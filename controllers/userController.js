@@ -1,11 +1,10 @@
-const express = require('express');
-const router = express.Router();
-// const users = express.Router();
+// const express = require('express');
+const User = require('../models/User.js');
+// const router = express.Router();
+// const express = require('express');
 // const cors = require('cors');
 // const jwt = require('jsonwebtoken');
 // const bcrypt = require('bcrypt');
-
-const User = require('../models/User.js');
 
 const userController = {
 	index: async (req, res) => {

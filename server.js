@@ -4,7 +4,6 @@ const logger = require('morgan');
 const app = express();
 const routes = require('./routes/index.js');
 
-// these are middlewares
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
