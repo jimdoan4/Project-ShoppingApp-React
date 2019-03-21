@@ -5,7 +5,7 @@ const router = express.Router();
 const homeController = {
 	index: async (req, res) => {
 		try {
-			res.json(index);
+			res.json({});
 		} catch (err) {
 			console.log(err);
 		}

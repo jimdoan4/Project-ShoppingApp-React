@@ -19,7 +19,7 @@ const clothController = {
 	show: async (req, res) => {
 		try {
 			const clothId = req.params.id;
-			const clothes = await Cloth.findById(clothesId);
+			const clothes = await Cloth.findById(clothId);
 			res.json(clothes);
 		} catch (err) {
 			console.log(err);

@@ -10,6 +10,7 @@ const userController = {
 	index: async (req, res) => {
 		try {
 			const users = await User.find({});
+			console.log(users);
 			res.json(users);
 		} catch (err) {
 			console.log(err);
@@ -18,7 +19,7 @@ const userController = {
 	show: async (req, res) => {
 		try {
 			const userId = req.params.id;
-			const users = await User.findById(usersId);
+			const users = await User.findById(userId);
 			res.json(users);
 		} catch (err) {
 			console.log(err);

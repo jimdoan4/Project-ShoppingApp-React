@@ -14,16 +14,16 @@ router.get('/fitness', fitnessController.index);
 router.get('/shop', shopController.index);
 router.get('/men', menController.index);
 
-router.get('/clothes', clothController.index);
-router.post('/clothes', clothController.create);
-router.get('/:clothid', clothController.show);
-router.put('/clothes/:clothid', clothController.update);
-router.delete('/clothes/:clothid', clothController.delete);
+// router.get('/clothes', clothController.index);
+// router.post('/clothes', clothController.create);
+// router.get('/:clothId', clothController.show);
+// router.put('/clothes/:clothId', clothController.update);
+// router.delete('/clothes/:clothId', clothController.delete);
 
-router.get('/', userController.index);
-router.post('/', userController.create);
-router.get('/:userid', userController.show);
-router.put('/users/:userid', userController.update);
-router.delete('/users/:userid', userController.delete);
+router.get('/users', userController.index);
+router.post('/users', userController.create);
+router.get('/:userId', userController.show);
+router.put('/users/:userId', userController.update);
+router.delete('/users/:userId', userController.delete);
 
 module.exports = router;
