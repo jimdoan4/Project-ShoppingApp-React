@@ -12,3 +12,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.navbar {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(15, 12, 1);
+  color: rgb(184, 169, 130);
+  box-shadow: -4px 1px 5px #000;
+}
+
+a {
+  color: rgb(184, 169, 130);
+}
+
+a:visited {
+  color: rgb(184, 169, 130);
+}

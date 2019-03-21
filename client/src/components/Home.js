@@ -5,12 +5,22 @@ import React, { Component } from 'react';
 export default class Home extends Component {
 	render() {
 		return (
-			<div>
-				<h1>Home</h1>
-			</div>
+			<nav className="navbar">
+				<a href="/about">About</a>
+				<a href="/fitness">Fitness</a>
+				<h1>Fitness App</h1>
+				<a href="/shop">Shop</a>
+				<a href="#contact">Contact</a>
+			</nav>
 		);
 	}
 }
+// 			<div>
+// 				<h1>Home</h1>
+// 			</div>
+// 		);
+// 	}
+// }
 
 // class Home extends Component {
 // 	// state = {
