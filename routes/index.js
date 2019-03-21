@@ -1,19 +1,21 @@
 const express = require('express')
 const router = express.Router()
-
+const frontController = require('../controllers/frontController')
 const userController = require('../controllers/userController')
 const clothController = require('../controllers/clothController')
 
-router.get('/', userController.index)
-router.post('/', userController.create)
-router.get('/:id', userController.show)
-router.put('/:id', userController.update)
-router.delete('/:id', userController.delete)
+router.get('/front', frontController.index)
 
-router.get('/', clothController.index)
-router.post('/', clothController.create)
-router.get('/clothes/:id', clothController.show)
-router.put('/clothes/:id', clothController.update)
-router.delete('/:id', clothController.delete)
+router.get('/clothes', clothController.index)
+router.post('/clothes', clothController.create)
+router.get('//:clothid', clothController.show)
+router.put('/clothes/:clothid', clothController.update)
+router.delete('/clothes/:clothid', clothController.delete)
+
+router.get('/users', userController.index)
+router.post('/users', userController.create)
+router.get('/:userid', userController.show)
+router.put('/:userid', userController.update)
+router.delete('/users/:userid', userController.delete)
 
 module.exports = router
