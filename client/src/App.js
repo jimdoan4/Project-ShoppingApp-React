@@ -4,6 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Shop from './components/Shop';
 import Fitness from './components/Fitness';
+import Men from './components/Men';
 // import Users from './components/Users.js'
 // import Clothes from './components/Clothes.js'
 
@@ -17,6 +18,7 @@ class App extends Component {
 						<Route path="/about" component={About} />
 						<Route path="/shop" component={Shop} />
 						<Route path="/fitness" component={Fitness} />
+						<Route path="/men" component={Men} />
 					</Switch>
 				</div>
 			</Router>

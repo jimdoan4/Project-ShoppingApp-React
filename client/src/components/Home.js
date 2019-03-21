@@ -10,7 +10,7 @@ export default class Home extends Component {
 				<a href="/fitness">Fitness</a>
 				<h1>Fitness App</h1>
 				<a href="/shop">Shop</a>
-				<a href="#contact">Contact</a>
+				<a href="/men">Men</a>
 			</nav>
 		);
 	}
