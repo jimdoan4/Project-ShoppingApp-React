@@ -24,6 +24,6 @@ const jim = new User({
 });
 
 User.remove({})
-	.then(() => elon.save())
+	.then(() => jim.save())
 	.then(() => console.log('Successful Save'))
 	.then(() => mongoose.connection.close());

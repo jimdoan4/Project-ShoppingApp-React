@@ -4,13 +4,13 @@ import Users from './components/Users.js'
 import Clothes from './components/Clothes.js'
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={}/>
-            <Route path="/:id" component={}/>
+            <Route exact path="/" component={} />
+            <Route path="/:id" component={} />
           </Switch>
         </div>
       </Router>
