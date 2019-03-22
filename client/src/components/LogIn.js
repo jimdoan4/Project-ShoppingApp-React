@@ -10,8 +10,8 @@ export default class LogIn extends Component {
 	render() {
 		return (
 			<div>
-				<Card style={{ width: '35rem' }}>
-					<Form>
+				<Card style={{ width: '35rem', display: 'inline-block' }}>
+					<Form className="text-center" style={{ display: 'inline-block' }}>
 						<Form.Row>
 							<Form.Group as={Col} controlId="formGridEmail">
 								<Form.Label>Email</Form.Label>

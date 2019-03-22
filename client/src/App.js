@@ -6,6 +6,9 @@ import { NavDropdown } from 'react-bootstrap';
 import Home from './components/Home';
 import About from './components/About';
 import Shop from './components/Shop';
+import WomenClothes from './components/WomenClothes';
+import MenClothes from './components/MenClothes';
+import Accessories from './components/Accessories';
 import Fitness from './components/Fitness';
 import Nutrition from './components/Nutrition';
 import LogIn from './components/LogIn';
@@ -18,7 +21,7 @@ class App extends Component {
 			<Router>
 				<div>
 					<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-						<Navbar.Brand href="/">Equis</Navbar.Brand>
+						<Navbar.Brand href="/">EQuis</Navbar.Brand>
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav">
 							<Nav className="mr-auto">
@@ -26,11 +29,11 @@ class App extends Component {
 								<Nav.Link href="/fitness">Fitness</Nav.Link>
 								<Nav.Link href="/nutrition">Nutrition</Nav.Link>
 								<NavDropdown title="Shop" id="collasible-nav-dropdown">
-									<NavDropdown.Item href="#action/3.1">Women Apparel</NavDropdown.Item>
-									<NavDropdown.Item href="#action/3.2">Men Apparel</NavDropdown.Item>
-									<NavDropdown.Item href="#action/3.3">Accessories</NavDropdown.Item>
+									<NavDropdown.Item href="/womenclothes">Women Apparel</NavDropdown.Item>
+									<NavDropdown.Item href="/menclothes">Men Apparel</NavDropdown.Item>
+									<NavDropdown.Item href="/accessories">Accessories</NavDropdown.Item>
 									<NavDropdown.Divider />
-									<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+									{/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
 								</NavDropdown>
 							</Nav>
 							<Nav>
@@ -44,7 +47,9 @@ class App extends Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/about" component={About} />
-						<Route path="/shop" component={Shop} />
+						<Route path="/womenclothes" component={WomenClothes} />
+						<Route path="/menclothes" component={MenClothes} />
+						<Route path="/accessories" component={Accessories} />
 						<Route path="/fitness" component={Fitness} />
 						<Route path="/nutrition" component={Nutrition} />
 						<Route path="/Login" component={LogIn} />
