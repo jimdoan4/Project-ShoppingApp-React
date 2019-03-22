@@ -6,7 +6,7 @@ export default class Men extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Men</h1>
+				<h1>Nutrition</h1>
 			</div>
 		);
 	}

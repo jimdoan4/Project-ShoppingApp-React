@@ -6,7 +6,7 @@ export default class Fitness extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Fitness amd</h1>
+				<h1>Fitness</h1>
 			</div>
 		);
 	}

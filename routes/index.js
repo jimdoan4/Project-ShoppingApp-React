@@ -3,16 +3,16 @@ const router = express.Router();
 const homeController = require('../controllers/homeController');
 const userController = require('../controllers/userController');
 const clothController = require('../controllers/clothController');
-const aboutController = require('../controllers/aboutController');
-const fitnessController = require('../controllers/fitnessController');
-const shopController = require('../controllers/shopController');
-const menController = require('../controllers/menController');
+// const aboutController = require('../controllers/aboutController');
+// const fitnessController = require('../controllers/fitnessController');
+// const shopController = require('../controllers/shopController');
+// const menController = require('../controllers/menController');
 
 router.get('/', homeController.index);
-router.get('/about', aboutController.index);
-router.get('/fitness', fitnessController.index);
-router.get('/shop', shopController.index);
-router.get('/men', menController.index);
+// router.get('/about', aboutController.index);
+// router.get('/fitness', fitnessController.index);
+// router.get('/shop', shopController.index);
+// router.get('/men', menController.index);
 
 // router.get('/clothes', clothController.index);
 // router.post('/clothes', clothController.create);
