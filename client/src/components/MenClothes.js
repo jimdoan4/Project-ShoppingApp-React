@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 // import { Container } from 'react-bootstrap';
 // import { Jumbotron } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
-
+import { Container } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -42,7 +43,9 @@ export default class MenClothes extends Component {
 			.post('/api/v1/apparels', {
 				name: this.state.newApparel.name,
 				description: this.state.newApparel.description,
-				image: this.state.newApparel.image
+                image: this.state.newApparel.image,
+                price: this.state.newApparel.price,
+                size: this.state.newApparel.size
 			})
 			.then((res) => {
 				const apparelsList = [ ...this.state.apparels ];
@@ -51,7 +54,9 @@ export default class MenClothes extends Component {
 					newApparel: {
 						name: '',
 						description: '',
-						image: ''
+                        image: '',
+                        price: '',
+                        size: ''
 					},
 					isApparelFormDisplayed: false,
 					apparels: apparelsList
@@ -61,6 +66,13 @@ export default class MenClothes extends Component {
 
 	render() {
 		return (
+            <div>
+             <Jumbotron fluid className='nutrition' style={{ height: '26rem' }}>
+				<Container>
+					<h1>Men Clothing</h1>
+					<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+				</Container>
+			</Jumbotron>
 			<div>
 				{this.state.apparels.map((apparel) => {
 					return (
@@ -70,10 +82,9 @@ export default class MenClothes extends Component {
 							</Link>
 							<Card.Body>
 								<Card.Title>{apparel.name}</Card.Title>
-								<Card.Text>
-									Some quick example text to build on the card title and make up the bulk of the
-									card's content.
-								</Card.Text>
+								<Card.Title>
+									${apparel.price}.00
+								</Card.Title>
 							</Card.Body>
 						</Card>
 						// <div key={apparel._id}>
@@ -107,10 +118,31 @@ export default class MenClothes extends Component {
 								value={this.state.newApparel.description}
 							/>
 						</div>
+                        <div>
+							<label htmlFor="price">Price</label>
+							<textarea
+								id="price"
+								type="Number"
+								name="price"
+								onChange={this.handleChange}
+								value={this.state.newApparel.price}
+							/>
+						</div>
+                        <div>
+							<label htmlFor="size">Size</label>
+							<textarea
+								id="size"
+								type="Number"
+								name="size"
+								onChange={this.handleChange}
+								value={this.state.newApparel.size}
+							/>
+						</div>
 						<button>Create</button>
 					</form>
 				) : null}
 			</div>
+            </div>
 		);
 	}
 }

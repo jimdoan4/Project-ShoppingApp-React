@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 // import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { CardColumns } from 'react-bootstrap';
 // import { NavDropdown } from 'react-bootstrap';
 export default class About extends Component {
 	render() {
 		return (
+            <div>
+        <Jumbotron fluid className='nutrition' style={{ height: '26rem' }}>
+				<Container>
+					<h1>Fluid jumbotron</h1>
+					<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+				</Container>
+			</Jumbotron>
+
 			<CardColumns style={{ width: '55rem' }}>
 				<Card>
 					<Card.Img
@@ -93,6 +103,7 @@ export default class About extends Component {
 					</Card.Body>
 				</Card>
 			</CardColumns>
+            </div>
 		);
 	}
 }

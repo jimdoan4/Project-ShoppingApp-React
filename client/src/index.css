@@ -25,7 +25,7 @@ body {
   font-family: 'HelveticaNeue';
 }
 
-.section {
+/* .section {
   width: 100%;
   padding: 0 7%;
   display: table;
@@ -41,6 +41,14 @@ body {
 
 .sections {
     background-color: black;
+} */
+
+.home {
+   background-image: url('https://images.ctfassets.net/ew96z4wsnz93/3lVFApyuM8YCOuyAWEgSWQ/d86b94d30106a8c7a48d50f4d56ac0c9/20170630_FB-Metadata_1200x630_Homepage.jpg');
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-size: cover;
+
 }
 
 .pic {

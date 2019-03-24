@@ -9,13 +9,28 @@ import { Jumbotron } from 'react-bootstrap';
 export default class Home extends Component {
 	render() {
 		return (
-[<div class="intro section">  
-  <div class="content">
-    <h1>EQuis</h1>
-    <p>Your MIND, BODY and SOUL</p>
-    
- </div>
-        </div>]
+            <div>
+            <Jumbotron fluid className='home' style={{ height: '26rem' }}>
+				<Container>
+					<h1>EQUIS</h1>
+					<p>Your MIND, BODY and SOUL</p>
+				</Container>
+			</Jumbotron>
+            <Jumbotron fluid className='home' style={{ height: '26rem' }}>
+				<Container>
+					<h1>EQUIS</h1>
+					<p>Your MIND, BODY and SOUL</p>
+				</Container>
+			</Jumbotron>
+            <Jumbotron fluid className='home' style={{ height: '26rem' }}>
+				<Container>
+					<h1>EQUIS</h1>
+					<p>Your MIND, BODY and SOUL</p>
+				</Container>
+			</Jumbotron>
+            </div>
+
+
 		);
 	}
 }
