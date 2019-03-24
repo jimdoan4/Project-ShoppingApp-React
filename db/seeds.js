@@ -5,13 +5,16 @@ mongoose.connect(process.env.MONGODB_URI);
 const Apparel = require('../models/Apparel');
 
 // Men Clothing/Shirt
-const ventShirt = new Apparel({
-	name: 'Metal Vent Tech Short Sleeve V',
-	size: 4,
-	image: 'https://images.lululemon.com/is/image/lululemon/LM3AT8S_036773_1?$image_carousel-lg_2x$',
-	price: 68,
-	description:
-		'Seamless construction, anti-stink technology, and strategic venting make this shirt training-session ready.'
+Apparel.deleteMany().then(() => {
+	const ventShirt = new Apparel({
+		name: 'Metal Vent Tech Short Sleeve V',
+		size: 4,
+		image: 'https://images.lululemon.com/is/image/lululemon/LM3AT8S_036773_1?$image_carousel-lg_2x$',
+		price: 68,
+		description:
+			'Seamless construction, anti-stink technology, and strategic venting make this shirt training-session ready.'
+	});
+	return ventShirt.save();
 });
 // const basicShirt = new Apparel({
 // 	name: '5 Year Basic Tee ELMT',
@@ -77,10 +80,10 @@ const ventShirt = new Apparel({
 // 		'Stay cool when you are heating it up in this breatheable, seamless, and lightweight tank.Integrated open- hole Mesh fabric allows for maxium airflow so you can push yourself to the max.Plus, anti - stink technology means you can go from running your favourite routes to enjoying a much - deserved cold one at happy hour.'
 // });
 
-Apparel.remove({})
-	.then(() => ventShirt.save())
-	.then(() => console.log('Successful Save'))
-	.then(() => mongoose.connection.close());
+// Apparel.remove({})
+// 	.then(() => ventShirt.save())
+// 	.then(() => console.log('Successful Save'))
+// 	.then(() => mongoose.connection.close());
 
 // Apparel.remove({})
 // 	.then(() => basicShirt.save())

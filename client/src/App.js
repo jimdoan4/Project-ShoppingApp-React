@@ -13,6 +13,8 @@ import Accessories from './components/Accessories';
 import Fitness from './components/Fitness';
 import Nutrition from './components/Nutrition';
 import LogIn from './components/LogIn';
+import Gym from './components/Gym';
+import Forum from './components/Forum';
 // import Users from './components/Users.js'
 // import Clothes from './components/Clothes.js'
 
@@ -29,34 +31,37 @@ class App extends Component {
 								<Nav.Link href="/about">About</Nav.Link>
 								<Nav.Link href="/fitness">Fitness</Nav.Link>
 								<Nav.Link href="/nutrition">Nutrition</Nav.Link>
+								<Nav.Link href="/gym">Gym</Nav.Link>
+								<Nav.Link href="/forum">Forum</Nav.Link>
 								<NavDropdown title="Shop" id="collasible-nav-dropdown">
 									<NavDropdown.Item href="/womenclothes">Women Apparel</NavDropdown.Item>
 									<NavDropdown.Item href="/menclothes">Men Apparel</NavDropdown.Item>
 									<NavDropdown.Item href="/accessories">Accessories</NavDropdown.Item>
 									<NavDropdown.Divider />
-									{/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
+				
 								</NavDropdown>
 							</Nav>
 							<Nav>
 								<Nav.Link href="/login">Log In</Nav.Link>
-								{/* <Nav.Link eventKey={2} href="#memes">
-									Dank memes
-								</Nav.Link> */}
 							</Nav>
 						</Navbar.Collapse>
 					</Navbar>
+         
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/about" component={About} />
 						<Route path="/womenclothes" component={WomenClothes} />
-						<Route path="/menclothes" component={MenClothes} />
-						<Route path="/menclothesid" component={MenClothesId} />
 						<Route path="/accessories" component={Accessories} />
 						<Route path="/fitness" component={Fitness} />
 						<Route path="/nutrition" component={Nutrition} />
+						<Route path="/gym" component={Gym} />
+						<Route path="/forum" component={Forum} />
 						<Route path="/Login" component={LogIn} />
+						<Route path="/menclothes" component={MenClothes} />
+						<Route path="/:apparelId" component={MenClothesId} />
 					</Switch>
 				</div>
+      
 			</Router>
 		);
 	}

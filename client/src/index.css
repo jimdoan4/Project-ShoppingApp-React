@@ -13,20 +13,113 @@ code {
     monospace;
 }
 
-.navbar {
-  display: flex;
-  width: 100vw;
-  justify-content: space-around;
-  align-items: center;
-  background: rgb(15, 12, 1);
-  color: rgb(184, 169, 130);
-  box-shadow: -4px 1px 5px #000;
+
+
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0; 
+  font-weight: 500;
+  font-family: 'HelveticaNeue';
+}
+
+.section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #373B44;
+  height: 80vh;
+  background-image: url('https://s3.amazonaws.com/coursestorm/live/media/ebe36e99967f11e88ea30e92b056efc0');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  }
+
+.sections {
+    background-color: black;
+}
+
+.pic {
+   background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-length-of-woman-lifting-weight-in-gym-royalty-free-image-1058449732-1547849286.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.nutrition {
+     background-image: url('https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_960_720.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+
+.gym {
+     background-image: url('https://cdn.newsapi.com.au/image/v1/29b133ac13b2dcd80f31916d1ec13837?width=1024');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.forum {
+     background-image: url('https://images.ctfassets.net/ew96z4wsnz93/3lVFApyuM8YCOuyAWEgSWQ/d86b94d30106a8c7a48d50f4d56ac0c9/20170630_FB-Metadata_1200x630_Homepage.jpg');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.women {
+     background-image: url('https://assets.parents.com/s3fs-public/styles/nfp_1080_portrait/public/fitbit_versa_lifestyle_female_outdoorrun.jpeg?k23jgEJVtM2wz0w2KeK8hcjAN3qiSshA');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+.intro {
+  height: 90vh;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 3em;
+  display: block;
+  color: white;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #C3CAD9;
 }
 
 a {
-  color: rgb(184, 169, 130);
+  font-weight: 700;
+  color: #373B44;
+  position: relative;
+  
+  &:hover{ 
+    opacity: 0.8;
+  }
+  
+  &:active {
+    top: 1px;
+  }
 }
 
-a:visited {
-  color: rgb(184, 169, 130);
+footer {
+  padding: 1% 5%;
+  text-align:center;
+  background-color: #373B44;
+  color: white;
+  
+  a {
+    color: #FE4B74;
+    font-weight: 500;
+    text-decoration: none;
+  }
 }

@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
-import { Jumbotron } from 'react-bootstrap';
+// import { Container } from 'react-bootstrap';
+// import { Jumbotron } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default class MenClothes extends Component {
 	state = {
 		apparels: [],
-		newApparel: {
-			name: '',
-			image: '',
-			description: ''
+        newApparel: {
+            image: '',
+            name: '',
+            size: '',
+			price: '',
+            description: ''
 		},
 		isApparelFormDisplayed: false
 	};
@@ -60,12 +64,24 @@ export default class MenClothes extends Component {
 			<div>
 				{this.state.apparels.map((apparel) => {
 					return (
-						<div key={apparel._id}>
+						<Card key={apparel._id} style={{ width: '18rem' }}>
 							<Link to={`/${apparel._id}`}>
-								<img src={apparel.image} alt={apparel.name} />
-								{apparel.name}
+								<Card.Img variant="top" src={apparel.image} alt={apparel.name} />
 							</Link>
-						</div>
+							<Card.Body>
+								<Card.Title>{apparel.name}</Card.Title>
+								<Card.Text>
+									Some quick example text to build on the card title and make up the bulk of the
+									card's content.
+								</Card.Text>
+							</Card.Body>
+						</Card>
+						// <div key={apparel._id}>
+						// 	<Link to={`/${apparel._id}`}>
+						// 		<img src={apparel.image} alt={apparel.name} />
+						// 		{apparel.name}
+						// 	</Link>
+						// </div>
 					);
 				})}
 				<button onClick={this.toggleApparelForm}>+ New Clothing</button>
@@ -98,12 +114,4 @@ export default class MenClothes extends Component {
 		);
 	}
 }
-// 			<Jumbotron fluid style={{ height: '26rem' }}>
-// 				<Container>
-// 					<h1>Men Clothing</h1>
-// 					<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-// 				</Container>
-// 			</Jumbotron>
-// 		);
-// 	}
-// }
+

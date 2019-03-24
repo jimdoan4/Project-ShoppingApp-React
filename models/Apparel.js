@@ -1,7 +1,7 @@
 const mongoose = require('../db/connections.js');
 const Schema = mongoose.Schema;
 
-const ApparelSchema = new Schema({
+const Apparel = new Schema({
 	name: String,
 	size: Number,
 	image: String,
@@ -9,4 +9,4 @@ const ApparelSchema = new Schema({
 	description: String
 });
 
-module.exports = mongoose.model('Apparel', ApparelSchema);
+module.exports = mongoose.model('Apparel', Apparel);

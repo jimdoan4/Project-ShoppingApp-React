@@ -7,9 +7,9 @@ import { Jumbotron } from 'react-bootstrap';
 export default class Accessories extends Component {
 	render() {
 		return (
-			<Jumbotron fluid style={{ height: '26rem' }}>
+		<Jumbotron fluid className='pic' style={{ height: '26rem' }}>
 				<Container>
-					<h1>Accessories</h1>
+					<h1>Fluid jumbotron</h1>
 					<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 				</Container>
 			</Jumbotron>

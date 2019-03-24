@@ -4,12 +4,12 @@ import { Jumbotron } from 'react-bootstrap';
 // import axios from 'axios';
 // import { Link } from 'react-router-dom';
 
-export default class WomenClothes extends Component {
+export default class Gym extends Component {
 	render() {
 		return (
-	<Jumbotron fluid className='women' style={{ height: '26rem' }}>
+			<Jumbotron fluid className='gym' style={{ height: '26rem' }}>
 				<Container>
-					<h1>Fluid jumbotron</h1>
+					<h1>Gym</h1>
 					<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 				</Container>
 			</Jumbotron>
