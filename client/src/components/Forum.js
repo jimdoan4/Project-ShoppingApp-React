@@ -19,7 +19,7 @@ export default class Forum extends Component {
             <Table striped bordered hover size="sm">
   <thead>
     <tr>
-      <th>#</th>
+     
       <th>First Name</th>
       <th>Last Name</th>
       <th>Username</th>

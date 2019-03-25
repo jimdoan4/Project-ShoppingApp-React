@@ -23,6 +23,7 @@ body {
   margin: 0; 
   font-weight: 500;
   font-family: 'HelveticaNeue';
+  background-color: #F3F6F8;
 }
 
 /* .section {
@@ -70,6 +71,7 @@ body {
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;
+  /* border-radius: 9rem; */
 }
 .forum {
      background-image: url('https://images.ctfassets.net/ew96z4wsnz93/3lVFApyuM8YCOuyAWEgSWQ/d86b94d30106a8c7a48d50f4d56ac0c9/20170630_FB-Metadata_1200x630_Homepage.jpg');

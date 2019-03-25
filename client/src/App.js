@@ -5,7 +5,7 @@ import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import Home from './components/Home';
 import About from './components/About';
-import Shop from './components/Shop';
+// import Shop from './components/Shop';
 import WomenClothes from './components/WomenClothes';
 import MenClothes from './components/MenClothes';
 import MenClothesId from './components/MenClothesId';
@@ -15,6 +15,7 @@ import Nutrition from './components/Nutrition';
 import LogIn from './components/LogIn';
 import Gym from './components/Gym';
 import Forum from './components/Forum';
+import Cart from './components/Cart';
 // import Users from './components/Users.js'
 // import Clothes from './components/Clothes.js'
 
@@ -38,15 +39,17 @@ class App extends Component {
 									<NavDropdown.Item href="/menclothes">Men Apparel</NavDropdown.Item>
 									<NavDropdown.Item href="/accessories">Accessories</NavDropdown.Item>
 									<NavDropdown.Divider />
-				
 								</NavDropdown>
 							</Nav>
 							<Nav>
 								<Nav.Link href="/login">Log In</Nav.Link>
 							</Nav>
+							<Nav>
+								<Nav.Link href="/cart">My Cart</Nav.Link>
+							</Nav>
 						</Navbar.Collapse>
 					</Navbar>
-         
+
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/about" component={About} />
@@ -57,11 +60,11 @@ class App extends Component {
 						<Route path="/gym" component={Gym} />
 						<Route path="/forum" component={Forum} />
 						<Route path="/Login" component={LogIn} />
+						<Route path="/cart" component={Cart} />
 						<Route path="/menclothes" component={MenClothes} />
 						<Route path="/:apparelId" component={MenClothesId} />
 					</Switch>
 				</div>
-      
 			</Router>
 		);
 	}

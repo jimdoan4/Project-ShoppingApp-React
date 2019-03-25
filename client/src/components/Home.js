@@ -16,19 +16,25 @@ export default class Home extends Component {
 					<p>Your MIND, BODY and SOUL</p>
 				</Container>
 			</Jumbotron>
-            <Jumbotron fluid className='home' style={{ height: '26rem' }}>
+           
+       
+            <Jumbotron fluid className='homes' style={{ height: '26rem' }}>
 				<Container>
 					<h1>EQUIS</h1>
 					<p>Your MIND, BODY and SOUL</p>
 				</Container>
 			</Jumbotron>
-            <Jumbotron fluid className='home' style={{ height: '26rem' }}>
+          
+         
+            <Jumbotron fluid className='homee' style={{ height: '26rem' }}>
 				<Container>
 					<h1>EQUIS</h1>
 					<p>Your MIND, BODY and SOUL</p>
 				</Container>
 			</Jumbotron>
             </div>
+         
+            
 
 
 		);

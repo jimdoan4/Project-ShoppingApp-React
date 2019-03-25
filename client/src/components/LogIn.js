@@ -14,8 +14,19 @@ export default class LogIn extends Component {
 					<Form className="text-center" style={{ display: 'inline-block' }}>
 						<Form.Row>
 							<Form.Group as={Col} controlId="formGridEmail">
-								<Form.Label>Email</Form.Label>
-								<Form.Control type="email" placeholder="Enter email" />
+								<Form.Label>First Name</Form.Label>
+								<Form.Control type="email" placeholder="Enter First Name" />
+							</Form.Group>
+
+							<Form.Group as={Col} controlId="formGridPassword">
+								<Form.Label>Last Name</Form.Label>
+								<Form.Control type="password" placeholder="Last Name" />
+							</Form.Group>
+						</Form.Row>
+                        <Form.Row>
+                            <Form.Group as={Col} controlId="formGridEmail">
+								<Form.Label>Username</Form.Label>
+								<Form.Control type="email" placeholder="Enter Username" />
 							</Form.Group>
 
 							<Form.Group as={Col} controlId="formGridPassword">
@@ -23,7 +34,10 @@ export default class LogIn extends Component {
 								<Form.Control type="password" placeholder="Password" />
 							</Form.Group>
 						</Form.Row>
-
+                        <Form.Group as={Col} controlId="formGridEmail">
+								<Form.Label>Email</Form.Label>
+								<Form.Control type="email" placeholder="Enter email" />
+							</Form.Group>
 						<Form.Group controlId="formGridAddress1">
 							<Form.Label>Address</Form.Label>
 							<Form.Control placeholder="1234 Main St" />
@@ -53,13 +67,11 @@ export default class LogIn extends Component {
 								<Form.Control />
 							</Form.Group>
 						</Form.Row>
-
-						<Form.Group id="formGridCheckbox">
-							<Form.Check type="checkbox" label="Check me out" />
-						</Form.Group>
-
+                        <Button variant="primary" type="submit">
+							Login
+						</Button>
 						<Button variant="primary" type="submit">
-							Submit
+							Register
 						</Button>
 					</Form>
 				</Card>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import MenClothes from './MenClothes.js';
-import { Link } from 'react-router-dom';
+// import MenClothes from './MenClothes.js';
+// import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 
 class MenClothesId extends Component {
