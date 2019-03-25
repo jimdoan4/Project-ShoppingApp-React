@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 // import axios from 'axios';
 // import { Link } from 'react-router-dom';
 
 export default class Fitness extends Component {
 	render() {
 		return (
+            <div>
 			<Jumbotron fluid className="nutrition" style={{ height: '26rem' }}>
 				<Container>
 					<h1>Be the BEST You. Get Tips on how to get in shape and live a heathier LIFESTYLE!</h1>
 					<p>Get a kick start to a healthier living.</p>
 				</Container>
 			</Jumbotron>
+            <>
+  <Card style={{ width: '34rem' }}>
+    <Card.Img variant="top" src="https://cdn-ami-drupal.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/media/1109-fit-for-life.jpg?itok=l9ipJgRE" style={{ width: '34rem' }}/>
+    <Card.Body>
+      <Card.Text>
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </Card.Text>
+    </Card.Body>
+  </Card>
+  <br />
+  <Card style={{ width: '34rem' }}>
+    <Card.Body>
+      <Card.Text>
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </Card.Text>
+    </Card.Body>
+    <Card.Img variant="bottom" src="https://cdn-ami-drupal.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/media/1109-fit-for-life.jpg?itok=l9ipJgRE" style={{ width: '34rem' }}/>
+  </Card>
+</>
+</div>
 		);
 	}
 }

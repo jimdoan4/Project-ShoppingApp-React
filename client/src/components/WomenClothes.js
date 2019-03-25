@@ -36,12 +36,12 @@ export default class WomenClothes extends Component {
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+								src="https://images.lululemon.com/is/image/lululemon/LW3MEBS_036963_2?$product_tile-md_2x$"
 								alt="top"
 							/>
 							{/* </Link> */}
 							<Card.Body>
-								<Card.Title>City Sweat Pullover Hoodie</Card.Title>
+								<Card.Title>Swiftly Tech Short</Card.Title>
 								<Card.Title>$68.00</Card.Title>
 							</Card.Body>
 						</Card>
@@ -49,13 +49,13 @@ export default class WomenClothes extends Component {
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+								src="https://images.lululemon.com/is/image/lululemon/LW1BV0S_037681_2?$product_tile-md_2x$"
 								alt="top"
 							/>
 							{/* </Link> */}
 							<Card.Body>
-								<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-								<Card.Title>$68.00</Card.Title>
+								<Card.Title>Tied Up Tank</Card.Title>
+								<Card.Title>$44.00</Card.Title>
 							</Card.Body>
 						</Card>
 					</CardGroup>
@@ -66,39 +66,39 @@ export default class WomenClothes extends Component {
 								{/* <Link to={`/${apparel._id}`}> */}
 								<Card.Img
 									variant="top"
-									src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+									src="https://images.lululemon.com/is/image/lululemon/LW1960S_036958_2?$product_tile-md_2x$"
 									alt="top"
 								/>
 								{/* </Link> */}
 								<Card.Body>
-									<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-									<Card.Title>$68.00</Card.Title>
+									<Card.Title>Tech Racerback</Card.Title>
+									<Card.Title>$58.00</Card.Title>
 								</Card.Body>
 							</Card>
 							<Card style={{ width: '18rem' }}>
 								{/* <Link to={`/${apparel._id}`}> */}
 								<Card.Img
 									variant="top"
-									src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+									src="https://images.lululemon.com/is/image/lululemon/LW6AWBS_037127_2?$product_tile-md_2x$"
 									alt="top"
 								/>
 								{/* </Link> */}
 								<Card.Body>
-									<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-									<Card.Title>$68.00</Card.Title>
+									<Card.Title>Speed Up Crop</Card.Title>
+									<Card.Title>$78.00</Card.Title>
 								</Card.Body>
 							</Card>
 							<Card style={{ width: '18rem' }}>
 								{/* <Link to={`/${apparel._id}`}> */}
 								<Card.Img
 									variant="top"
-									src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+									src="https://images.lululemon.com/is/image/lululemon/LW5BPNS_036763_2?$product_tile-md_2x$"
 									alt="top"
 								/>
 								{/* </Link> */}
 								<Card.Body>
-									<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-									<Card.Title>$68.00</Card.Title>
+									<Card.Title>Fly Pant</Card.Title>
+									<Card.Title>$98.00</Card.Title>
 								</Card.Body>
 							</Card>
 						</CardGroup>
@@ -109,39 +109,39 @@ export default class WomenClothes extends Component {
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
-										src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+										src="https://images.lululemon.com/is/image/lululemon/LW7AVGT_036745_2?$product_tile-md_2x$"
 										alt="top"
 									/>
 									{/* </Link> */}
 									<Card.Body>
-										<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-										<Card.Title>$68.00</Card.Title>
+										<Card.Title>Hottie Short</Card.Title>
+										<Card.Title>$58.00</Card.Title>
 									</Card.Body>
 								</Card>
 								<Card style={{ width: '18rem' }}>
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
-										src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+										src="https://images.lululemon.com/is/image/lululemon/LW7ARKR_036744_2?$product_tile-md_2x$"
 										alt="top"
 									/>
 									{/* </Link> */}
 									<Card.Body>
-										<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-										<Card.Title>$68.00</Card.Title>
+										<Card.Title>Hottie Short II</Card.Title>
+										<Card.Title>$58.00</Card.Title>
 									</Card.Body>
 								</Card>
 								<Card style={{ width: '18rem' }}>
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
-										src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+										src="https://images.lululemon.com/is/image/lululemon/LW2AUPS_036811_2?$product_tile-md_2x$"
 										alt="top"
 									/>
 									{/* </Link> */}
 									<Card.Body>
-										<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-										<Card.Title>$68.00</Card.Title>
+										<Card.Title>Flow Bra</Card.Title>
+										<Card.Title>$48.00</Card.Title>
 									</Card.Body>
 								</Card>
 							</CardGroup>
@@ -151,39 +151,39 @@ export default class WomenClothes extends Component {
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
-											src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+											src="https://images.lululemon.com/is/image/lululemon/LW2AJ8S_036915_2?$product_tile-md_2x$"
 											alt="top"
 										/>
 										{/* </Link> */}
 										<Card.Body>
-											<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-											<Card.Title>$68.00</Card.Title>
+											<Card.Title>Free Up Bra</Card.Title>
+											<Card.Title>$38.00</Card.Title>
 										</Card.Body>
 									</Card>
 									<Card style={{ width: '18rem' }}>
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
-											src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+											src="https://images.lululemon.com/is/image/lululemon/LW5BOCS_036721_2?$product_tile-md_2x$"
 											alt="top"
 										/>
 										{/* </Link> */}
 										<Card.Body>
-											<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-											<Card.Title>$68.00</Card.Title>
+											<Card.Title>Align HighRise Pant</Card.Title>
+											<Card.Title>$88.00</Card.Title>
 										</Card.Body>
 									</Card>
 									<Card style={{ width: '18rem' }}>
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
-											src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+											src="https://images.lululemon.com/is/image/lululemon/LW6AVLS_8650_2?$product_tile-md_2x$"
 											alt="top"
 										/>
 										{/* </Link> */}
 										<Card.Body>
-											<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-											<Card.Title>$68.00</Card.Title>
+											<Card.Title>Pace Crop</Card.Title>
+											<Card.Title>$78.00</Card.Title>
 										</Card.Body>
 									</Card>
 								</CardGroup>

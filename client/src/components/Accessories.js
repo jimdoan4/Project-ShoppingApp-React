@@ -35,26 +35,26 @@ export default class Accessories extends Component {
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+								src="https://images.lululemon.com/is/image/lululemon/LM9767S_036763_2?$product_tile-lg_2x$"
 								alt="top"
 							/>
 							{/* </Link> */}
 							<Card.Body>
-								<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-								<Card.Title>$68.00</Card.Title>
+								<Card.Title>Command BackPack</Card.Title>
+								<Card.Title>$148.00</Card.Title>
 							</Card.Body>
 						</Card>
 						<Card style={{ width: '18rem' }}>
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+								src="https://images.lululemon.com/is/image/lululemon/LM9723S_034135_2?$product_tile-lg_2x$"
 								alt="top"
 							/>
 							{/* </Link> */}
 							<Card.Body>
-								<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-								<Card.Title>$68.00</Card.Title>
+								<Card.Title>Surge BackPack</Card.Title>
+								<Card.Title>$168.00</Card.Title>
 							</Card.Body>
 						</Card>
 					</CardGroup>
@@ -65,39 +65,39 @@ export default class Accessories extends Component {
 								{/* <Link to={`/${apparel._id}`}> */}
 								<Card.Img
 									variant="top"
-									src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+									src="https://images.lululemon.com/is/image/lululemon/LM9474S_037617_2?$product_tile-lg_2x$"
 									alt="top"
 								/>
 								{/* </Link> */}
 								<Card.Body>
-									<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-									<Card.Title>$68.00</Card.Title>
+									<Card.Title>Lightspeed Hat</Card.Title>
+									<Card.Title>$38.00</Card.Title>
 								</Card.Body>
 							</Card>
 							<Card style={{ width: '18rem' }}>
 								{/* <Link to={`/${apparel._id}`}> */}
 								<Card.Img
 									variant="top"
-									src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+									src="https://images.lululemon.com/is/image/lululemon/LM9641S_031382_2?$product_tile-lg_2x$"
 									alt="top"
 								/>
 								{/* </Link> */}
 								<Card.Body>
-									<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-									<Card.Title>$68.00</Card.Title>
+									<Card.Title>Cold Beanie</Card.Title>
+									<Card.Title>$28.00</Card.Title>
 								</Card.Body>
 							</Card>
 							<Card style={{ width: '18rem' }}>
 								{/* <Link to={`/${apparel._id}`}> */}
 								<Card.Img
 									variant="top"
-									src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+									src="https://images.lululemon.com/is/image/lululemon/LU9AF5S_0001_2?$product_tile-lg_2x$"
 									alt="top"
 								/>
 								{/* </Link> */}
 								<Card.Body>
-									<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-									<Card.Title>$68.00</Card.Title>
+									<Card.Title>Stay Cold Bottle</Card.Title>
+									<Card.Title>$48.00</Card.Title>
 								</Card.Body>
 							</Card>
 						</CardGroup>
@@ -108,39 +108,39 @@ export default class Accessories extends Component {
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
-										src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+										src="https://images.lululemon.com/is/image/lululemon/LW9BAZR_033907_2?$product_tile-lg_2x$"
 										alt="top"
 									/>
 									{/* </Link> */}
 									<Card.Body>
-										<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-										<Card.Title>$68.00</Card.Title>
+										<Card.Title>TechLook Shoes</Card.Title>
+										<Card.Title>$98.00</Card.Title>
 									</Card.Body>
 								</Card>
 								<Card style={{ width: '18rem' }}>
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
-										src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+										src="https://images.lululemon.com/is/image/lululemon/LW9AWXS_037690_2?$product_tile-lg_2x$"
 										alt="top"
 									/>
 									{/* </Link> */}
 									<Card.Body>
-										<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-										<Card.Title>$68.00</Card.Title>
+										<Card.Title>Secret Sock</Card.Title>
+										<Card.Title>$18.00</Card.Title>
 									</Card.Body>
 								</Card>
 								<Card style={{ width: '18rem' }}>
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
-										src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+										src="https://images.lululemon.com/is/image/lululemon/LM9635S_034927_2?$product_tile-lg_2x$"
 										alt="top"
 									/>
 									{/* </Link> */}
 									<Card.Body>
-										<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-										<Card.Title>$68.00</Card.Title>
+										<Card.Title>Resolute Gloves</Card.Title>
+										<Card.Title>$28.00</Card.Title>
 									</Card.Body>
 								</Card>
 							</CardGroup>
@@ -150,39 +150,39 @@ export default class Accessories extends Component {
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
-											src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+											src="https://images.lululemon.com/is/image/lululemon/LU9AAJS_0001_2?$product_tile-lg_2x$"
 											alt="top"
 										/>
 										{/* </Link> */}
 										<Card.Body>
-											<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-											<Card.Title>$68.00</Card.Title>
+											<Card.Title>Yoga Block</Card.Title>
+											<Card.Title>$18.00</Card.Title>
 										</Card.Body>
 									</Card>
 									<Card style={{ width: '18rem' }}>
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
-											src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+											src="https://images.lululemon.com/is/image/lululemon/LW9BLCS_037657_2?$product_tile-lg_2x$"
 											alt="top"
 										/>
 										{/* </Link> */}
 										<Card.Body>
-											<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-											<Card.Title>$68.00</Card.Title>
+											<Card.Title>Yoga Mat Bag</Card.Title>
+											<Card.Title>$48.00</Card.Title>
 										</Card.Body>
 									</Card>
 									<Card style={{ width: '18rem' }}>
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
-											src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+											src="https://images.lululemon.com/is/image/lululemon/LW9BYYS_038214_2?$product_tile-lg_2x$"
 											alt="top"
 										/>
 										{/* </Link> */}
 										<Card.Body>
-											<Card.Title>City Sweat Pullover Hoodie</Card.Title>
-											<Card.Title>$68.00</Card.Title>
+											<Card.Title>UpLift Training Gloves</Card.Title>
+											<Card.Title>$38.00</Card.Title>
 										</Card.Body>
 									</Card>
 								</CardGroup>

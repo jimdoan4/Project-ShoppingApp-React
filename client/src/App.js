@@ -18,7 +18,7 @@ import Forum from './components/Forum';
 import Cart from './components/Cart';
 import CityHoodie from './components/CityHoodie';
 // import Users from './components/Users.js'
-// import Clothes from './components/Clothes.js'
+
 
 class App extends Component {
 	render() {
