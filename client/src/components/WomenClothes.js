@@ -13,8 +13,8 @@ export default class WomenClothes extends Component {
 			<div>
 				<Jumbotron fluid className="women" style={{ height: '26rem' }}>
 					<Container>
-						<h1>Fluid jumbotron</h1>
-						<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+						<h1>Women Clothing</h1>
+						<p>This is a modified jumbotron that occupies the entire horizontal.</p>
 					</Container>
 				</Jumbotron>
 				<div>

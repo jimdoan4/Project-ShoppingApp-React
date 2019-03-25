@@ -8,7 +8,7 @@ import About from './components/About';
 // import Shop from './components/Shop';
 import WomenClothes from './components/WomenClothes';
 import MenClothes from './components/MenClothes';
-import MenClothesId from './components/MenClothesId';
+// import MenClothesId from './components/MenClothesId';
 import Accessories from './components/Accessories';
 import Fitness from './components/Fitness';
 import Nutrition from './components/Nutrition';
@@ -16,6 +16,7 @@ import LogIn from './components/LogIn';
 import Gym from './components/Gym';
 import Forum from './components/Forum';
 import Cart from './components/Cart';
+import CityHoodie from './components/CityHoodie';
 // import Users from './components/Users.js'
 // import Clothes from './components/Clothes.js'
 
@@ -52,6 +53,7 @@ class App extends Component {
 
 					<Switch>
 						<Route exact path="/" component={Home} />
+						<Route path="/menclothes/cityhoodie" component={CityHoodie} />
 						<Route path="/about" component={About} />
 						<Route path="/womenclothes" component={WomenClothes} />
 						<Route path="/accessories" component={Accessories} />
@@ -62,7 +64,7 @@ class App extends Component {
 						<Route path="/Login" component={LogIn} />
 						<Route path="/cart" component={Cart} />
 						<Route path="/menclothes" component={MenClothes} />
-						<Route path="/:apparelId" component={MenClothesId} />
+						{/* <Route path="/:apparelId" component={MenClothesId} /> */}
 					</Switch>
 				</div>
 			</Router>

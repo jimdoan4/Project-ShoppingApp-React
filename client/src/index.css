@@ -16,11 +16,11 @@ code {
 
 
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0; 
+  margin: 0;
   font-weight: 500;
   font-family: 'HelveticaNeue';
   background-color: #F3F6F8;
@@ -45,46 +45,85 @@ body {
 } */
 
 .home {
-   background-image: url('https://images.ctfassets.net/ew96z4wsnz93/3lVFApyuM8YCOuyAWEgSWQ/d86b94d30106a8c7a48d50f4d56ac0c9/20170630_FB-Metadata_1200x630_Homepage.jpg');
-  background-position: center;  
-  background-repeat: no-repeat; 
+  background-image: url('https://images.ctfassets.net/ew96z4wsnz93/3lVFApyuM8YCOuyAWEgSWQ/d86b94d30106a8c7a48d50f4d56ac0c9/20170630_FB-Metadata_1200x630_Homepage.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-
 }
 
+.homes {
+  background-image: url('https://cdn1.medicalnewstoday.com/content/images/articles/320/320590/woman-looking-at-phone-in-gym.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homee {
+  background-image: url('http://vkool.com/wp-content/uploads/2015/11/vitamin-a1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .pic {
-   background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-length-of-woman-lifting-weight-in-gym-royalty-free-image-1058449732-1547849286.jpg');
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-length-of-woman-lifting-weight-in-gym-royalty-free-image-1058449732-1547849286.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  background-image: url('https://media2.s-nbcnews.com/j/newscms/2017_36/2144546/170905-working-out-group-ac-512p_2b5db137b66bedb7f1d96c24b8ca1b8a.fit-760w.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .nutrition {
-     background-image: url('https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_960_720.jpg');
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_960_720.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 .gym {
-     background-image: url('https://cdn.newsapi.com.au/image/v1/29b133ac13b2dcd80f31916d1ec13837?width=1024');
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url('https://medfit.org/wp-content/uploads/2016/10/175558978.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   /* border-radius: 9rem; */
 }
+
 .forum {
-     background-image: url('https://images.ctfassets.net/ew96z4wsnz93/3lVFApyuM8YCOuyAWEgSWQ/d86b94d30106a8c7a48d50f4d56ac0c9/20170630_FB-Metadata_1200x630_Homepage.jpg');
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url('https://s3.amazonaws.com/coursestorm/live/media/ebe36e99967f11e88ea30e92b056efc0');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
+
 .women {
-     background-image: url('https://assets.parents.com/s3fs-public/styles/nfp_1080_portrait/public/fitbit_versa_lifestyle_female_outdoorrun.jpeg?k23jgEJVtM2wz0w2KeK8hcjAN3qiSshA');
-  background-position: center; 
-  background-repeat: no-repeat; 
+  background-image: url('https://assets.parents.com/s3fs-public/styles/nfp_1080_portrait/public/fitbit_versa_lifestyle_female_outdoorrun.jpeg?k23jgEJVtM2wz0w2KeK8hcjAN3qiSshA');
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
+
+.man {
+  background-image: url('https://www.mensjournal.com/wp-content/uploads/mf/_crop_mf0217_ot_fitness_01_1.jpg?w=1200&h=630&crop=1');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.accessories {
+  background-image: url('https://www.modells.com/on/demandware.static/-/Sites-Modells-Library/default/dwea3f1e8c/CategoryLanding/Fitness-and-Activities/Accessories/cat-landing-fitness-accessories-hero-012318.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .intro {
   height: 90vh;
 }
@@ -111,11 +150,11 @@ a {
   font-weight: 700;
   color: #373B44;
   position: relative;
-  
-  &:hover{ 
+
+  &:hover {
     opacity: 0.8;
   }
-  
+
   &:active {
     top: 1px;
   }
@@ -123,10 +162,10 @@ a {
 
 footer {
   padding: 1% 5%;
-  text-align:center;
+  text-align: center;
   background-color: #373B44;
   color: white;
-  
+
   a {
     color: #FE4B74;
     font-weight: 500;

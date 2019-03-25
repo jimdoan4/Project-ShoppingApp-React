@@ -11,7 +11,7 @@ export default class Forum extends Component {
             <div>
 			<Jumbotron fluid className='forum' style={{ height: '26rem' }}>
 				<Container>
-					<h1>Fluid jumbotron</h1>
+					<h1>Forum</h1>
 					<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 				</Container>
 			</Jumbotron>
