@@ -65,6 +65,13 @@ body {
   background-size: cover;
 }
 
+.homefont {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  /* background-color: white; */
+}
 
 .pic {
   background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-length-of-woman-lifting-weight-in-gym-royalty-free-image-1058449732-1547849286.jpg');
@@ -123,6 +130,12 @@ body {
   background-size: cover;
 }
 
+.cart {
+  background-image: url('https://images.lululemon.com/is/image/lululemon/NA_Feb18_CollectionsUpdate_M_SpringJackets?$full_width_feature-lg_2x$');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .intro {
   height: 90vh;
@@ -157,18 +170,5 @@ a {
 
   &:active {
     top: 1px;
-  }
-}
-
-footer {
-  padding: 1% 5%;
-  text-align: center;
-  background-color: #373B44;
-  color: white;
-
-  a {
-    color: #FE4B74;
-    font-weight: 500;
-    text-decoration: none;
   }
 }

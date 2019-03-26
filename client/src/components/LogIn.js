@@ -9,8 +9,8 @@ import { Card } from 'react-bootstrap';
 export default class LogIn extends Component {
 	render() {
 		return (
-			<div>
-				<Card style={{ width: '35rem', display: 'inline-block' }}>
+			<div className='container'>
+				<Card className='container' style={{ width: '33rem', height: '40rem', paddingTop: '35px', marginTop: '90px' }}>
 					<Form className="text-center" style={{ display: 'inline-block' }}>
 						<Form.Row>
 							<Form.Group as={Col} controlId="formGridEmail">
@@ -67,10 +67,10 @@ export default class LogIn extends Component {
 								<Form.Control />
 							</Form.Group>
 						</Form.Row>
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" type="submit" style= {{ marginRight: '140px', paddingLeft: '30px', paddingRight: '30px' }}>
 							Login
 						</Button>
-						<Button variant="primary" type="submit">
+						<Button variant="primary" type="submit" style= {{ paddingLeft: '18px', paddingRight: '18px' }}>
 							Register
 						</Button>
 					</Form>

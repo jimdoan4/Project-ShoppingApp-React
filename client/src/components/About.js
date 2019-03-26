@@ -12,7 +12,7 @@ export default class About extends Component {
 			<div>
 				<Jumbotron fluid className="about" style={{ height: '26rem' }}>
 					<Container>
-						<h1 style={{ color: 'black' }}>About EQUIS</h1>
+						<h1 style={{ color: 'black', fontWeight: 'bold' }}>About EQUIS</h1>
 						<p style={{ color: 'black' }}>This is a modified jumbotron that occupies.</p>
 					</Container>
 				</Jumbotron>

@@ -12,7 +12,7 @@ export default class Men extends Component {
 			<div>
 				<Jumbotron fluid className="pic" style={{ height: '26rem' }}>
 					<Container>
-						<h1>Nutrition</h1>
+						<h1 style={{ fontWeight: 'bold' }}>Nutrition</h1>
 						<p>This is a modified jumbotron that occupies the entire horizontal.</p>
 					</Container>
 				</Jumbotron>
