@@ -15,33 +15,43 @@ export default class Forum extends Component {
 					<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 				</Container>
 			</Jumbotron>
-            <div>
+            <div className='container'>
             <Table striped bordered hover size="sm">
   <thead>
-    <tr>
-     
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+    <tr>   
+      <th>Welcome to EQUIS Fitness Forums</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
     </tr>
     <tr>
-      <td>3</td>
-      <td colSpan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
+    </tr>
+     <tr>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
+    </tr>
+     <tr>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
+    </tr>
+     <tr>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
+    </tr>
+     <tr>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
+    </tr>
+     <tr>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
+    </tr>
+     <tr>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
+    </tr>
+     <tr>
+      <td style= {{ padding: '14px' }}>User Guidelines & General Information</td>
     </tr>
   </tbody>
 </Table>

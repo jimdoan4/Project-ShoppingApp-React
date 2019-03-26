@@ -16,8 +16,8 @@ export default class About extends Component {
 						<p style={{ color: 'black' }}>This is a modified jumbotron that occupies.</p>
 					</Container>
 				</Jumbotron>
-				<div>
-					<CardColumns style={{ width: '55rem' }}>
+				<div className="container">
+					<CardColumns className="container" style={{ width: '55rem' }}>
 						<Card>
 							<Card.Img
 								variant="top"
@@ -31,7 +31,6 @@ export default class About extends Component {
 								</Card.Text>
 							</Card.Body>
 						</Card>
-					
 					</CardColumns>
 				</div>
 			</div>

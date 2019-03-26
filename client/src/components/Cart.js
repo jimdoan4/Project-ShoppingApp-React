@@ -17,7 +17,7 @@ export default class Cart extends Component {
 				</Container>
 			</Jumbotron>
 <div>
-					<Card style={{ width: '34rem' }}>
+					<Card className='container' style={{ width: '34rem' }}>
 						<Card>
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
@@ -34,22 +34,22 @@ export default class Cart extends Component {
 								</Card.Title>
 								<Card.Title>$68.00</Card.Title>
 							</Card.Body>
-							<Form.Group controlId="exampleForm.ControlSelect1" style={{ width: '34rem' }}>
-								<Form.Label>Size</Form.Label>
-								<Form.Control as="select" style={{ width: '12rem' }}>
+							<Form.Group controlId="exampleForm.ControlSelect1" className='container' style={{ width: '34rem' }}>
+								<Form.Label className='container'>Size</Form.Label>
+								<Form.Control as="select" className='container' style={{ width: '12rem' }}>
 									<option>S</option>
 									<option>M</option>
 									<option>L</option>
 									<option>XL</option>
 								</Form.Control>
                             </Form.Group>      
-							<button
+							<button className='container'
 								style={{ width: '10rem', backgroundColor: 'red' }}
 								onClick={this.toggleApparelForm}
 							>
 								Add to Cart
 							</button>
-							<Card style={{ width: '33.8rem' }}>
+							<Card className='container' style={{ width: '31.9rem' }}>
 								<Card.Body>
 									<Card.Title>Reviews</Card.Title>
 									<Card.Text>

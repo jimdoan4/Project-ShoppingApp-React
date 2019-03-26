@@ -12,7 +12,7 @@ export default class Home extends Component {
 			<div>
 				<Jumbotron fluid className="home" style={{ height: '26rem' }}>
 					<Container>
-						<h1>EQUIS</h1>
+						<h1 style={{ fontWeight: 'bold', color: 'grey' }}>EQUIS</h1>
 						<p>Your MIND, BODY and SOUL</p>
 					</Container>
 				</Jumbotron>
@@ -29,14 +29,14 @@ export default class Home extends Component {
 				</h5>
 				<Jumbotron fluid className="homes" style={{ height: '26rem' }}>
 					<Container>
-						<h1>GYM</h1>
+						<h1 style={{ fontWeight: 'bold', color: 'grey' }}>GYM</h1>
 						<p>Your MIND, BODY and SOUL</p>
 					</Container>
 				</Jumbotron>
 
 				<Jumbotron fluid className="homee" style={{ height: '26rem' }}>
 					<Container>
-						<h1>NUTRITION</h1>
+						<h1 style={{ fontWeight: 'bold', color: 'grey' }}>NUTRITION</h1>
 						<p>Your MIND, BODY and SOUL</p>
 					</Container>
 				</Jumbotron>

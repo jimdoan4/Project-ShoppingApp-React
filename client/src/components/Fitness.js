@@ -16,7 +16,7 @@ export default class Fitness extends Component {
 				</Container>
 			</Jumbotron>
             <>
-  <Card style={{ width: '34rem' }}>
+  <Card className='container' style={{ width: '36rem' }}>
     <Card.Img variant="top" src="https://cdn-ami-drupal.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/media/1109-fit-for-life.jpg?itok=l9ipJgRE" style={{ width: '34rem' }}/>
     <Card.Body>
       <Card.Text>
@@ -26,7 +26,7 @@ export default class Fitness extends Component {
     </Card.Body>
   </Card>
   <br />
-  <Card style={{ width: '34rem' }}>
+  <Card className='container' style={{ width: '36rem' }}>
     <Card.Body>
       <Card.Text>
         Some quick example text to build on the card title and make up the bulk

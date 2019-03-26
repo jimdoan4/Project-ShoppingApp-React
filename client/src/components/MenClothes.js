@@ -75,9 +75,9 @@ export default class MenClothes extends Component {
 							<p>This is a modified jumbotron that occupies the entire horizontal.</p>
 						</Container>
 					</Jumbotron>
-					<div>
+					<div style={{ marginLeft: '30px', marginRight: '30px' }}>
 						<CardGroup>
-							<Card style={{ width: '18rem' }}>
+							<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 								<Link to={'/menclothes/cityhoodie'}>
 									<Card.Img
 										variant="top"
@@ -90,7 +90,7 @@ export default class MenClothes extends Component {
 									<Card.Title>$68.00</Card.Title>
 								</Card.Body>
 							</Card>
-							<Card style={{ width: '18rem' }}>
+							<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 								{/* <Link to={`/${apparel._id}`}> */}
 								<Card.Img
 									variant="top"
@@ -103,7 +103,7 @@ export default class MenClothes extends Component {
 									<Card.Title>$128.00</Card.Title>
 								</Card.Body>
 							</Card>
-							<Card style={{ width: '18rem' }}>
+							<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 								{/* <Link to={`/${apparel._id}`}> */}
 								<Card.Img
 									variant="top"
@@ -118,9 +118,9 @@ export default class MenClothes extends Component {
 							</Card>
 						</CardGroup>
 						{/* </div> */}
-						<div>
+						<div style={{ marginTop: '30px' }}>
 							<CardGroup>
-								<Card style={{ width: '18rem' }}>
+								<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
@@ -133,7 +133,7 @@ export default class MenClothes extends Component {
 										<Card.Title>$118.00</Card.Title>
 									</Card.Body>
 								</Card>
-								<Card style={{ width: '18rem' }}>
+								<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
@@ -146,7 +146,7 @@ export default class MenClothes extends Component {
 										<Card.Title>$88.00</Card.Title>
 									</Card.Body>
 								</Card>
-								<Card style={{ width: '18rem' }}>
+								<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
@@ -161,9 +161,9 @@ export default class MenClothes extends Component {
 								</Card>
 							</CardGroup>
 							{/* </div> */}
-							<div>
+							<div style={{ marginTop: '30px' }}>
 								<CardGroup className="menmargin">
-									<Card style={{ width: '18rem' }}>
+									<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
@@ -176,7 +176,7 @@ export default class MenClothes extends Component {
 											<Card.Title>$48.00</Card.Title>
 										</Card.Body>
 									</Card>
-									<Card style={{ width: '18rem' }}>
+									<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
@@ -189,7 +189,7 @@ export default class MenClothes extends Component {
 											<Card.Title>$28.00</Card.Title>
 										</Card.Body>
 									</Card>
-									<Card style={{ width: '18rem' }}>
+									<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
@@ -203,9 +203,9 @@ export default class MenClothes extends Component {
 										</Card.Body>
 									</Card>
 								</CardGroup>
-								<div>
+								<div style={{ marginTop: '30px', marginBottom: '30px' }}>
 									<CardGroup className="menmargin">
-										<Card style={{ width: '18rem' }}>
+										<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 											{/* <Link to={`/${apparel._id}`}> */}
 											<Card.Img
 												variant="top"
@@ -218,7 +218,7 @@ export default class MenClothes extends Component {
 												<Card.Title>$48.00</Card.Title>
 											</Card.Body>
 										</Card>
-										<Card style={{ width: '18rem' }}>
+										<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 											{/* <Link to={`/${apparel._id}`}> */}
 											<Card.Img
 												variant="top"
@@ -231,7 +231,7 @@ export default class MenClothes extends Component {
 												<Card.Title>$38.00</Card.Title>
 											</Card.Body>
 										</Card>
-										<Card style={{ width: '18rem' }}>
+										<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
 											{/* <Link to={`/${apparel._id}`}> */}
 											<Card.Img
 												variant="top"
