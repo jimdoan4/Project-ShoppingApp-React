@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import CityHoodie from './CityHoodie';
+// import CityHoodie from './CityHoodie';
 
 export default class MenClothes extends Component {
 	// state = {
@@ -67,7 +67,7 @@ export default class MenClothes extends Component {
 
 	render() {
 		return (
-			<Router>
+		
 				<div>
 					<Jumbotron fluid className="man" style={{ height: '26rem' }}>
 						<Container>
@@ -125,7 +125,7 @@ export default class MenClothes extends Component {
 									<Card.Img
 										variant="top"
 										src="https://images.lululemon.com/is/image/lululemon/LM4886S_0023_2?$product_tile-lg_2x$"
-										alt="top"
+										alt="top" href='/menclothes/cityhoodie'
 									/>
 									{/* </Link> */}
 									<Card.Body>
@@ -245,15 +245,15 @@ export default class MenClothes extends Component {
 											</Card.Body>
 										</Card>
 									</CardGroup>
-									<Switch>
+									{/* <Switch>
 										<Route path="/menclothes/cityhoodie" component={CityHoodie} />
-									</Switch>
+									</Switch> */}
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</Router>
+			
 		);
 	}
 }

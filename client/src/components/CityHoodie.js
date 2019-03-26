@@ -75,8 +75,8 @@ export default class CityHoodie extends Component {
 					</Container>
 				</Jumbotron>
 
-				<div>
-					<Card style={{ width: '34rem' }}>
+				<div className= 'container'>
+					<Card className= 'container' style={{ width: '34rem' }}>
 						<Card>
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
@@ -108,7 +108,7 @@ export default class CityHoodie extends Component {
 							>
 								Add to Cart
 							</button>
-							<Card style={{ width: '33.8rem' }}>
+							<Card style={{ width: '31.9rem' }}>
 								<Card.Body>
 									<Card.Title>Reviews</Card.Title>
 									<Card.Text>

@@ -62,7 +62,7 @@ export default class Home extends Component {
 						<p>Your MIND, BODY and SOUL</p>
 					</Container>
 				</Jumbotron>
-				<div style={{ marginLeft: '20px', marginRight: '20px', marginBottom: '30px', marginTop: '45px' }}>
+				<div style={{ marginLeft: '16px', marginRight: '16px', marginBottom: '30px', marginTop: '45px' }}>
 					<CardGroup>
 						<Card style={{ width: '23rem', marginLeft: '14px', marginRight: '14px' }}>
 							<Link to={'/menclothes/cityhoodie'}>
