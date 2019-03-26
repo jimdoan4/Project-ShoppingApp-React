@@ -2,19 +2,15 @@ const express = require('express');
 const logger = require('morgan');
 // const bodyParser = require('body-parser');
 const app = express();
-const routes = require('./routes/index.js');
+const userController = require('./controllers/userController')
+
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(`${__dirname}/client/build`));
-// app.use(
-// 	bodyParser.urlencoded({
-// 		extended: false
-// 	})
-// );
 
-app.use('/api/v1', routes);
+app.use('/api/v1', userController);
 app.get('/*', (req, res) => {
 	res.sendFile(`${__dirname}/client/build/index.html`);
 });

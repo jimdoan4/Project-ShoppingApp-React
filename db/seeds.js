@@ -1,21 +1,60 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
-// const User = require('../models/User');
+const User = require('../models/User');
+const Review = require('../models/Review');
 const Apparel = require('../models/Apparel');
 
-// Men Clothing/Shirt
-Apparel.deleteMany().then(() => {
-	const ventShirt = new Apparel({
-		name: 'Metal Vent Tech Short Sleeve V',
-		size: 4,
-		image: 'https://images.lululemon.com/is/image/lululemon/LM3AT8S_036773_1?$image_carousel-lg_2x$',
-		price: 68,
-		description:
-			'Seamless construction, anti-stink technology, and strategic venting make this shirt training-session ready.'
-	});
-	return ventShirt.save();
+
+const shirt = new Review({
+	title: "This is the best shirt I ever bought!",
+	description: "This shirt if worth the price"
 });
+
+const cityHoodie = new Apparel({
+	name: "City Sweat Pullover Hoodie",
+	size: "Small",
+	price: 68.00,
+	description: "Cozy meets technical in this breathable, sweat-wicking pullover hoodie that keeps your muscles warm before and after training.",
+	image: "https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$",
+	reviews: [shirt]
+});
+
+const jim = new User({
+	UserName: "jimdoan4",
+	password: "hello",
+});
+
+User.remove({})
+.then(() => Apparel.remove())
+.then(() => cityHoodie.save())
+  .then(() => jim.save())
+  .then(() => console.log("Successful Save"))
+  .then(() => mongoose.connection.close());
+
+
+
+
+
+
+
+
+
+
+
+// Apparel.deleteMany().then(() => {
+// 	const ventShirt = new Apparel({
+// 		name: 'Metal Vent Tech Short Sleeve V',
+// 		size: 4,
+// 		image: 'https://images.lululemon.com/is/image/lululemon/LM3AT8S_036773_1?$image_carousel-lg_2x$',
+// 		price: 68,
+// 		description:
+// 			'Seamless construction, anti-stink technology, and strategic venting make this shirt training-session ready.'
+// 	});
+// 	return ventShirt.save();
+// });
+
+
 // const basicShirt = new Apparel({
 // 	name: '5 Year Basic Tee ELMT',
 // 	size: 4,

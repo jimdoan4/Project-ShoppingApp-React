@@ -1,12 +1,11 @@
-const mongoose = require('../db/connections.js');
-const Schema = mongoose.Schema;
+const { ApparelSchema } = require("../db/schema.js");
+const mongoose = require("../db/connections.js");
 
-const Apparel = new Schema({
-	name: String,
-	size: Number,
-	image: String,
-	price: Number,
-	description: String
-});
+module.exports = mongoose.model("Apparel", ApparelSchema);
 
-module.exports = mongoose.model('Apparel', Apparel);
+
+
+
+
+
+
