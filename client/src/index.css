@@ -26,24 +26,6 @@ body {
   background-color: #F3F6F8;
 }
 
-/* .section {
-  width: 100%;
-  padding: 0 7%;
-  display: table;
-  margin: 0;
-  max-width: none;
-  background-color: #373B44;
-  height: 80vh;
-  background-image: url('https://s3.amazonaws.com/coursestorm/live/media/ebe36e99967f11e88ea30e92b056efc0');
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover;
-  }
-
-.sections {
-    background-color: black;
-} */
-
 .home {
   background-image: url('https://images.ctfassets.net/ew96z4wsnz93/3lVFApyuM8YCOuyAWEgSWQ/d86b94d30106a8c7a48d50f4d56ac0c9/20170630_FB-Metadata_1200x630_Homepage.jpg');
   background-position: center;

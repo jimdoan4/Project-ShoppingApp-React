@@ -6,7 +6,6 @@ import { Jumbotron } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import axios from 'axios';
 // import { Redirect } from 'react-router-dom';
-
 // import { Link } from 'react-router-dom';
 
 export default class CityHoodie extends Component {
