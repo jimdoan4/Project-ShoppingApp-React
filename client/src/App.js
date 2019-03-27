@@ -7,7 +7,6 @@ import MenClothes from './components/MenClothes';
 import Home from './components/Home';
 import About from './components/About';
 import WomenClothes from './components/WomenClothes';
-// import MenClothesId from './components/MenClothesId';
 import Accessories from './components/Accessories';
 import Fitness from './components/Fitness';
 import Nutrition from './components/Nutrition';
@@ -66,7 +65,7 @@ class App extends Component {
 						<Route path="/gym" component={Gym} />
 						<Route path="/forum" component={Forum} />
 						<Route path="/cart" component={Cart} />
-						<Route exact path="/apparel/:apparelId" component={UserPage} />
+						<Route path="/apparel" component={UserPage} />
 					</Switch>
 				</div>
 			</Router>
