@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-// import { Card } from 'react-bootstrap';
-// import { CardGroup } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
-
-// import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
@@ -32,13 +28,11 @@ export default class Home extends Component {
 							
 						</Card>
 						<Card style={{ width: '18rem', marginTop: '14px', marginLeft: '30px', marginRight: '30px' }}>
-							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
 								src="https://images.lululemon.com/is/image/lululemon/LW1BV0S_037681_2?$product_tile-md_2x$"
 								alt="top"
 							/>
-							{/* </Link> */}
 					
 						</Card>
 					</CardGroup>
@@ -78,39 +72,33 @@ export default class Home extends Component {
 							</Card.Body>
 						</Card>
 						<Card style={{ width: '23rem', marginLeft: '30px', marginRight: '30px' }}>
-							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
 								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw892b22b7/hi-res/253034_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 								alt="top"
 							/>
-							{/* </Link> */}
 							<Card.Body>
 								<Card.Title>City Sweat Zip Hoodie</Card.Title>
 								<Card.Title>$128.00</Card.Title>
 							</Card.Body>
 						</Card>
 						<Card style={{ width: '23rem', marginLeft: '30px', marginRight: '30px' }}>
-							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
 								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw6aabec55/hi-res/520810_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 								alt="top"
 							/>
-							{/* </Link> */}
 							<Card.Body>
 								<Card.Title>Accedo Vest Hoodie</Card.Title>
 								<Card.Title>$78.00</Card.Title>
 							</Card.Body>
 						</Card>
 						<Card style={{ width: '23rem', marginLeft: '14px', marginRight: '14px' }}>
-							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
 								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dwd8ef5fc3/hi-res/386576_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 								alt="top"
 							/>
-							{/* </Link> */}
 							<Card.Body>
 								<Card.Title>Accedo Vest Hoodie</Card.Title>
 								<Card.Title>$78.00</Card.Title>
