@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
-import { CardGroup } from 'react-bootstrap';
+
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
@@ -22,7 +22,7 @@ export default class CityHoodie extends Component {
 	};
 
 	componentDidMount = () => {
-		axios.get('/api/v1/apparels').then((res) => {
+		axios.get('/api/apparels').then((res) => {
 			this.setState({ apparels: res.data });
 		});
 	};
@@ -41,7 +41,7 @@ export default class CityHoodie extends Component {
 	createApparel = (e) => {
 		e.preventDefault();
 		axios
-			.post('/api/v1/apparels', {
+			.post('/api/apparels', {
 				name: this.state.newApparel.name,
 				description: this.state.newApparel.description,
 				image: this.state.newApparel.image,
@@ -75,8 +75,8 @@ export default class CityHoodie extends Component {
 					</Container>
 				</Jumbotron>
 
-				<div className= 'container'>
-					<Card className= 'container' style={{ width: '34rem' }}>
+				<div className="container">
+					<Card className="container" style={{ width: '34rem' }}>
 						<Card>
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
@@ -101,26 +101,20 @@ export default class CityHoodie extends Component {
 									<option>L</option>
 									<option>XL</option>
 								</Form.Control>
-                            </Form.Group>      
-							<button
-								style={{ width: '10rem', backgroundColor: 'red' }}
-								onClick={this.toggleApparelForm}
-							>
+							</Form.Group>
+							<button style={{ width: '10rem', backgroundColor: 'red' }} onClick={this.toggleApparelForm}>
 								Add to Cart
 							</button>
 							<Card style={{ width: '31.9rem' }}>
 								<Card.Body>
 									<Card.Title>Reviews</Card.Title>
-									<Card.Text>
-										This is where you write your reviews.
-									</Card.Text>
+									<Card.Text>This is where you write your reviews.</Card.Text>
 								</Card.Body>
 							</Card>
 						</Card>
 					</Card>
 				</div>
-                </div>
-                
+			</div>
 		);
 	}
 }

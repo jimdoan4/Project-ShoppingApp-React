@@ -1,63 +1,75 @@
-# // const express = require('express');
-# // const router = express.Router();
-# // const users = express.Router();
-# // const cors = require('cors');
-# // const jwt = require('jsonwebtoken');
-# // const bcrypt = require('bcrypt');
+const express = require('express');
+const Apparel = require('../models/Apparel.js');
+const Review = require('../models/Review.js');
+const router = express.Router();
 
-# const Apparel = require('../models/Apparel.js');
+router.get('/', (req, res) => {
+	Apparel.find()
+		.then((apparels) => {
+			res.json(apparels);
+		})
+		.catch((err) => console.log(err));
+});
 
-# const apparelController = {
-# 	index: async (req, res) => {
-# 		try {
-# 			const apparels = await Apparel.find({});
-# 			res.json(apparels);
-# 		} catch (err) {
-# 			console.log(err);
-# 		}
-# 	},
-# 	show: async (req, res) => {
-# 		try {
-# 			const apparelId = req.params.id;
-# 			const apparels = await Apparel.findById(apparelId);
-# 			res.json(apparels);
-# 		} catch (err) {
-# 			console.log(err);
-# 			res.json(err);
-# 		}
-# 	},
-# 	create: async (req, res) => {
-# 		try {
-# 			const newApparel = req.body;
-# 			const savedApparel = await Apparel.create(newApparel);
-# 			res.json(savedApparel);
-# 		} catch (err) {
-# 			console.log(err);
-# 			res.status(500).json(err);
-# 		}
-# 	},
-# 	update: async (req, res) => {
-# 		try {
-# 			const apparelId = req.params.id;
-# 			const updatedApparel = req.body;
-# 			const savedApparel = await Apparel.findByIdAndUpdate(apparelId, updatedApparel);
-# 			res.json(savedApparel);
-# 		} catch (err) {
-# 			console.log(err);
-# 			res.status(500).json(err);
-# 		}
-# 	},
-# 	delete: async (req, res) => {
-# 		console.log('DELETE');
-# 		try {
-# 			const apparelId = req.params.id;
-# 			const deletedApparel = await Apparel.findByIdAndRemove(apparelId);
-# 			res.json(deletedApparel);
-# 		} catch (err) {
-# 			console.log(err);
-# 			res.status(500).json(err);
-# 		}
-# 	}
-# };
+router.post('/', (req, res) => {
+	const newApparel = new Apparel(req.body.apparel);
+	newApparel
+		.save()
+		.then((apparel) => {
+			res.json(apparel);
+		})
+		.catch((err) => console.log(err));
+});
 
-# module.exports = apparelController;
+router.get('/:apparelId', (req, res) => {
+	Apparel.findById(req.params.apparelId)
+		.then((apparel) => {
+			user.reviews = apparel.reviews.reverse();
+			res.json(apparel);
+		})
+		.catch((err) => console.log(err));
+});
+
+router.post('/:apparelId/reviews', (req, res) => {
+	Apparel.findById(req.params.apparelId).then((apparel) => {
+		const newReview = new Review({});
+		apparel.reviews.push(newReview);
+
+		apparel.save().then((apparel) => {
+			res.json(newReview);
+		});
+	});
+});
+
+router.delete('/:apparelId/reviews/:reviewId', (req, res) => {
+	Apparel.findById(req.params.apparelId).then((apparel) => {
+		const filteredReview = apparel.reviews.filter((review) => review._id.toString() !== req.params.reviewId);
+
+		apparel.reviews = filteredReview;
+
+		apparel.save().then((apparel) => {
+			apparel.reviews = apparel.reviews.reverse();
+			res.json(apparel.reviews);
+		});
+	});
+});
+
+router.patch('/:apparelId/reviews/:reviewId', (req, res) => {
+	Apparel.findById(req.params.apparelId).then((apparel) => {
+		const update = req.body.review;
+		const review = apparel.reviews.id(req.params.reviewId);
+		if (update.title) {
+			review.title = update.title;
+		}
+		if (update.description) {
+			review.description = update.description;
+		}
+
+		apparel.save().then((apparel) => {
+			apparel.reviews = apparel.reviews.reverse();
+			res.json(apparel);
+		});
+	});
+});
+
+module.exports = router;

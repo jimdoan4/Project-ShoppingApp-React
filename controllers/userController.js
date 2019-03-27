@@ -1,92 +1,79 @@
-const express = require('express');
-const User = require('../models/User.js');
-const Review = require('../models/Review.js');
-const router = express.Router();
+// const express = require('express');
+// const User = require('../models/User.js');
+// // const Apparel = require('../models/Apparel.js');
+// const router = express.Router();
 
+// router.get('/', (req, res) => {
+// 	User.find()
+// 		.then((users) => {
+// 			res.json(users);
+// 		})
+// 		.catch((err) => console.log(err));
+// });
 
-router.get("/", (req, res) => {
-  User.find()
-    .then(users => {
-      res.json(users);
-    })
-    .catch(err => console.log(err));
-});
+// router.post('/', (req, res) => {
+// 	const newUser = new User(req.body.user);
 
-router.post("/", (req, res) => {
-  const newUser = new User(req.body.user);
+// 	newUser
+// 		.save()
+// 		.then((user) => {
+// 			res.json(user);
+// 		})
+// 		.catch((err) => console.log(err));
+// });
 
-  newUser
-    .save()
-    .then(user => {
-      res.json(user);
-    })
-    .catch(err => console.log(err));
-});
+// router.get('/:userId', (req, res) => {
+// 	User.findById(req.params.userId)
+// 		.then((user) => {
+// 			// user.reviews = user.reviews.reverse();
+// 			res.json(user);
+// 		})
+// 		.catch((err) => console.log(err));
+// });
 
-router.get("/:userId", (req, res) => {
-  User.findById(req.params.userId)
-    .then(user => {
-      user.reviews = user.reviews.reverse();
-      res.json(user);
-    })
-    .catch(err => console.log(err));
-});
+// router.post('/:userId/', (req, res) => {
+// 	User.findById(req.params.userId).then((user) => {
+// 		// const newReview = new Review({});
+// 		// user.reviews.push(newReview);
 
-router.post("/:userId/reviews", (req, res) => {
-  User.findById(req.params.userId).then(user => {
-    const newReview = new Review({});
-    user.reviews.push(newReview);
+// 		user.save().then((user) => {
+// 			res.json(user);
+// 		});
+// 	});
+// });
 
-    user.save().then(user => {
-      res.json(newReview);
-    });
-  });
-});
+// router.delete('/:userId/', (req, res) => {
+// 	User.findByIdAndDelete(req.params.userId).then((user) => {
+// 		// const filteredReview = user.reviews.filter((review) => review._id.toString() !== req.params.Id);
 
-router.delete("/:userId/reviews/:reviewId", (req, res) => {
-  User.findById(req.params.userId).then(user => {
-    const filteredReview = user.reviews.filter(
-      review => review._id.toString() !== req.params.reviewId
-    );
+// 		// user.reviews = filteredReview;
 
-    user.reviews = filteredReview;
+// 		// user.save().then((user) => {
+// 		// 	user = user.reverse();
+// 		res.json(user);
+// 	});
+// });
 
-    user.save().then(user => {
-      user.reviews = user.reviews.reverse();
-      res.json(user.reviews);
-    });
-  });
-});
+// router.patch('/:userId', (req, res) => {
+// 	User.findByIdAndUpdate(req.params.userId, req.body, {
+// 		new: true
+// 	}).then((user) => {
+// 		// const update = req.body.review;
+// 		// const review = user.reviews.id(req.params.reviewId);
+// 		// if (update.title) {
+// 		// 	review.title = update.title;
+// 		// }
+// 		// if (update.description) {
+// 		// 	review.description = update.description;
+// 		// }
 
-router.patch("/:userId/reviews/:reviewId", (req, res) => {
-  User.findById(req.params.userId).then(user => {
-    const update = req.body.review;
-    const review = user.reviews.id(req.params.reviewId);
-    if (update.title) {
-      review.title = update.title;
-    }
-    if (update.description) {
-      review.description = update.description;
-    }
+// 		// user.save().then((user) => {
+// 		// 	user.reviews = user.reviews.reverse();
+// 		res.json(user);
+// 	});
+// });
 
-    user.save().then(user => {
-      user.reviews = user.reviews.reverse();
-      res.json(user);
-    });
-  });
-});
-
-module.exports = router;
-
-
-
-
-
-
-
-
-
-
+// module.exports = router;
 
 // const userController = {
 // 	index: async (req, res) => {
