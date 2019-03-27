@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import axios from "axios";
-import { Container } from 'react-bootstrap';
-import { Jumbotron } from 'react-bootstrap';
+// import { Container } from 'react-bootstrap';
+// import { Jumbotron } from 'react-bootstrap';
 
 class UserPage extends Component {
   	state = {

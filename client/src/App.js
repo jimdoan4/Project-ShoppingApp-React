@@ -15,7 +15,7 @@ import LogIn from './components/LogIn';
 import Gym from './components/Gym';
 import Forum from './components/Forum';
 import Cart from './components/Cart';
-import CityHoodie from './components/CityHoodie';
+// import CityHoodie from './components/CityHoodie';
 import Register from './components/Register';
 import UserPage from './components/UserPage';
 // import Users from './components/Users.js'
@@ -53,12 +53,11 @@ class App extends Component {
 					</Navbar>
 
 					<Switch>
-						{/* <Route exact path="/shopping" component={Shop} /> */}
 						<Route exact path="/menclothes" component={MenClothes} />
 						<Route exact path="/" component={Home} />
 						<Route exact path="/login" component={LogIn} />
 						<Route exact path="/register" component={Register} />
-						<Route exact path="/menclothes/cityhoodie" component={CityHoodie} />
+						{/* <Route exact path="/menclothes/cityhoodie" component={CityHoodie} /> */}
 						<Route path="/about" component={About} />
 						<Route path="/womenclothes" component={WomenClothes} />
 						<Route path="/accessories" component={Accessories} />

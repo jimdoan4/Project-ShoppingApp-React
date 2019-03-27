@@ -2,9 +2,9 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
-import { Form } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
+// import { Form } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
+// import { Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
