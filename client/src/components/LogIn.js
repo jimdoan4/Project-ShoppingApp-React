@@ -45,12 +45,12 @@ class LogIn extends Component {
 	// 	this.createUser();
 	// };
 	render() {
-		if (this.state.redirectToHome === true) {
-			return <Redirect to={`/user/${this.state.createdUser._id}`} />;
-		}
+		// if (this.state.redirectToHome === true) {
+		// 	return <Redirect to={`/user/${this.state.createdUser._id}`} />;
+		// }
 		return (
 			<div>
-				<h2>Select a user</h2>
+				{/* <h2>Select a user</h2>
 				{this.state.users.map((user) => {
 					return (
 						<div>
@@ -59,7 +59,7 @@ class LogIn extends Component {
 							</Link>
 						</div>
 					);
-				})}
+				})} */}
 				<div className="container">
 					<Card
 						className="container"
@@ -73,7 +73,7 @@ class LogIn extends Component {
 										type="text"
 										name="userName"
 										onChange={this.handleChange}
-										value={this.state.user.userName}
+										// value={this.state.user.userName}
 										placeholder="Enter Username"
 									/>
 								</Form.Group>
@@ -85,7 +85,7 @@ class LogIn extends Component {
 										type="password"
 										name="password"
 										onChange={this.handleChange}
-										value={this.state.user.password}
+										// value={this.state.user.password}
 										placeholder="Enter Password"
 									/>
 								</Form.Group>

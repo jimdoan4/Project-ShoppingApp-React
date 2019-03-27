@@ -35,7 +35,7 @@ export default class Home extends Component {
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM3BC2S_026914_2?$product_tile-lg_2x$"
+								src="https://images.lululemon.com/is/image/lululemon/LW1BV0S_037681_2?$product_tile-md_2x$"
 								alt="top"
 							/>
 							{/* </Link> */}
@@ -68,7 +68,7 @@ export default class Home extends Component {
 							<Link to={'/menclothes/cityhoodie'}>
 								<Card.Img
 									variant="top"
-									src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+									src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw65b2a723/hi-res/217908_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 									alt="top"
 								/>
 							</Link>
@@ -81,7 +81,7 @@ export default class Home extends Component {
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM3BC2S_026914_2?$product_tile-lg_2x$"
+								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw892b22b7/hi-res/253034_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 								alt="top"
 							/>
 							{/* </Link> */}
@@ -94,7 +94,7 @@ export default class Home extends Component {
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM4891S_038271_2?$product_tile-lg_2x$"
+								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw6aabec55/hi-res/520810_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 								alt="top"
 							/>
 							{/* </Link> */}
@@ -107,7 +107,7 @@ export default class Home extends Component {
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM4891S_038271_2?$product_tile-lg_2x$"
+								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw892b22b7/hi-res/253034_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 								alt="top"
 							/>
 							{/* </Link> */}
