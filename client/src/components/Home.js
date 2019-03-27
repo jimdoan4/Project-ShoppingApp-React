@@ -57,7 +57,7 @@ export default class Home extends Component {
 				</h5>
 				<div>
 				<Jumbotron fluid className="homes" style={{ height: '26rem', marginTop: '90px' }}>
-					<Container>
+					<Container style={{ width: '100%' }}>
 						<h1 style={{ fontWeight: 'bold', color: 'grey' }}>GYM</h1>
 						<p>Your MIND, BODY and SOUL</p>
 					</Container>

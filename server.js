@@ -1,15 +1,14 @@
 const express = require('express');
 const logger = require('morgan');
 const app = express();
-// const userController = require('./controllers/userController');
-const apparelController = require('./controllers/apparelController');
+const routes = require('./routes/index')
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(`${__dirname}/client/build`));
 
-app.use('/api/apparels', apparelController);
+app.use('/api/apparels', routes);
 app.get('/', (req, res) => {
 	res.sendFile(`${__dirname}/client/build/index.html`);
 });

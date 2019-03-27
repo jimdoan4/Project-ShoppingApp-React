@@ -1,7 +1,7 @@
-// const { UserSchema } = require('../db/schema.js');
-// const mongoose = require('../db/connections.js');
+const { UserSchema } = require('../db/schema.js');
+const mongoose = require('../db/connections.js');
 
-// module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
 
 // const mongoose = require('../db/connections.js');
 // const Schema = mongoose.Schema;

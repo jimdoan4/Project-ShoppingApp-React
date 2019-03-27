@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import  { Link } from 'react-router-dom'; 
 import { Nav } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
@@ -14,9 +15,8 @@ import LogIn from './components/LogIn';
 import Gym from './components/Gym';
 import Forum from './components/Forum';
 import Cart from './components/Cart';
-// import CityHoodie from './components/CityHoodie';
 import Register from './components/Register';
-import UserPage from './components/UserPage';
+// import ApparelItem from './components/ApparelItem';
 // import Users from './components/Users.js'
 
 class App extends Component {
@@ -29,43 +29,58 @@ class App extends Component {
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav">
 							<Nav className="mr-auto">
-								<Nav.Link href="/about">About</Nav.Link>
-								<Nav.Link href="/fitness">Fitness</Nav.Link>
-								<Nav.Link href="/nutrition">Nutrition</Nav.Link>
+							<Nav.Link>
+								<Link to="/about" style= {{color: 'white '}}>About</Link>
+								</Nav.Link>
+								<Nav.Link>
+								<Link to="/fitness" style= {{color: 'white '}}>Fitness</Link>
+								</Nav.Link>
+								<Nav.Link>
+								<Link to="/nutrition" style= {{color: 'white '}}>Nutrition</Link>
+								</Nav.Link>
 								{/* <Nav.Link href="/shopping">Example</Nav.Link> */}
-								<Nav.Link href="/gym">Gym</Nav.Link>
-								<Nav.Link href="/forum">Forum</Nav.Link>
+								<Nav.Link>
+								<Link to="/gym" style= {{color: 'white '}}>Gym</Link>
+								</Nav.Link>
+								<Nav.Link>
+								<Link to="/forum" style= {{ color: 'white' }}>Forum</Link>
+								</Nav.Link>
 								<NavDropdown title="Shop" id="collasible-nav-dropdown">
-									<NavDropdown.Item href="/womenclothes">Women Apparel</NavDropdown.Item>
-									<NavDropdown.Item href="/menclothes">Men Apparel</NavDropdown.Item>
-									<NavDropdown.Item href="/accessories">Accessories</NavDropdown.Item>
+								<NavDropdown.Item>
+									<Link to="/womenclothes" style= {{color: 'black '}}>Women Apparel</Link>
+									</NavDropdown.Item>
+									<NavDropdown.Item>
+									<Link to="/apparels" style= {{color: 'black '}}>Men Apparel</Link>
+									</NavDropdown.Item>
+									<NavDropdown.Item>
+									<Link to="/accessories" style= {{color: 'black '}}>Accessories</Link>
+									</NavDropdown.Item>
 									<NavDropdown.Divider />
 								</NavDropdown>
 							</Nav>
-							<Nav>
-								<Nav.Link href="/login">Log In</Nav.Link>
-							</Nav>
-							<Nav>
-								<Nav.Link href="/cart">My Cart</Nav.Link>
-							</Nav>
+							<Nav.Link>
+								<Link to="/login" style= {{color: 'white '}}>Log In</Link>
+							</Nav.Link>
+							<Nav.Link>
+								<Link to="/cart" style= {{color: 'white '}}>My Cart</Link>
+							</Nav.Link>
 						</Navbar.Collapse>
 					</Navbar>
 
 					<Switch>
-						<Route exact path="/menclothes" component={MenClothes} />
 						<Route exact path="/" component={Home} />
+						<Route exact path="/apparels" component={MenClothes} />
+						{/* <Route exact path="/:apparelId" component={ApparelItem} /> */}
 						<Route exact path="/login" component={LogIn} />
 						<Route exact path="/register" component={Register} />
-						{/* <Route exact path="/menclothes/cityhoodie" component={CityHoodie} /> */}
-						<Route path="/about" component={About} />
-						<Route path="/womenclothes" component={WomenClothes} />
-						<Route path="/accessories" component={Accessories} />
-						<Route path="/fitness" component={Fitness} />
-						<Route path="/nutrition" component={Nutrition} />
-						<Route path="/gym" component={Gym} />
-						<Route path="/forum" component={Forum} />
-						<Route path="/cart" component={Cart} />
-						<Route path="/apparel" component={UserPage} />
+						<Route exact path="/about" component={About} />
+						<Route exact path="/womenclothes" component={WomenClothes} />
+						<Route exact path="/accessories" component={Accessories} />
+						<Route exact path="/fitness" component={Fitness} />
+						<Route exact path="/nutrition" component={Nutrition} />
+						<Route exact path="/gym" component={Gym} />
+						<Route exact path="/forum" component={Forum} />
+						<Route exact path="/cart" component={Cart} />
 					</Switch>
 				</div>
 			</Router>
@@ -74,3 +89,5 @@ class App extends Component {
 }
 
 export default App;
+
+
