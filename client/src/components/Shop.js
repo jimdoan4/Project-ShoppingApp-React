@@ -7,7 +7,6 @@ import { Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
-// import { CardRow } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
 
 class Shop extends Component {
@@ -53,25 +52,6 @@ class Shop extends Component {
 	};
 
 	render() {
-		// 							</Card.Text>
-		// 							<button onClick={this.deleteApparel}>Delete</button>
-		// 							<button onClick={this.toggleEditForm}>Edit</button>
-		// 						</Card.Body>
-		// 					</Card>
-		// 					{/*
-		// 					<div>
-		// 						<h1>Single Item</h1>
-		// 						<div>Name: {this.state.apparel.name}</div>
-		// 						<div>Description: {this.state.apparel.description}</div>
-		// 						<button onClick={this.deleteApparel}>Delete</button>
-		// 						<button onClick={this.toggleEditForm}>Edit</button>
-		// 					</div> */}
-		// 				</div>
-		// 			</Card>
-		// 		);
-		// 	}
-		// }
-
 		if (this.state.redirectToHome === true) {
 			return <Redirect to={`/apparel/${this.state.createdApparel._id}`} />;
 		}
@@ -92,11 +72,6 @@ class Shop extends Component {
 								marginLeft: '30px',
 								marginRight: '30px',
 								marginBottom: '30px',
-								// display: 'flex',
-								// width: '300px',
-								// flexWrap: 'wrap',
-								// justifyContent: 'space-around',
-								// alignItems: 'flex-start'
 							}}
 						>
 							<CardGroup className="row">
@@ -113,9 +88,9 @@ class Shop extends Component {
 										<Card.Img variant="top" src={apparel.image} />
 									</Link>
 									<Card.Body>
-										<Link to="/apparelid">
+										{/* <Link to="/apparelid"> */}
 											<Card.Title>{apparel.name}</Card.Title>
-										</Link>
+										{/* </Link> */}
 										<Card.Text>${apparel.price}.00</Card.Text>
 									</Card.Body>
 								</Card>

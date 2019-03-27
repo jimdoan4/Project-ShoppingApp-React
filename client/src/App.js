@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
-import Shop from './components/Shop';
 import Home from './components/Home';
 import About from './components/About';
+import Shop from './components/Shop';
 import WomenClothes from './components/WomenClothes';
 import MenClothes from './components/MenClothes';
 // import MenClothesId from './components/MenClothesId';
@@ -55,7 +55,7 @@ class App extends Component {
 
 					<Switch>
 						<Route exact path="/shopping" component={Shop} />
-						<Route path="/" component={Home} />
+						<Route exact path="/" component={Home} />
 						<Route exact path="/login" component={LogIn} />
 						<Route exact path="/register" component={Register} />
 						<Route exact path="/menclothes/cityhoodie" component={CityHoodie} />
@@ -68,7 +68,7 @@ class App extends Component {
 						<Route path="/forum" component={Forum} />
 						<Route path="/cart" component={Cart} />
 						<Route exact path="/menclothes" component={MenClothes} />
-						<Route exact path="/apparelid" component={UserPage} />
+						<Route exact path="/apparel/:apparelId" component={UserPage} />
 					</Switch>
 				</div>
 			</Router>

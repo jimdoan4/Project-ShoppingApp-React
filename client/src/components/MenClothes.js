@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-
 import { Card } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
-
 import { Link } from 'react-router-dom';
 // import CityHoodie from './CityHoodie';
 
