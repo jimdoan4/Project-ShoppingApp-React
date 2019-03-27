@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import ApparelItem from './ApparelItem'
 import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
@@ -15,10 +14,9 @@ class MenClothes extends Component {
 			size: '',
 			image: '',
 			price: '',
-			description: ''
+			description: '',
 		},
-		isCreatureFormDisplayed: false,
-		apparelId: this.props.match.params.apparelId,
+		displayApparelForm: false,
 	};
 
 	componentDidMount = () => {
@@ -52,16 +50,11 @@ class MenClothes extends Component {
 						price: '',
 						description: ''
 					},
-					isApparelFormDisplayed: false,
+					displayApparelForm: false,
 					apparels: apparelsList
 				});
 			});
 	};
-	// 	axios.post('/api/apparels', { apparel: this.state.apparel }).then((res) => {
-	// 		console.log(res.data);
-	// 		this.setState({ redirectToHome: true, createdApparel: res.data });
-	// 	});
-	// };
 
 	handleChange = (e) => {
 		const newApparel = { ...this.state.apparel };
@@ -69,15 +62,12 @@ class MenClothes extends Component {
 		this.setState({ apparel: newApparel });
 	};
 
-	// handleSignUp = (e) => {
-	// 	e.preventDefault();
-	// 	this.createApparel();
-	// };
+
 
 	render() {
-		if (this.state.redirectToHome === true) {
-			return <Redirect to={`/apparel/${this.state.createdApparel._id}`} />;
-		}
+		// if (this.state.redirectToHome === true) {
+		// 	return <Redirect to={`/apparel/${this.state.createdApparel._id}`} />;
+		// }
 		return (
 			<div>
 				<Jumbotron fluid className="man" style={{ height: '26rem' }}>
@@ -99,7 +89,7 @@ class MenClothes extends Component {
 							>
 								<CardGroup className="row">
 									<Card
-										key={this.state.apparel._id}
+										key={apparel._id}
 										className="row"
 										style={{
 											width: '18rem',
@@ -107,13 +97,11 @@ class MenClothes extends Component {
 											marginRight: '30px'
 										}}
 									>
-										<Link to={`/apparel/${apparel._id}`} key={apparel._id}>
+										<Link to= {`/${apparel._id}`}>
 											<Card.Img variant="top" src={apparel.image} />
 										</Link>
 										<Card.Body>
-											{/* <Link to="/apparelid"> */}
 											<Card.Title style={{ color: 'black' }}>{apparel.name}</Card.Title>
-											{/* </Link> */}
 											<Card.Text style={{ color: 'black' }}>${apparel.price}.00</Card.Text>
 										</Card.Body>
 									</Card>

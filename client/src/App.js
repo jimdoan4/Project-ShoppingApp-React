@@ -16,7 +16,7 @@ import Gym from './components/Gym';
 import Forum from './components/Forum';
 import Cart from './components/Cart';
 import Register from './components/Register';
-// import ApparelItem from './components/ApparelItem';
+import FullItemPage from './components/FullItemPage';
 // import Users from './components/Users.js'
 
 class App extends Component {
@@ -70,7 +70,6 @@ class App extends Component {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/apparels" component={MenClothes} />
-						{/* <Route exact path="/:apparelId" component={ApparelItem} /> */}
 						<Route exact path="/login" component={LogIn} />
 						<Route exact path="/register" component={Register} />
 						<Route exact path="/about" component={About} />
@@ -81,6 +80,7 @@ class App extends Component {
 						<Route exact path="/gym" component={Gym} />
 						<Route exact path="/forum" component={Forum} />
 						<Route exact path="/cart" component={Cart} />
+						<Route exact path="/:apparelId" component={FullItemPage} />
 					</Switch>
 				</div>
 			</Router>
