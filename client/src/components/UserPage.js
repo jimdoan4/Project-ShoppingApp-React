@@ -5,11 +5,12 @@ import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 
 class UserPage extends Component {
-  state = {
-      apparel: {},
-      redirectToHome: false,
-      isEditFormDisplayed: false
-  }
+  	state = {
+		apparel: {},
+        redirectToHome: false,
+        isEditFormDisplayed: false,
+		createdApparel: {}
+	};
 
   componentDidMount = () => {
       axios.get(`/api/apparels/${this.props.match.params.id}`).then(res => {
@@ -36,13 +37,13 @@ class UserPage extends Component {
 
     return (
       <div>
-        <button onClick={this.toggleEditForm}>Edit</button>
-        <h1>Apparel item</h1>
+        <div>{this.state.apparel.image}</div>
         <div>Name: {this.state.apparel.name}</div>
         <div>Price: {this.state.apparel.price}</div>
         <div>Size: {this.state.apparel.size}</div>
         <div>Description: {this.state.apparel.description}</div>
         <button onClick={this.deleteApparel}>Delete</button>
+         <button onClick={this.toggleEditForm}>Edit</button>
       </div>
     );
   }

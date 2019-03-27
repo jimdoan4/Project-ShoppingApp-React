@@ -3,11 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
+import MenClothes from './components/MenClothes';
 import Home from './components/Home';
 import About from './components/About';
-import Shop from './components/Shop';
 import WomenClothes from './components/WomenClothes';
-import MenClothes from './components/MenClothes';
 // import MenClothesId from './components/MenClothesId';
 import Accessories from './components/Accessories';
 import Fitness from './components/Fitness';
@@ -34,7 +33,7 @@ class App extends Component {
 								<Nav.Link href="/about">About</Nav.Link>
 								<Nav.Link href="/fitness">Fitness</Nav.Link>
 								<Nav.Link href="/nutrition">Nutrition</Nav.Link>
-								<Nav.Link href="/shopping">Example</Nav.Link>
+								{/* <Nav.Link href="/shopping">Example</Nav.Link> */}
 								<Nav.Link href="/gym">Gym</Nav.Link>
 								<Nav.Link href="/forum">Forum</Nav.Link>
 								<NavDropdown title="Shop" id="collasible-nav-dropdown">
@@ -54,7 +53,8 @@ class App extends Component {
 					</Navbar>
 
 					<Switch>
-						<Route exact path="/shopping" component={Shop} />
+						{/* <Route exact path="/shopping" component={Shop} /> */}
+						<Route exact path="/menclothes" component={MenClothes} />
 						<Route exact path="/" component={Home} />
 						<Route exact path="/login" component={LogIn} />
 						<Route exact path="/register" component={Register} />
@@ -67,7 +67,6 @@ class App extends Component {
 						<Route path="/gym" component={Gym} />
 						<Route path="/forum" component={Forum} />
 						<Route path="/cart" component={Cart} />
-						<Route exact path="/menclothes" component={MenClothes} />
 						<Route exact path="/apparel/:apparelId" component={UserPage} />
 					</Switch>
 				</div>

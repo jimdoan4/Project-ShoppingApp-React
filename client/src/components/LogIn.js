@@ -7,43 +7,43 @@ import { Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 
 class LogIn extends Component {
-	state = {
-		users: [],
-		user: {
-			userName: '',
-			password: ''
-		},
-		redirectToHome: false,
-		createdUser: {}
-	};
+	// state = {
+	// 	users: [],
+	// 	user: {
+	// 		userName: '',
+	// 		password: ''
+	// 	},
+	// 	redirectToHome: false,
+	// 	createdUser: {}
+	// };
 
-	componentDidMount = () => {
-		this.getAllUsers();
-	};
+	// componentDidMount = () => {
+	// 	this.getAllUsers();
+	// };
 
-	getAllUsers = () => {
-		axios.get('/api/users').then((res) => {
-			this.setState({ users: res.data });
-		});
-	};
+	// getAllUsers = () => {
+	// 	axios.get('/api/users').then((res) => {
+	// 		this.setState({ users: res.data });
+	// 	});
+	// };
 
-	createUser = () => {
-		axios.post('/api/users', { user: this.state.user }).then((res) => {
-			console.log(res.data);
-			this.setState({ redirectToHome: true, createdUser: res.data });
-		});
-	};
+	// createUser = () => {
+	// 	axios.post('/api/users', { user: this.state.user }).then((res) => {
+	// 		console.log(res.data);
+	// 		this.setState({ redirectToHome: true, createdUser: res.data });
+	// 	});
+	// };
 
-	handleChange = (e) => {
-		const newUser = { ...this.state.user };
-		newUser[e.target.name] = e.target.value;
-		this.setState({ user: newUser });
-	};
+	// handleChange = (e) => {
+	// 	const newUser = { ...this.state.user };
+	// 	newUser[e.target.name] = e.target.value;
+	// 	this.setState({ user: newUser });
+	// };
 
-	handleSignUp = (e) => {
-		e.preventDefault();
-		this.createUser();
-	};
+	// handleSignUp = (e) => {
+	// 	e.preventDefault();
+	// 	this.createUser();
+	// };
 	render() {
 		if (this.state.redirectToHome === true) {
 			return <Redirect to={`/user/${this.state.createdUser._id}`} />;
