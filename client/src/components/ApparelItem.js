@@ -78,8 +78,8 @@ class ApparelItem extends Component {
 					<p>This is a modified jumbotron that occupies the.</p>
 				</Container>
 			</Jumbotron>
-<div style= {{ marginTop: '100px', marginBotton: '70px' }}>
-					<Card className='container' style={{ width: '34rem' }}>
+<div style= {{ marginTop: '100px', marginBotton: '100px' }}>
+					<Card className='container' style={{ width: '43rem' }}>
 						<Card>
 							<Card.Img
 								variant="top"
@@ -102,24 +102,28 @@ class ApparelItem extends Component {
 									<option>XL</option>
 								</Form.Control>
                             </Form.Group>     
-                            <div style= {{ marginBotton: '70px'}}>  
+                            <div className='container' style= {{ marginBotton: '70px'}}>  
 							<button className='container'
-								style={{ width: '10rem', backgroundColor: 'red' }}
+								style={{ width: '10rem', marginBottom: '50px', backgroundColor: 'red' }}
 								onClick={this.toggleApparelForm}
 							>
 								Add to Cart
 							</button>
                           </div>
-							{/* <Card className='container' style={{ width: '31.9rem' }}>
-								<Card.Body>
-									<Card.Title>Reviews</Card.Title>
-									<Card.Text>
+                         
+						</Card>
+					</Card>
+
+							<Card className='container' style={{ width: '80rem', marginTop: '50px', marginBottom: '50px' }}>
+								<Card.Body className='container'>
+									<Card.Title className='container'>Reviews</Card.Title>
+									<Card.Text className='container'>
 										This is where you write your reviews.
 									</Card.Text>
 								</Card.Body>
-							</Card> */}
-						</Card>
-					</Card>
+                                <button className='container' style={{ width: '12rem' }}>Review this item</button>
+                                    <button className='container' style={{ width: '12rem', marginBottom: '30px' }}>Edit Review</button>
+							</Card>
 				</div>
                 </div>
                

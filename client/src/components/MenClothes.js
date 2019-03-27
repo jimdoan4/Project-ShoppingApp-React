@@ -62,8 +62,6 @@ class MenClothes extends Component {
 		this.setState({ apparel: newApparel });
 	};
 
-
-
 	render() {
 		// if (this.state.redirectToHome === true) {
 		// 	return <Redirect to={`/apparel/${this.state.createdApparel._id}`} />;
