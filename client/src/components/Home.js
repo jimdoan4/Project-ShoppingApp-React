@@ -21,7 +21,7 @@ export default class Home extends Component {
 				</Jumbotron>
 				<div style={{ marginLeft: '30px', marginRight: '30px', marginBottom: '30px', height: '20rem' }}>
 					<CardGroup>
-						<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
+						<Card style={{ width: '18rem', marginLeft: '30px', marginTop: '14px', marginRight: '30px' }}>
 							<Link to={'/menclothes/cityhoodie'}>
 								<Card.Img
 									variant="top"
@@ -31,7 +31,7 @@ export default class Home extends Component {
 							</Link>
 							
 						</Card>
-						<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
+						<Card style={{ width: '18rem', marginTop: '14px', marginLeft: '30px', marginRight: '30px' }}>
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
@@ -107,7 +107,7 @@ export default class Home extends Component {
 							{/* <Link to={`/${apparel._id}`}> */}
 							<Card.Img
 								variant="top"
-								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw892b22b7/hi-res/253034_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
+								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dwd8ef5fc3/hi-res/386576_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 								alt="top"
 							/>
 							{/* </Link> */}
