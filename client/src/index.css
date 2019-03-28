@@ -48,10 +48,17 @@ body {
 }
 
 .homefont {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Lato',
+    sans-serif;
+  font-family: 'Noto Sans KR',
+    sans-serif;
+  font-family: 'Merriweather',
+    serif;
+  font-family: 'Francois One',
+    sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 25px;
+  font-size: 45px;
   /* background-color: white; */
 }
 
@@ -153,4 +160,13 @@ a {
   &:active {
     top: 1px;
   }
+}
+
+.mainfont {
+  font-family: 'Lato',
+    sans-serif;
+  font-family: 'Noto Sans KR',
+    sans-serif;
+  font-family: 'Merriweather',
+    serif;
 }

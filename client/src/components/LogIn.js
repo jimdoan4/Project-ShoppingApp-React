@@ -1,66 +1,14 @@
 import React, { Component } from 'react';
-// import { Redirect, Link } from 'react-router-dom';
-// import axios from 'axios';
-import  { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 
 class LogIn extends Component {
-	// state = {
-	// 	users: [],
-	// 	user: {
-	// 		userName: '',
-	// 		password: ''
-	// 	},
-	// 	redirectToHome: false,
-	// 	createdUser: {}
-	// };
-
-	// componentDidMount = () => {
-	// 	this.getAllUsers();
-	// };
-
-	// getAllUsers = () => {
-	// 	axios.get('/api/users').then((res) => {
-	// 		this.setState({ users: res.data });
-	// 	});
-	// };
-
-	// createUser = () => {
-	// 	axios.post('/api/users', { user: this.state.user }).then((res) => {
-	// 		console.log(res.data);
-	// 		this.setState({ redirectToHome: true, createdUser: res.data });
-	// 	});
-	// };
-
-	// handleChange = (e) => {
-	// 	const newUser = { ...this.state.user };
-	// 	newUser[e.target.name] = e.target.value;
-	// 	this.setState({ user: newUser });
-	// };
-
-	// handleSignUp = (e) => {
-	// 	e.preventDefault();
-	// 	this.createUser();
-	// };
 	render() {
-		// if (this.state.redirectToHome === true) {
-		// 	return <Redirect to={`/user/${this.state.createdUser._id}`} />;
-		// }
 		return (
 			<div>
-				{/* <h2>Select a user</h2>
-				{this.state.users.map((user) => {
-					return (
-						<div>
-							<Link to={`/user/${user._id}`} key={user._id}>
-								{user.userName}
-							</Link>
-						</div>
-					);
-				})} */}
 				<div className="container">
 					<Card
 						className="container"
@@ -74,7 +22,6 @@ class LogIn extends Component {
 										type="text"
 										name="userName"
 										onChange={this.handleChange}
-										// value={this.state.user.userName}
 										placeholder="Enter Username"
 									/>
 								</Form.Group>
@@ -86,7 +33,6 @@ class LogIn extends Component {
 										type="password"
 										name="password"
 										onChange={this.handleChange}
-										// value={this.state.user.password}
 										placeholder="Enter Password"
 									/>
 								</Form.Group>
@@ -105,19 +51,19 @@ class LogIn extends Component {
 							>
 								Login
 							</Button>
-							<Link to='/register'>
-							<Button
-								variant="primary"
-								type="submit"
-								style={{
-									paddingLeft: '18px',
-									paddingRight: '18px',
-									marginTop: '15px',
-									marginBottom: '25px'
-								}}
-							>
-								Register
-							</Button>
+							<Link to="/register">
+								<Button
+									variant="primary"
+									type="submit"
+									style={{
+										paddingLeft: '18px',
+										paddingRight: '18px',
+										marginTop: '15px',
+										marginBottom: '25px'
+									}}
+								>
+									Register
+								</Button>
 							</Link>
 						</Form>
 					</Card>

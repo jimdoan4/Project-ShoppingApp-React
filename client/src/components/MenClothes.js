@@ -14,9 +14,9 @@ class MenClothes extends Component {
 			size: '',
 			image: '',
 			price: '',
-			description: '',
+			description: ''
 		},
-		displayApparelForm: false,
+		displayApparelForm: false
 	};
 
 	componentDidMount = () => {
@@ -63,15 +63,13 @@ class MenClothes extends Component {
 	};
 
 	render() {
-		// if (this.state.redirectToHome === true) {
-		// 	return <Redirect to={`/apparel/${this.state.createdApparel._id}`} />;
-		// }
 		return (
 			<div>
 				<Jumbotron fluid className="man" style={{ height: '26rem' }}>
 					<Container>
-						<h1>Men Clothing</h1>
-						<p>This is a modified jumbotron that occupies the entire horizontal.</p>
+						<h1 className="mainfont" style={{ color: 'black' }}>
+							Let it Breathe
+						</h1>
 					</Container>
 				</Jumbotron>
 				<div className="row">
@@ -95,7 +93,7 @@ class MenClothes extends Component {
 											marginRight: '30px'
 										}}
 									>
-										<Link to= {`/${apparel._id}`}>
+										<Link to={`/${apparel._id}`}>
 											<Card.Img variant="top" src={apparel.image} />
 										</Link>
 										<Card.Body>
@@ -107,7 +105,6 @@ class MenClothes extends Component {
 							</div>
 						);
 					})}
-				
 				</div>
 			</div>
 		);

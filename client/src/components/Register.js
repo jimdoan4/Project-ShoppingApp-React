@@ -7,8 +7,11 @@ import { Card } from 'react-bootstrap';
 export default class Register extends Component {
 	render() {
 		return (
-			<div className='container'>
-				<Card className='container' style={{ width: '33rem', height: '40rem', paddingTop: '35px', marginTop: '90px' }}>
+			<div className="container">
+				<Card
+					className="container"
+					style={{ width: '33rem', height: '40rem', paddingTop: '35px', marginTop: '90px' }}
+				>
 					<Form className="text-center" style={{ display: 'inline-block' }}>
 						<Form.Row>
 							<Form.Group as={Col} controlId="formGridEmail">
@@ -21,8 +24,8 @@ export default class Register extends Component {
 								<Form.Control type="password" placeholder="Last Name" />
 							</Form.Group>
 						</Form.Row>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="formGridEmail">
+						<Form.Row>
+							<Form.Group as={Col} controlId="formGridEmail">
 								<Form.Label>Username</Form.Label>
 								<Form.Control type="email" placeholder="Enter Username" />
 							</Form.Group>
@@ -32,10 +35,10 @@ export default class Register extends Component {
 								<Form.Control type="password" placeholder="Password" />
 							</Form.Group>
 						</Form.Row>
-                        <Form.Group as={Col} controlId="formGridEmail">
-								<Form.Label>Email</Form.Label>
-								<Form.Control type="email" placeholder="Enter email" />
-							</Form.Group>
+						<Form.Group as={Col} controlId="formGridEmail">
+							<Form.Label>Email</Form.Label>
+							<Form.Control type="email" placeholder="Enter email" />
+						</Form.Group>
 						<Form.Group controlId="formGridAddress1">
 							<Form.Label>Address</Form.Label>
 							<Form.Control placeholder="1234 Main St" />
@@ -65,7 +68,17 @@ export default class Register extends Component {
 								<Form.Control />
 							</Form.Group>
 						</Form.Row>
-                        <Button className='container' variant="primary" type="submit" style= {{ marginRight: '140px', paddingLeft: '30px', paddingRight: '30px', marginTop: '22px' }}>
+						<Button
+							className="container"
+							variant="primary"
+							type="submit"
+							style={{
+								marginRight: '140px',
+								paddingLeft: '30px',
+								paddingRight: '30px',
+								marginTop: '22px'
+							}}
+						>
 							Submit
 						</Button>
 					</Form>

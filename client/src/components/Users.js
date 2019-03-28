@@ -66,7 +66,7 @@
 //         return (
 //             <div>
 //                 <h3>Select User Account</h3>
-//                 { 
+//                 {
 //                     this.state.users.map(user => {
 //                         return (
 //                             <div key = {user._id}>
@@ -76,7 +76,7 @@
 //                     })
 //                 }
 //                 <ButtonStyled onClick = {this.toggleUserForm} className="btn-small">Sign Up</ButtonStyled>
-//                 { 
+//                 {
 //                     this.state.displayUserForm
 //                         ? <form onSubmit = {this.createUser}>
 //                             <div>

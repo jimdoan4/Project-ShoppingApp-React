@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import  { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
@@ -19,7 +19,6 @@ import Register from './components/Register';
 import FullItemPage from './components/FullItemPage';
 // import Users from './components/Users';
 
-
 class App extends Component {
 	render() {
 		return (
@@ -30,39 +29,59 @@ class App extends Component {
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav">
 							<Nav className="mr-auto">
-							<Nav.Link>
-								<Link to="/about" style= {{color: 'white '}}>About</Link>
+								<Nav.Link>
+									<Link to="/about" style={{ color: 'white ' }}>
+										About
+									</Link>
 								</Nav.Link>
 								<Nav.Link>
-								<Link to="/fitness" style= {{color: 'white '}}>Fitness</Link>
+									<Link to="/fitness" style={{ color: 'white ' }}>
+										Fitness
+									</Link>
 								</Nav.Link>
 								<Nav.Link>
-								<Link to="/nutrition" style= {{color: 'white '}}>Nutrition</Link>
+									<Link to="/nutrition" style={{ color: 'white ' }}>
+										Nutrition
+									</Link>
 								</Nav.Link>
 								<Nav.Link>
-								<Link to="/gym" style= {{color: 'white '}}>Gym</Link>
+									<Link to="/gym" style={{ color: 'white ' }}>
+										Gym
+									</Link>
 								</Nav.Link>
 								<Nav.Link>
-								<Link to="/forum" style= {{ color: 'white' }}>Forum</Link>
+									<Link to="/forum" style={{ color: 'white' }}>
+										Forum
+									</Link>
 								</Nav.Link>
 								<NavDropdown title="Shop" id="collasible-nav-dropdown">
-								<NavDropdown.Item>
-									<Link to="/womenclothes" style= {{color: 'black '}}>Women Apparel</Link>
+									<NavDropdown.Item>
+										<Link to="/womenclothes" style={{ color: 'black ' }}>
+											Women Apparel
+										</Link>
 									</NavDropdown.Item>
 									<NavDropdown.Item>
-									<Link to="/apparels" style= {{color: 'black '}}>Men Apparel</Link>
+										<Link to="/apparels" style={{ color: 'black ' }}>
+											Men Apparel
+										</Link>
 									</NavDropdown.Item>
 									<NavDropdown.Item>
-									<Link to="/accessories" style= {{color: 'black '}}>Accessories</Link>
+										<Link to="/accessories" style={{ color: 'black ' }}>
+											Accessories
+										</Link>
 									</NavDropdown.Item>
 									<NavDropdown.Divider />
 								</NavDropdown>
 							</Nav>
 							<Nav.Link>
-								<Link to="/login" style= {{color: 'white '}}>Log In</Link>
+								<Link to="/login" style={{ color: 'white ' }}>
+									Log In
+								</Link>
 							</Nav.Link>
 							<Nav.Link>
-								<Link to="/cart" style= {{color: 'white '}}>My Cart</Link>
+								<Link to="/cart" style={{ color: 'white ' }}>
+									My Cart
+								</Link>
 							</Nav.Link>
 						</Navbar.Collapse>
 					</Navbar>
@@ -79,7 +98,7 @@ class App extends Component {
 						<Route exact path="/nutrition" component={Nutrition} />
 						<Route exact path="/gym" component={Gym} />
 						<Route exact path="/forum" component={Forum} />
-						<Route exact path="/cart" component={Cart} />
+						<Route exact path="/cart/:itemid" component={Cart} />
 						<Route exact path="/:apparelId" component={FullItemPage} />
 					</Switch>
 				</div>
@@ -89,5 +108,3 @@ class App extends Component {
 }
 
 export default App;
-
-
