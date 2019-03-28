@@ -2,7 +2,6 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 
-const User = require('../models/User');
 const Review = require('../models/Review');
 const Apparel = require('../models/Apparel');
 
@@ -122,13 +121,7 @@ const noBoxer = new Apparel({
 	reviews: [ shirt ]
 });
 
-const jim = new User({
-	userName: 'jimdoan4',
-	password: 'hello'
-});
-
-User.remove({})
-	.then(() => Apparel.remove())
+Apparel.deleteMany({})
 	.then(() => cityHoodie.save())
 	.then(() => surgeTank.save())
 	.then(() => sleevelessShirt.save())
@@ -141,7 +134,13 @@ User.remove({})
 	.then(() => surgeShort.save())
 	.then(() => noBoxer.save())
 	.then(() => ventShirt.save())
-	.then(() => jim.save())
 	.then(() => console.log('Successful Save'))
 	.then(() => mongoose.connection.close());
 
+// apparels: [cityHoodie, surgeTank, sleevelessShirt, ventTechShirt, zipHoodie, sweatPullOver, ventShirt2, ventShirtPolo, basicShirt]
+
+
+// User.deleteMany({})
+// 	.then(() => jim.save())
+// 	.then(() => console.log('Successful Save'))
+// 	.then(() => mongoose.connection.close());

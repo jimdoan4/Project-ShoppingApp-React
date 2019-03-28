@@ -1,7 +1,4 @@
-// const express = require('express');
 const Apparel = require('../models/Apparel.js');
-const Review = require('../models/Review.js');
-// const router = express.Router();
 
 const apparelController = {
     index: (req, res) => {

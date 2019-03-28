@@ -9,6 +9,7 @@ import { Form } from 'react-bootstrap';
 class ApparelItem extends Component {
         state = {
         apparelId: this.props.apparelId,
+        apparels: [],
         apparel: {
             _id: '',
             name: '',
@@ -65,6 +66,33 @@ class ApparelItem extends Component {
             })
     }
 
+    createApparel = (e) => {
+        e.preventDefault()
+        axios
+            .post(`/api/apparels/${this.state.apparelId}`, {
+                image: this.state.apparel.image,
+                name: this.state.apparel.name,
+                description: this.state.apparel.description,
+                size: this.state.apparel.size,
+                price: this.state.apparel.price,
+            })
+            .then(res => {
+                const apparelsList = [this.state.apparels]
+                apparelsList.unshift(res.data)
+                this.setState({
+                    apparel: {
+                    name: '',
+			size: '',
+			image: '',
+            price: '',
+            description: '',
+                    },
+                    displayUserForm: false,
+                    apparels: apparelsList
+                })
+            })
+    }
+
     render() {
         if (this.state.redirectToHome) {
             return (<Redirect to = '/' />)
@@ -78,6 +106,7 @@ class ApparelItem extends Component {
 					<p>This is a modified jumbotron that occupies the.</p>
 				</Container>
 			</Jumbotron>
+            <form onSubmit = {this.createApparel}>
 <div style= {{ marginTop: '100px', marginBotton: '100px' }}>
 					<Card className='container' style={{ width: '43rem' }}>
 						<Card>
@@ -105,7 +134,7 @@ class ApparelItem extends Component {
                             <div className='container' style= {{ marginBotton: '70px'}}>  
 							<button className='container'
 								style={{ width: '10rem', marginBottom: '50px', backgroundColor: 'red' }}
-								onClick={this.toggleApparelForm}
+								onClick={this.deleteApparel}
 							>
 								Add to Cart
 							</button>
@@ -125,6 +154,7 @@ class ApparelItem extends Component {
                                     <button className='container' style={{ width: '12rem', marginBottom: '30px' }}>Edit Review</button>
 							</Card>
 				</div>
+                </form>
                 </div>
                
         );
@@ -133,5 +163,3 @@ class ApparelItem extends Component {
 
 
 export default ApparelItem;
-
-

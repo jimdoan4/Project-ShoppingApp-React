@@ -17,7 +17,8 @@ import Forum from './components/Forum';
 import Cart from './components/Cart';
 import Register from './components/Register';
 import FullItemPage from './components/FullItemPage';
-// import Users from './components/Users.js'
+// import Users from './components/Users';
+
 
 class App extends Component {
 	render() {
@@ -38,7 +39,6 @@ class App extends Component {
 								<Nav.Link>
 								<Link to="/nutrition" style= {{color: 'white '}}>Nutrition</Link>
 								</Nav.Link>
-								{/* <Nav.Link href="/shopping">Example</Nav.Link> */}
 								<Nav.Link>
 								<Link to="/gym" style= {{color: 'white '}}>Gym</Link>
 								</Nav.Link>

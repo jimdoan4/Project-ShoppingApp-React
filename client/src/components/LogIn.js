@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import { Redirect, Link } from 'react-router-dom';
 // import axios from 'axios';
+import  { Link } from 'react-router-dom'; 
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
@@ -104,6 +105,7 @@ class LogIn extends Component {
 							>
 								Login
 							</Button>
+							<Link to='/register'>
 							<Button
 								variant="primary"
 								type="submit"
@@ -113,10 +115,10 @@ class LogIn extends Component {
 									marginTop: '15px',
 									marginBottom: '25px'
 								}}
-								href="/register"
 							>
 								Register
 							</Button>
+							</Link>
 						</Form>
 					</Card>
 				</div>
