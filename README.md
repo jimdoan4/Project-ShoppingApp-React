@@ -1,11 +1,11 @@
-# Shopping App (To be Continued...)
+# EQUIS Shopping Store
 
 ### Overview
-Shopping App is...
+EQUIS Shopping Store is an online clothing store specifically marketed for athletic wears where users can shop for clothing items and accessories. There are a men, women and accessories sections.
 
 ### Project Links
 
-[Heroku]
+[Heroku](https://dry-peak-27739.herokuapp.com/)
 
 [Trello Board](https://trello.com/b/hoyd0tdc/shopping-app)
 
@@ -13,7 +13,7 @@ Shopping App is...
 
 This application has:
 
-* **Three models** – one representing a user being able to use full CRUD by adding/deleting/editing and updating (a course), one representing a user being able to use full CRUD by adding/deleting/editing and updating (a professor) and a third model for a user being able to use full CRUD by adding/deleting/editing and updating  (a note)
+* **Two models** – one representing a user being able to use full CRUD by adding/deleting/editing and updating (a review), one representing a apparel being able to use full CRUD by adding/deleting/editing and updating (a clothing item).
 * **Complete RESTful routes** for at least one resource (a project) with GET, POST, PUT, and DELETE.
 * **Uses Mongo queries and the Mongoose module** to interact with a document database.
 * **Promises** to help build more complex queries!
@@ -47,4 +47,8 @@ This application has:
 - VS Code
 
 #### Future Development
-- Add 
+- Add User Authentication
+- Add Animations
+- Add Sound effects
+- Add Bank/Credit Card Functionality
+- Add 'Add to Cart' Functionality
