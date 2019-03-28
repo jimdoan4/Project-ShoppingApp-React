@@ -73,7 +73,7 @@ export default class Accessories extends Component {
 									src="https://images.lululemon.com/is/image/lululemon/LM9641S_031382_2?$product_tile-lg_2x$"
 									alt="top"
 								/>
-								{/* </Link> */}
+
 								<Card.Body>
 									<Card.Title>Cold Beanie</Card.Title>
 									<Card.Title>$28.00</Card.Title>

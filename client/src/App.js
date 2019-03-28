@@ -17,7 +17,6 @@ import Forum from './components/Forum';
 import Cart from './components/Cart';
 import Register from './components/Register';
 import FullItemPage from './components/FullItemPage';
-// import Users from './components/Users';
 
 class App extends Component {
 	render() {

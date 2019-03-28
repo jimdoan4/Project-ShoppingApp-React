@@ -122,13 +122,12 @@ export default class WomenClothes extends Component {
 									</Card.Body>
 								</Card>
 								<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
-									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
 										src="https://images.lululemon.com/is/image/lululemon/LW2AUPS_036811_2?$product_tile-md_2x$"
 										alt="top"
 									/>
-									{/* </Link> */}
+
 									<Card.Body>
 										<Card.Title>Flow Bra</Card.Title>
 										<Card.Title>$48.00</Card.Title>
@@ -138,39 +137,36 @@ export default class WomenClothes extends Component {
 							<div style={{ marginTop: '30px', marginBottom: '30px' }}>
 								<CardGroup className="menmargin">
 									<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
-										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
 											src="https://images.lululemon.com/is/image/lululemon/LW2AJ8S_036915_2?$product_tile-md_2x$"
 											alt="top"
 										/>
-										{/* </Link> */}
+
 										<Card.Body>
 											<Card.Title>Free Up Bra</Card.Title>
 											<Card.Title>$38.00</Card.Title>
 										</Card.Body>
 									</Card>
 									<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
-										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
 											src="https://images.lululemon.com/is/image/lululemon/LW5BOCS_036721_2?$product_tile-md_2x$"
 											alt="top"
 										/>
-										{/* </Link> */}
+
 										<Card.Body>
 											<Card.Title>Align HighRise Pant</Card.Title>
 											<Card.Title>$88.00</Card.Title>
 										</Card.Body>
 									</Card>
 									<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
-										{/* <Link to={`/${apparel._id}`}> */}
 										<Card.Img
 											variant="top"
 											src="https://images.lululemon.com/is/image/lululemon/LW6AVLS_8650_2?$product_tile-md_2x$"
 											alt="top"
 										/>
-										{/* </Link> */}
+
 										<Card.Body>
 											<Card.Title>Pace Crop</Card.Title>
 											<Card.Title>$78.00</Card.Title>

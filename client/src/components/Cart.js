@@ -28,6 +28,3 @@ class Cart extends Component {
 }
 
 export default Cart;
-
-// fdf
-// e.preventDefault();

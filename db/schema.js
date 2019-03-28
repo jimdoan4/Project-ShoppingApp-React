@@ -9,7 +9,7 @@ const ReviewSchema = new Schema({
 	description: {
 		type: String,
 		default: 'New Description'
-	},
+	}
 });
 
 const ApparelSchema = new Schema({
@@ -36,19 +36,7 @@ const ApparelSchema = new Schema({
 	reviews: [ ReviewSchema ]
 });
 
-// const UserSchema = new Schema({
-// 	userName: {
-// 		type: String,
-// 		default: 'New Username'
-// 	},
-// 	password: {
-// 		type: String,
-// 		default: 'New Password'
-// 	}
-// });
-
 module.exports = {
 	ReviewSchema: ReviewSchema,
-	// UserSchema: UserSchema,
 	ApparelSchema: ApparelSchema
 };

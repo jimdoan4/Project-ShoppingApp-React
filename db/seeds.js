@@ -43,7 +43,7 @@ const ventShirtPolo = new Apparel({
 	name: 'Metal Vent Tech Polo',
 	size: 3,
 	image: 'https://images.lululemon.com/is/image/lululemon/LM3ASES_0572_1?$image_carousel-lg_2x$',
-	price: 68.00,
+	price: 68.0,
 	description:
 		'Go ahead and get sweaty in this anti-stink polo with strategic venting, four-way stretch fabric, and seamless construction.',
 	reviews: [ shirt ]
@@ -52,7 +52,7 @@ const ventShirt2 = new Apparel({
 	name: 'Metal Vent Tech Polo 2',
 	size: 'Large',
 	image: 'https://images.lululemon.com/is/image/lululemon/LM3AUJS_033061_1?$image_carousel-lg_2x$',
-	price: 49.00,
+	price: 49.0,
 	description:
 		'Seamless construction, anti-stink technology, and strategic venting make this a polo you will not be afraid to sweat in.',
 	reviews: [ shirt ]
@@ -106,7 +106,7 @@ const surgeShort = new Apparel({
 	name: 'Surge Short',
 	size: 'Large',
 	image: 'https://images.lululemon.com/is/image/lululemon/LM7A99S_0001_2?$product_tile-lg_2x$',
-	price: 48.00,
+	price: 48.0,
 	description:
 		'Stay cool when you are heating it up in this breatheable, seamless, and lightweight tank.Integrated open- hole Mesh fabric allows for maxium airflow so you can push yourself to the max.Plus, anti - stink technology means you can go from running your favourite routes to enjoying a much - deserved cold one at happy hour.',
 	reviews: [ shirt ]
@@ -115,7 +115,7 @@ const noBoxer = new Apparel({
 	name: 'No Boxer',
 	size: 'Medium',
 	image: 'https://images.lululemon.com/is/image/lululemon/LM9563S_036866_2?$product_tile-lg_2x$',
-	price: 39.00,
+	price: 39.0,
 	description:
 		'Stay cool when you are heating it up in this breatheable, seamless, and lightweight tank.Integrated open- hole Mesh fabric allows for maxium airflow so you can push yourself to the max.Plus, anti - stink technology means you can go from running your favourite routes to enjoying a much - deserved cold one at happy hour.',
 	reviews: [ shirt ]
@@ -136,11 +136,3 @@ Apparel.deleteMany({})
 	.then(() => ventShirt.save())
 	.then(() => console.log('Successful Save'))
 	.then(() => mongoose.connection.close());
-
-// apparels: [cityHoodie, surgeTank, sleevelessShirt, ventTechShirt, zipHoodie, sweatPullOver, ventShirt2, ventShirtPolo, basicShirt]
-
-
-// User.deleteMany({})
-// 	.then(() => jim.save())
-// 	.then(() => console.log('Successful Save'))
-// 	.then(() => mongoose.connection.close());
