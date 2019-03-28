@@ -10,7 +10,9 @@ export default class WomenClothes extends Component {
 			<div>
 				<Jumbotron fluid className="women" style={{ height: '26rem' }}>
 					<Container>
-						<h1>Let your clothes Shine</h1>
+						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: '#6a7587' }}>
+							Let your clothes Shine
+						</h1>
 					</Container>
 				</Jumbotron>
 				<div style={{ marginLeft: '30px', marginRight: '30px' }}>

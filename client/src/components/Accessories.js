@@ -11,7 +11,6 @@ export default class Accessories extends Component {
 				<Jumbotron fluid className="accessories" style={{ height: '26rem' }}>
 					<Container>
 						<h1>Accessories</h1>
-						<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 					</Container>
 				</Jumbotron>
 				<div style={{ marginLeft: '30px', marginRight: '30px' }}>

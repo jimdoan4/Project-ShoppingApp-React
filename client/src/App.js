@@ -6,7 +6,7 @@ import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import MenClothes from './components/MenClothes';
 import Home from './components/Home';
-import About from './components/About';
+
 import WomenClothes from './components/WomenClothes';
 import Accessories from './components/Accessories';
 import Fitness from './components/Fitness';
@@ -29,11 +29,6 @@ class App extends Component {
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav">
 							<Nav className="mr-auto">
-								<Nav.Link>
-									<Link to="/about" style={{ color: 'white ' }}>
-										About
-									</Link>
-								</Nav.Link>
 								<Nav.Link>
 									<Link to="/fitness" style={{ color: 'white ' }}>
 										Fitness
@@ -91,7 +86,6 @@ class App extends Component {
 						<Route exact path="/apparels" component={MenClothes} />
 						<Route exact path="/login" component={LogIn} />
 						<Route exact path="/register" component={Register} />
-						<Route exact path="/about" component={About} />
 						<Route exact path="/womenclothes" component={WomenClothes} />
 						<Route exact path="/accessories" component={Accessories} />
 						<Route exact path="/fitness" component={Fitness} />

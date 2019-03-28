@@ -3,8 +3,6 @@ import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
-// import axios from 'axios';
-// import { Link } from 'react-router-dom';
 
 export default class Men extends Component {
 	render() {
@@ -13,7 +11,6 @@ export default class Men extends Component {
 				<Jumbotron fluid className="pic" style={{ height: '26rem' }}>
 					<Container>
 						<h1 style={{ fontWeight: 'bold' }}>Nutrition</h1>
-						<p>This is a modified jumbotron that occupies the entire horizontal.</p>
 					</Container>
 				</Jumbotron>
 				<div style={{ marginLeft: '30px', marginRight: '30px' }}>
@@ -25,7 +22,7 @@ export default class Men extends Component {
 								src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dwd8ef5fc3/hi-res/386576_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 								alt="top"
 							/>
-							{/* </Link> */}
+
 							<Card.Body>
 								<Card.Title>Pure Protein Isolate</Card.Title>
 								<Card.Title>$30.00</Card.Title>
@@ -105,7 +102,6 @@ export default class Men extends Component {
 						<div style={{ marginTop: '30px' }}>
 							<CardGroup className="menmargin">
 								<Card style={{ width: '18rem', marginLeft: '30px', marginRight: '30px' }}>
-									{/* <Link to={`/${apparel._id}`}> */}
 									<Card.Img
 										variant="top"
 										src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dwb6c1c013/hi-res/398507_web_Xtend%20Pro%20Whey%20Isolate%20Cookie%20Butter_Front_Tub.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
