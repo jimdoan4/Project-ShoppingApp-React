@@ -3,7 +3,7 @@ import ApparelItem from './ApparelItem';
 
 class Cart extends Component {
 	state = {
-		apparelId: this.props.match.params.itemid,
+		apparelId: this.props.match.params.apparelId,
 		userCart: []
 	};
 	addThisItem = () => {

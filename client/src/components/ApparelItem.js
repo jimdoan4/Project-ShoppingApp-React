@@ -6,6 +6,7 @@ import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 class ApparelItem extends Component {
 	state = {
@@ -124,8 +125,8 @@ class ApparelItem extends Component {
 									</Form.Control>
                                         </Container>
 								</Form.Group>
-                            <Container style= {{ textAlign: 'center'}}>
-                                <button>
+                            <Container style= {{ textAlign: 'center', marginBottom: '30px', marginTop: '8px'}}>
+                                <Button style= {{ backgroundColor: 'white', borderColor: 'black'}}>
 								<Link
 									to={{
 										pathname: `/cart/${this.state.apparelId}`,
@@ -134,7 +135,7 @@ class ApparelItem extends Component {
 								>
 									Add to Cart
 								</Link>
-                                </button>
+                                </Button>
                                 </Container>
 							</Card>
 						</Card>
@@ -144,12 +145,16 @@ class ApparelItem extends Component {
 								<Card.Title className="container">Reviews</Card.Title>
 								<Card.Text className="container">This is where you write your reviews.</Card.Text>
 							</Card.Body>
-							<button className="container" style={{ width: '12rem' }}>
+							<div className= 'row'>
+							<Button className="container" style={{ width: '12rem', backgroundColor: 'white', borderColor: 'white', color: 'black', borderColor: 'black' }}>
 								Review this item
-							</button>
-							<button className="container" style={{ width: '12rem', marginBottom: '30px' }}>
+							</Button>
+								</div>
+								<div className= 'row'>
+							<Button className="container" style={{ width: '12rem', marginBottom: '30px', backgroundColor: 'white', borderColor: 'white', color: 'black', borderColor: 'black', marginTop: '13px' }}>
 								Edit Review
-							</button>
+							</Button>
+							</div>
 						</Card>
 					</div>
 				</form>

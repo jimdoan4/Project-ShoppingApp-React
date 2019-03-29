@@ -90,7 +90,7 @@ class App extends Component {
 						<Route exact path="/nutrition" component={Nutrition} />
 						<Route exact path="/gym" component={Gym} />
 						<Route exact path="/forum" component={Forum} />
-						<Route exact path="/cart/:itemid" component={Cart} />
+						<Route exact path="/cart/:apparelId" component={Cart} />
 						<Route exact path="/:apparelId" component={FullItemPage} />
 					</Switch>
 				</div>
