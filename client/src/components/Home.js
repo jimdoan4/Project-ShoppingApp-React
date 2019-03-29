@@ -10,8 +10,8 @@ export default class Home extends Component {
 		return (
 			<div>
 				<Jumbotron fluid className="home" style={{ height: '26rem' }}>
-					<Container>
-						<h1 style={{ fontSize: '60px', fontWeight: 'bold', color: '#6a7587' }}>EQUIS</h1>
+					<Container className= 'homefont'>
+						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: '#6a7587' }}>EQUIS</h1>
 						<p style={{ fontSize: '20px', color: '#495260' }}>Your MIND, BODY and SOUL</p>
 					</Container>
 				</Jumbotron>
@@ -34,27 +34,28 @@ export default class Home extends Component {
 							/>
 						</Card>
 					</CardGroup>
-					<div style={{ marginTop: '110px' }}>
-						<h5
-							className="homefont"
-							style={{
-								height: '7rem',
-								marginLeft: '125px',
-								marginRight: '125px',
-								marginBottom: '90px',
-								color: '#495260'
-							}}
-						>
-							EQUIS, the haven of your fitness guides. Browse through and find the best tips to your
+					<Container
+					>
+						<h5 className="homefont"
+						style={{
+							marginTop: '110px',
+							marginBottom: '110px',
+							marginLeft: '70px',
+							marginRight: '70px',
+							color: '#495260'
+						}}>
+							EQUIS, the haven to your fitness guides. Browse through and find the best tips to your
 							healthy LIFESTYLE.
 						</h5>
-						<div style={{ marginTop: '50px' }}>
-							<Jumbotron fluid className="homes" style={{ height: '26rem', marginTop: '90px' }}>
-								<Container style={{ width: '100%' }}>
-									<h1 style={{ fontWeight: 'bold', color: 'grey' }}>GYM</h1>
-									<p>Your MIND, BODY and SOUL</p>
+						</Container>
+						<div>
+							<Jumbotron fluid className="homes" style={{ height: '26rem', marginTop: '20px' }}>
+								<Container style={{ fontWeight: 'bold', color: '#495260' }}>
+									<h1 className= 'fonts' style={{ fontWeight: 'bold', color: 'white', marginTop: '170px' }}>EQUIS GYM</h1>
+								
 								</Container>
 							</Jumbotron>
+							</div>
 							<div
 								style={{
 									marginLeft: '16px',
@@ -64,14 +65,14 @@ export default class Home extends Component {
 								}}
 							>
 								<CardGroup>
-									<Card style={{ width: '23rem', marginLeft: '14px', marginRight: '14px' }}>
-										<Link to={'/menclothes/cityhoodie'}>
+									<Card style={{ width: '23rem', marginLeft: '10px', marginRight: '10px' }}>
+										
 											<Card.Img
 												variant="top"
 												src="https://cdn-us-ec.yottaa.net/5b9fc7760b534475fab84ce9/www.gnc.com/v~4b.1e/dw/image/v2/BBLB_PRD/on/demandware.static/-/Sites-master-catalog-gnc/default/dw65b2a723/hi-res/217908_1.jpg?sw=305&sh=305&sm=fit&yocs=s_f_&yoloc=us"
 												alt="top"
 											/>
-										</Link>
+									
 										<Card.Body>
 											<Card.Title>City Sweat Pullover Hoodie</Card.Title>
 											<Card.Title>$68.00</Card.Title>
@@ -111,18 +112,113 @@ export default class Home extends Component {
 										</Card.Body>
 									</Card>
 								</CardGroup>
-								<div style={{ marginTop: '40px' }}>
+								</div>
+								<Container style= {{ textAlign: 'center'}}>
+											<h1 className= 'homefont' style={{
+							marginTop: '80px',
+							marginBottom: '80px',
+							marginLeft: '70px',
+							marginRight: '70px',
+							color: '#495260'}}>Check out our FORUM</h1>
+										</Container>
+										
+								<div style={{ marginTop: '40px', background: 'cover' }}>
 									<Jumbotron fluid className="homee" style={{ width: 'max', height: '26rem' }}>
 										<Container>
-											<h1 style={{ fontWeight: 'bold', color: '#6a7587' }}>NUTRITION</h1>
+											<h1 className= 'fonts' style={{ fontWeight: 'bold', color: 'white', marginTop: '70px' }}>Accessories</h1>
 										</Container>
 									</Jumbotron>
 								</div>
+								<div style={{ marginLeft: '10px', marginRight: '10px' }}>
+					<CardGroup style= {{ marginTop: '50px'}}>
+						<Card style={{ width: '18rem', marginLeft: '2px', marginRight: '2px' }}>
+							<Card.Img
+								variant="top"
+								src="https://images.lululemon.com/is/image/lululemon/LU9A73S_037040_1?$image_carousel-lg_2x$"
+								alt="top"
+							/>
+
+							<Card.Body>
+								<Card.Title>The Reversible Mat 5mm</Card.Title>
+								<Card.Title>$78.00</Card.Title>
+							</Card.Body>
+						</Card>
+						<Card style={{ width: '18rem', marginLeft: '2px', marginRight: '2px' }}>
+							<Card.Img
+								variant="top"
+								src="https://images.lululemon.com/is/image/lululemon/LM9767S_036763_2?$product_tile-lg_2x$"
+								alt="top"
+							/>
+
+							<Card.Body>
+								<Card.Title>Command BackPack</Card.Title>
+								<Card.Title>$148.00</Card.Title>
+							</Card.Body>
+						</Card>
+						<Card style={{ width: '18rem', marginLeft: '2px', marginRight: '2px' }}>
+							<Card.Img
+								variant="top"
+								src="https://images.lululemon.com/is/image/lululemon/LM9723S_034135_2?$product_tile-lg_2x$"
+								alt="top"
+							/>
+
+							<Card.Body>
+								<Card.Title>Surge BackPack</Card.Title>
+								<Card.Title>$168.00</Card.Title>
+							</Card.Body>
+						</Card>
+					</CardGroup>
+
+					<div style={{ marginTop: '20px', marginBottom: '30px' }}>
+						<CardGroup>
+							<Card style={{ width: '18rem', marginLeft: '2px', marginRight: '2px' }}>
+								<Card.Img
+									variant="top"
+									src="https://images.lululemon.com/is/image/lululemon/LM9474S_037617_2?$product_tile-lg_2x$"
+									alt="top"
+								/>
+
+								<Card.Body>
+									<Card.Title>Lightspeed Hat</Card.Title>
+									<Card.Title>$38.00</Card.Title>
+								</Card.Body>
+							</Card>
+							<Card style={{ width: '18rem', marginLeft: '2px', marginRight: '2px' }}>
+								<Card.Img
+									variant="top"
+									src="https://images.lululemon.com/is/image/lululemon/LM9641S_031382_2?$product_tile-lg_2x$"
+									alt="top"
+								/>
+
+								<Card.Body>
+									<Card.Title>Cold Beanie</Card.Title>
+									<Card.Title>$28.00</Card.Title>
+								</Card.Body>
+							</Card>
+							<Card style={{ width: '18rem', marginLeft: '2px', marginRight: '2px' }}>
+								<Card.Img
+									variant="top"
+									src="https://images.lululemon.com/is/image/lululemon/LU9AF5S_0001_2?$product_tile-lg_2x$"
+									alt="top"
+								/>
+
+								<Card.Body>
+									<Card.Title>Stay Cold Bottle</Card.Title>
+									<Card.Title>$48.00</Card.Title>
+								</Card.Body>
+							</Card>
+						</CardGroup>
+
+						
+							</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
+						</div>
+					
+							
+							
+							
+			
 		);
 	}
 }

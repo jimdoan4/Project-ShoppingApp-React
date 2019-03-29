@@ -66,8 +66,10 @@ class MenClothes extends Component {
 		return (
 			<div>
 				<Jumbotron fluid className="man" style={{ height: '26rem' }}>
-					<Container>
-						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: '#6a7587' }}>Let it Breathe</h1>
+					<Container className= 'homefont' style={{ marginTop: '210px' }}>
+						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: 'white' }}>
+							Let it Breathe
+						</h1>
 					</Container>
 				</Jumbotron>
 				<div className="row">

@@ -41,7 +41,7 @@ body {
 }
 
 .homee {
-  background-image: url('http://vkool.com/wp-content/uploads/2015/11/vitamin-a1.jpg');
+  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-length-of-woman-lifting-weight-in-gym-royalty-free-image-1058449732-1547849286.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,7 +58,7 @@ body {
     sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 45px;
+  font-size: 33px;
   /* background-color: white; */
 }
 
@@ -125,7 +125,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.fonts {
+  font-family: 'Fira Sans', sans-serif;
+}
 .intro {
   height: 90vh;
 }

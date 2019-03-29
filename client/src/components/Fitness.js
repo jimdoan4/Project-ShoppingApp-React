@@ -7,9 +7,9 @@ export default class Fitness extends Component {
 		return (
 			<div>
 				<Jumbotron fluid className="nutrition" style={{ height: '26rem' }}>
-					<Container>
-						<h1>Be the BEST You. Get Tips on how to get in shape and live a heathier LIFESTYLE!</h1>
-						<p>Get a kick start to a healthier living.</p>
+					<Container className= 'homefont' style= {{ marginTop: '180px' }}>
+						<h1 style= {{ fontSize: '33px'}}>Be the BEST You. Get Tips on how to get in shape and live a heathier LIFESTYLE!</h1>
+						<p style= {{ fontSize: '33px'}}>Get a kick start to a healthier living.</p>
 					</Container>
 				</Jumbotron>
 

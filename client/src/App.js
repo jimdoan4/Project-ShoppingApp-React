@@ -6,7 +6,6 @@ import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import MenClothes from './components/MenClothes';
 import Home from './components/Home';
-
 import WomenClothes from './components/WomenClothes';
 import Accessories from './components/Accessories';
 import Fitness from './components/Fitness';

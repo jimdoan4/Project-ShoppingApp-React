@@ -9,8 +9,8 @@ export default class Men extends Component {
 		return (
 			<div>
 				<Jumbotron fluid className="pic" style={{ height: '26rem' }}>
-					<Container>
-						<h1 style={{ fontWeight: 'bold' }}>Nutrition</h1>
+					<Container className= 'homefont' style={{ marginTop: '160px' }}>
+						<h1 style={{ fontWeight: 'bold', fontSize: '70px' }}>Nutrition</h1>
 					</Container>
 				</Jumbotron>
 				<div style={{ marginLeft: '30px', marginRight: '30px' }}>

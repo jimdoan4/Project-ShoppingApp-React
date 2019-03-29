@@ -10,7 +10,7 @@ export default class Accessories extends Component {
 			<div>
 				<Jumbotron fluid className="accessories" style={{ height: '26rem' }}>
 					<Container>
-						<h1>Accessories</h1>
+						<h1 className= 'homefont' style={{ fontWeight: 'bold', fontSize: '48px' }}>Accessories</h1>
 					</Container>
 				</Jumbotron>
 				<div style={{ marginLeft: '30px', marginRight: '30px' }}>

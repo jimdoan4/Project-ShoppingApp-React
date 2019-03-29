@@ -8,9 +8,9 @@ export default class Forum extends Component {
 		return (
 			<div>
 				<Jumbotron fluid className="forum" style={{ height: '26rem' }}>
-					<Container>
-						<h1 style={{ fontWeight: 'bold' }}>Forum</h1>
-						<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+					<Container className= 'homefont' style={{ marginTop: '180px' }}>
+						<h1 style={{ fontWeight: 'bold', fontSize: '70px' }}>Forum</h1>
+				
 					</Container>
 				</Jumbotron>
 				<div className="container">

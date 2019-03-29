@@ -97,27 +97,24 @@ class ApparelItem extends Component {
 
 		return (
 			<div>
-				<Jumbotron fluid className="cart" style={{ height: '26rem' }}>
-					<Container>
-						<h1 style={{ color: 'black', fontWeight: 'bold' }}>Brand</h1>
-						<p>This is a modified jumbotron that occupies the.</p>
-					</Container>
-				</Jumbotron>
+				<Jumbotron fluid className="cart" style={{ height: '26rem' }} />
 				<form onSubmit={this.createApparel}>
 					<div style={{ marginTop: '100px', marginBotton: '100px' }}>
-						<Card className="container" style={{ width: '43rem' }}>
+						<Card className="container" style={{ width: '43rem', marginBottom: '40px' }}>
 							<Card>
 								<Card.Img variant="top" src={this.state.apparel.image} alt="top" />
 								<Card.Body>
 									<Card.Title>{this.state.apparel.name}</Card.Title>
 									<Card.Title>{this.state.apparel.description}</Card.Title>
-									<Card.Title>${this.state.apparel.price}</Card.Title>
+									<Card.Title>${this.state.apparel.price}.00</Card.Title>
 								</Card.Body>
+                                
 								<Form.Group
 									controlId="exampleForm.ControlSelect1"
 									className="container"
 									style={{ width: '34rem' }}
 								>
+                                <Container style= {{ textAlign: 'center'}}>
 									<Form.Label>Size</Form.Label>
 									<Form.Control as="select" className="container" style={{ width: '12rem' }}>
 										<option>S</option>
@@ -125,8 +122,10 @@ class ApparelItem extends Component {
 										<option>L</option>
 										<option>XL</option>
 									</Form.Control>
+                                        </Container>
 								</Form.Group>
-
+                            <Container style= {{ textAlign: 'center'}}>
+                                <button>
 								<Link
 									to={{
 										pathname: `/cart/${this.state.apparelId}`,
@@ -135,6 +134,8 @@ class ApparelItem extends Component {
 								>
 									Add to Cart
 								</Link>
+                                </button>
+                                </Container>
 							</Card>
 						</Card>
 
