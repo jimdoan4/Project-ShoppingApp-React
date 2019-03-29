@@ -15,7 +15,7 @@ export default class Forum extends Component {
 				</Jumbotron>
 				<div className="container">
 					<Table striped bordered hover size="sm">
-						<thead>
+						<thead style= {{backgroundColor: '#9eacc1'}}>
 							<tr>
 								<th>Welcome to EQUIS Fitness Forums</th>
 							</tr>
@@ -24,32 +24,35 @@ export default class Forum extends Component {
 							<tr>
 								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
 							</tr>
+              
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Workout Equipment</td>
 							</tr>
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Workout Programs</td>
 							</tr>
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Exercises</td>
 							</tr>
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Nutrition</td>
 							</tr>
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Losing Fat</td>
 							</tr>
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Teen Bodybuilding</td>
 							</tr>
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Powerlifting/Strongman
+</td>
 							</tr>
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Female Bodybuilding
+</td>
 							</tr>
 							<tr>
-								<td style={{ padding: '14px' }}>User Guidelines & General Information</td>
+								<td style={{ padding: '14px' }}>Sport Training</td>
 							</tr>
 						</tbody>
 					</Table>

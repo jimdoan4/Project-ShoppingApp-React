@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -18,14 +19,15 @@ export default class Home extends Component {
 				<div style={{ marginLeft: '30px', marginRight: '30px', marginBottom: '30px', height: '20rem' }}>
 					<CardGroup>
 						<Card style={{ width: '18rem', marginLeft: '30px', marginTop: '14px', marginRight: '30px' }}>
-							<Link to={'/menclothes/cityhoodie'}>
+							
 								<Card.Img
 									variant="top"
 									src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
 									alt="top"
 								/>
-							</Link>
+							
 						</Card>
+						
 						<Card style={{ width: '18rem', marginTop: '14px', marginLeft: '30px', marginRight: '30px' }}>
 							<Card.Img
 								variant="top"
@@ -33,6 +35,7 @@ export default class Home extends Component {
 								alt="top"
 							/>
 						</Card>
+						
 					</CardGroup>
 					<Container
 					>

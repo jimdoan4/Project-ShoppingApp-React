@@ -59,7 +59,13 @@ body {
   font-style: normal;
   font-weight: 900;
   font-size: 33px;
-  /* background-color: white; */
+}
+
+.gyms {
+  background-image: url('http://www.montana.edu/getfit/_ldp/.private_ldp/a4199/production/master/1b826c54-1730-4d06-b34e-58ca1344874b.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .pic {
