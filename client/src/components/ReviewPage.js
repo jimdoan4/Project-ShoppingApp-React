@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
@@ -10,10 +9,9 @@ import { Button } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 
-
 class ReviewPage extends Component {
 	state = {
-        apparelId: this.props.apparelId,
+		apparelId: this.props.apparelId,
 		reviews: [],
 		newReview: {
 			title: '',
@@ -23,15 +21,12 @@ class ReviewPage extends Component {
 		displayEditForm: false
 	};
 
-    
-    getAllReviews = () => {
-		axios
-            .get(`/api/apparels/${this.state.apparelId}/reviews`)
-            .then(res => {
-                console.log(res.data)
-                this.setState({ reviews: res.data})
-            })
-    }
+	getAllReviews = () => {
+		axios.get(`/api/apparels/${this.state.apparelId}/reviews`).then((res) => {
+			console.log(res.data);
+			this.setState({ reviews: res.data });
+		});
+	};
 
 	componentDidMount = () => {
 		this.getAllReviews();
@@ -42,19 +37,19 @@ class ReviewPage extends Component {
 			return { displayEditForm: !state.displayEditForm };
 		});
 	};
-    
-     handleChange = (e) => {
-        const changeNewReview = {...this.state.newReview}
-        changeNewReview[e.target.name] = e.target.value
-        this.setState({newReview: changeNewReview})
-    }
+
+	handleChange = (e) => {
+		const changeNewReview = { ...this.state.newReview };
+		changeNewReview[e.target.name] = e.target.value;
+		this.setState({ newReview: changeNewReview });
+	};
 
 	createReview = (e) => {
 		e.preventDefault();
 		axios
 			.post(`/api/apparels/${this.state.apparelId}/reviews`, {
 				title: this.state.newReview.title,
-			    description: this.state.newReview.description
+				description: this.state.newReview.description
 			})
 			.then((res) => {
 				const reviewsList = [ ...this.state.reviews ];
@@ -67,8 +62,8 @@ class ReviewPage extends Component {
 					displayReviewForm: false,
 					reviews: reviewsList
 				});
-            });
-            this.getAllReviews()
+			});
+		this.getAllReviews();
 	};
 
 	handleChange = (e) => {
@@ -96,7 +91,7 @@ class ReviewPage extends Component {
 	// 	});
 	// };
 
-    // handleSignUp = (e) => {
+	// handleSignUp = (e) => {
 	// 	e.preventDefault();
 	// 	this.createReview();
 	// };
@@ -106,96 +101,108 @@ class ReviewPage extends Component {
 			<div>
 				{this.state.reviews.map((review) => {
 					return (
-						<div key = {review._id}>
-							<Card className="container" style={{ width: '80rem', marginTop: '0px', marginBottom: '50px' }}>
+						<div key={review._id}>
+							<Card
+								className="container"
+								style={{ width: '80rem', marginTop: '0px', marginBottom: '50px' }}
+							>
 								<Card.Body className="container">
-                                <Card.Title className="container">
-									<Link to={`/apparels/${this.state.apparelId}/reviews/${review._id}`} key={review._id}>
-                                        <p style={{fontSize: '20px', color: 'black'}}className= 'text-center'>{review.title}</p>
-                                      
-                                        <p style={{fontSize: '20px', color: 'black'}} className= 'text-center'>{review.description}</p>
-                                        
-									</Link>
-                                    </Card.Title>
+									<Card.Title className="container">
+										<Link
+											to={`/apparels/${this.state.apparelId}/reviews/${review._id}`}
+											key={review._id}
+										>
+											<p style={{ fontSize: '20px', color: 'black' }} className="text-center">
+												{review.title}
+											</p>
+
+											<p style={{ fontSize: '20px', color: 'black' }} className="text-center">
+												{review.description}
+											</p>
+										</Link>
+									</Card.Title>
 								</Card.Body>
-                                <Form onSubmit={this.createReview}>
-                                	<Form.Row>
-								<Form.Group as={Col} controlId="formGridEmail">
-									<Form.Label htmlFor="title">Title</Form.Label>
-									<Form.Control
-										type="text"
-										name="title"
-										onChange={this.handleChange}
-										value={this.state.newReview.title}
-										placeholder="Enter Title"
-									/>
-								</Form.Group>
-							</Form.Row>
-                            	<Form.Row>
-								<Form.Group as={Col} controlId="formGridEmail">
-									<Form.Label htmlFor="description">Description</Form.Label>
-									<Form.Control
-										type="text"
-										name="description"
-										onChange={this.handleChange}
-										value={this.state.newReview.description}
-										placeholder="Enter Description"
-									/>
-								</Form.Group>
-							</Form.Row>
-                                
-                                	<div className="row">
-								<Button
-                                    className="container"
-                                    type="submit"
-									style={{
-										width: '12rem',
-										backgroundColor: 'white',
-										borderColor: 'white',
-										color: 'black',
-										borderColor: 'black'
-									}}
-								>
-									Review this item
-								</Button>
-							</div>
-							<div className="text-center">
-                            <Link className="text-center" to ={`/apparels/${this.state.apparelId}/reviews/${review._id}`}>
-								<Button
-                                    className="text-center"
-                                    type="submit"
-									style={{
-										width: '12rem',
-										marginBottom: '30px',
-										backgroundColor: 'white',
-										borderColor: 'white',
-										color: 'black',
-										borderColor: 'black',
-										marginTop: '13px'
-									}}
-								>
-									Edit Review
-								</Button>
-                                </Link>
-							</div>
-                            </Form>
-							</Card>
+								</Card>
+								
+								<br />
+								<br />
+								<div>
+								<Form onSubmit={this.createReview}>
+									<Form.Row>
+										<Form.Group as={Col} controlId="formGridEmail" className= 'text-center'>
+											<Form.Label htmlFor="title">Title</Form.Label>
+											<Form.Control
+												className= 'container'
+												type="text"
+												name="title"
+												onChange={this.handleChange}
+												value={this.state.newReview.title}
+												placeholder="Enter Title"
+											/>
+										</Form.Group>
+									</Form.Row>
+									<Form.Row>
+										<Form.Group as={Col} controlId="formGridEmail" className= 'text-center'>
+											<Form.Label  htmlFor="description">Description</Form.Label>
+											<Form.Control
+												className= 'container'
+												type="text"
+												name="description"
+												onChange={this.handleChange}
+												value={this.state.newReview.description}
+												placeholder="Enter Description"
+											/>
+										</Form.Group>
+									</Form.Row>
+
+									<div className="row">
+										<Button
+											className="container"
+											type="submit"
+											style={{
+												width: '12rem',
+												backgroundColor: 'white',
+												borderColor: 'white',
+												color: 'black',
+												borderColor: 'black'
+											}}
+										>
+											Review this item
+										</Button>
+									</div>
+									<div className="text-center">
+										<Link
+											className="text-center"
+											to={`/apparels/${this.state.apparelId}/reviews/${review._id}`}
+										>
+											<Button
+												className="text-center"
+												type="submit"
+												style={{
+													width: '12rem',
+													marginBottom: '30px',
+													backgroundColor: 'white',
+													borderColor: 'white',
+													color: 'black',
+													borderColor: 'black',
+													marginTop: '13px'
+												}}
+											>
+												Edit Review
+											</Button>
+										</Link>
+									</div>
+								</Form>
+								</div>
 						</div>
+							
 					);
 				})}
-				<br />
-				<br />
 			
 			</div>
+			
 		);
 	}
 }
-        
-        
-        
-			
-export default ReviewPage
 
-   
-
-
+export default ReviewPage;

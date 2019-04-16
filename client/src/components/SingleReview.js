@@ -79,7 +79,7 @@ class SingleReview extends Component {
                         <div className="row">
                             <div className="col s12 m6">
                                 <label htmlFor="title">Title</label>
-                                <input
+                                <input style= {{height: '65px', width: '320px'}}
                                     id="title"
                                     type="text"
                                     name="title"
@@ -90,6 +90,7 @@ class SingleReview extends Component {
                             <div className="col s12 m6">
                                 <label htmlFor="description">Description</label>
                                 <input
+                                style= {{height: '65px', width: '320px'}}
                                     id="description"
                                     type="text"
                                     name="description"
