@@ -26,7 +26,6 @@ class UserAccount extends Component {
 			this.setState({ users: res.data });
 		});
 	};
-	// created a method to get all users
 
 	createUser = (e) => {
 		axios
@@ -69,9 +68,8 @@ class UserAccount extends Component {
 					return (
 						<div>
 							<Card>
-								<Card.Body>
-									<Link to={`/users/${user._id}`} key={user._id}>
-										{user.userName}
+								<Card.Body className= 'text-center'>
+									<Link to={`/users/${user._id}`} key={user._id}>Welcome: {user.userName}
 									</Link>
 								</Card.Body>
 							</Card>
@@ -110,7 +108,7 @@ class UserAccount extends Component {
 									/>
 								</Form.Group>
 							</Form.Row>
-							<div className='text-center'>
+							<div style= {{ marginLeft: '140px'}}className='text-center'>
 							<Button
 								className='text-center'
 								variant="primary"
@@ -136,29 +134,6 @@ class UserAccount extends Component {
 }
 
 {
-	/* <form onSubmit={this.handleSignUp}>
-					<div>
-						<label htmlFor="userName">Username</label>
-						<input
-							type="text"
-							name="userName"
-							onChange={this.handleChange}
-							value={this.state.user.userName}
-						/>
-					</div>
-					<div>
-						<label htmlFor="password">password</label>
-						<input
-							type="password"
-							name="password"
-							onChange={this.handleChange}
-							value={this.state.user.password}
-						/>
-					</div>
-
-					<button>+ Create User</button>
-				</form>
-			</div> */
 }
 
 export default UserAccount;

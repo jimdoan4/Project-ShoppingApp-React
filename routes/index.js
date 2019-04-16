@@ -4,7 +4,6 @@ const appController = require('../controllers/appController.js');
 const apparelController = require('../controllers/apparelController');
 const userController = require('../controllers/userController');
 const reviewController = require('../controllers/reviewController');
-// const cartController = require('../controllers/cartController');
 
 router.get('/', appController.index);
 
@@ -13,12 +12,6 @@ router.post('/apparels/:apparelId/reviews', reviewController.create);
 router.get('/apparels/:apparelId/reviews/:reviewId', reviewController.show);
 router.put('/apparels/:apparelId/reviews/:reviewId', reviewController.update);
 router.delete('/apparels/:apparelId/reviews/:reviewId', reviewController.delete);
-
-// router.get('/apparels/:apparelId/carts', cartController.index);
-// router.post('/apparels/:apparelId/carts', cartController.create);
-// router.get('/apparels/:apparelId/carts/:cartId', cartController.show);
-// router.put('/apparels/:apparelId/carts/:cartId', cartController.update);
-// router.delete('/apparels/:apparelId/carts/:cartId', cartController.delete);
 
 router.get('/users', userController.index);
 router.post('/users', userController.create);

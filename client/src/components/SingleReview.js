@@ -3,12 +3,10 @@ import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 
-
-
-
 class SingleReview extends Component {
     state = {
         review: {
+            screenName: '',
             title: '',
             description: ''
         },
@@ -47,6 +45,7 @@ class SingleReview extends Component {
         e.preventDefault()
         axios
             .put(`/api/apparels/${this.state.apparelId}/reviews/${this.state.reviewId}`, {
+                screenName: this.state.review.screenName,
                 title: this.state.review.title,
                 description: this.state.review.description
                 
@@ -71,8 +70,8 @@ class SingleReview extends Component {
             return (<Redirect to={`/apparels/${this.state.apparelId}`}/>)
         }
         return (
-            <div>
-                <h3 style= {{ marginTop: '30px' }}className="text-center">{this.state.review.title}</h3>
+            <div className= 'text-center'>
+                <h3 style= {{ marginTop: '30px' }} className="text-center">{this.state.review.title}</h3>
                 {
                     this.state.displayEditForm
                     ? <form onSubmit = {this.updateReview} className="col s12">
@@ -91,7 +90,7 @@ class SingleReview extends Component {
                             <div className="col s12 m6 text-center">
                                 <label style= {{ marginRight: '30px', marginTop: '40px'}}htmlFor="description">Description</label>
                                 <input
-                                style= {{height: '50px', width: '320px', marginRight: '53px'}}
+                                style= {{height: '54px', width: '390px', marginRight: '53px'}}
                                     className= 'text-center'
                                     id="description"
                                     type="text"
@@ -113,7 +112,7 @@ class SingleReview extends Component {
                         </div>
                      </div>
                 }
-                <div className="text-center" style= {{ marginTop: '20px'}}>
+                <div className="text-center" style= {{ marginTop: '18px'}}>
                 <Link className="text-center" to = {`/apparels/${this.state.apparelId}/`}>Back To Apparels</Link>
                 </div>
             </div>

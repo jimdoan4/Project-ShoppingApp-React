@@ -14,6 +14,7 @@ class ReviewPage extends Component {
 		apparelId: this.props.apparelId,
 		reviews: [],
 		newReview: {
+			screenName: '',
 			title: '',
 			description: ''
 		},
@@ -48,6 +49,7 @@ class ReviewPage extends Component {
 		e.preventDefault();
 		axios
 			.post(`/api/apparels/${this.state.apparelId}/reviews`, {
+				screenName: this.state.newReview.screenName,
 				title: this.state.newReview.title,
 				description: this.state.newReview.description
 			})
@@ -56,6 +58,7 @@ class ReviewPage extends Component {
 				reviewsList.unshift(res.data);
 				this.setState({
 					newReview: {
+						screenName: '',
 						name: '',
 						size: ''
 					},
@@ -85,17 +88,6 @@ class ReviewPage extends Component {
 		this.getAllReviews();
 	};
 
-	// deleteReview = () => {
-	// 	axios.delete(`/api/apparels/${this.state.apparelId}/reviews/${this.state.reviewId}`).then((res) => {
-	// 		this.setState({ redirectToUser: true });
-	// 	});
-	// };
-
-	// handleSignUp = (e) => {
-	// 	e.preventDefault();
-	// 	this.createReview();
-	// };
-
 	render() {
 		return (
 			<div>
@@ -112,6 +104,9 @@ class ReviewPage extends Component {
 											to={`/apparels/${this.state.apparelId}/reviews/${review._id}`}
 											key={review._id}
 										>
+											<p style={{ fontSize: '20px', color: 'black' }} className="text-center">
+												{review.screenName}
+											</p>
 											<p style={{ fontSize: '20px', color: 'black' }} className="text-center">
 												{review.title}
 											</p>

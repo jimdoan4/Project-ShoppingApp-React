@@ -6,7 +6,6 @@ import { Jumbotron } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-// import Review from './Review';
 
 class SingleApparel extends Component {
 	state = {
@@ -153,43 +152,6 @@ class SingleApparel extends Component {
 								</Container>
 							</Card>
 						</Card>
-
-						{/* <Card className="container" style={{ width: '80rem', marginTop: '50px', marginBottom: '50px' }}>
-							<Card.Body className="container">
-								<Card.Title className="container">Reviews</Card.Title>
-								<Card.Text className="container">This is where you write your reviews.</Card.Text>
-							</Card.Body>
-							<div className="row">
-								<Button
-									className="container"
-									style={{
-										width: '12rem',
-										backgroundColor: 'white',
-										borderColor: 'white',
-										color: 'black',
-										borderColor: 'black'
-									}}
-								>
-									Review this item
-								</Button>
-							</div>
-							<div className="row">
-								<Button
-									className="container"
-									style={{
-										width: '12rem',
-										marginBottom: '30px',
-										backgroundColor: 'white',
-										borderColor: 'white',
-										color: 'black',
-										borderColor: 'black',
-										marginTop: '13px'
-									}}
-								>
-									Edit Review
-								</Button>
-							</div>
-						</Card> */}
 					</div>
 				</form>
 			</div>

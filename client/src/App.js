@@ -6,10 +6,7 @@ import { Navbar } from 'react-bootstrap';
 import { NavDropdown } from 'react-bootstrap';
 import MenClothes from './components/MenClothes';
 import Home from './components/Home';
-import LogIn from './components/LogIn';
-import Register from './components/Register';
 import UserAccount from './components/UserAccount';
-// import SingleApparel from './components/SingleApparel';
 import UserPage from './components/UserPage';
 import ClothesPage from './components/ClothesPage';
 import SingleReview from './components/SingleReview';
@@ -30,23 +27,12 @@ class App extends Component {
 											Men Apparel
 										</Link>
 									</NavDropdown.Item>
-
 									<NavDropdown.Divider />
 								</NavDropdown>
 							</Nav>
 							<Nav.Link>
 								<Link to="/users" style={{ color: 'white ' }}>
 									User Account
-								</Link>
-							</Nav.Link>
-							{/* <Nav.Link>
-								<Link to="/login" style={{ color: 'white ' }}>
-									Log In
-								</Link>
-							</Nav.Link> */}
-							<Nav.Link>
-								<Link to="/cart" style={{ color: 'white ' }}>
-									My Cart
 								</Link>
 							</Nav.Link>
 						</Navbar.Collapse>
@@ -59,8 +45,6 @@ class App extends Component {
 						<Route exact path="/users/:userId" component={UserPage} />
 						<Route exact path="/apparels/:apparelId" component={ClothesPage} />
 						<Route exact path="/apparels/:apparelId/reviews/:reviewId" component={SingleReview} />
-						{/* <Route exact path="/login" component={LogIn} /> */}
-						<Route exact path="/register" component={Register} /> 
 					</Switch>
 				</div>
 			</Router>

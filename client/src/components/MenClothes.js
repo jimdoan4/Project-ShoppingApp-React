@@ -30,32 +30,32 @@ class MenClothes extends Component {
 		});
 	};
 
-	// createApparel = (e) => {
-	// 	e.preventDefault();
-	// 	axios
-	// 		.post(`/api/apparels`, {
-	// 			name: this.state.newApparel.name,
-	// 			size: this.state.newApparel.size,
-	// 			image: this.state.newApparel.image,
-	// 			description: this.state.newApparel.description,
-	// 			price: this.state.newApparel.price
-	// 		})
-	// 		.then((res) => {
-	// 			const apparelsList = [ ...this.state.apparels ];
-	// 			apparelsList.unshift(res.data);
-	// 			this.setState({
-	// 				newApparel: {
-	// 					name: '',
-	// 					size: '',
-	// 					image: '',
-	// 					price: '',
-	// 					description: ''
-	// 				},
-	// 				displayApparelForm: false,
-	// 				apparels: apparelsList
-	// 			});
-	// 		});
-	// };
+	createApparel = (e) => {
+		e.preventDefault();
+		axios
+			.post(`/api/apparels`, {
+				name: this.state.newApparel.name,
+				size: this.state.newApparel.size,
+				image: this.state.newApparel.image,
+				description: this.state.newApparel.description,
+				price: this.state.newApparel.price
+			})
+			.then((res) => {
+				const apparelsList = [ ...this.state.apparels ];
+				apparelsList.unshift(res.data);
+				this.setState({
+					newApparel: {
+						name: '',
+						size: '',
+						image: '',
+						price: '',
+						description: ''
+					},
+					displayApparelForm: false,
+					apparels: apparelsList
+				});
+			});
+	};
 
 	handleChange = (e) => {
 		const newApparel = { ...this.state.apparel };

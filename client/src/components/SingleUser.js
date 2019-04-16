@@ -84,7 +84,6 @@ class SingleUser extends Component {
 								Password
 							</label>
 							<input
-								// className="container"
 								id="password"
 								type="password"
 								name="password"
