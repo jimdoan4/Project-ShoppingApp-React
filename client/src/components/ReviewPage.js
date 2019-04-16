@@ -123,9 +123,7 @@ class ReviewPage extends Component {
 									</Card.Title>
 								</Card.Body>
 								</Card>
-								
-								<br />
-								<br />
+							
 								<div>
 								<Form onSubmit={this.createReview}>
 									<Form.Row>
@@ -160,6 +158,7 @@ class ReviewPage extends Component {
 											className="container"
 											type="submit"
 											style={{
+												marginTop: '20px',
 												width: '12rem',
 												backgroundColor: 'white',
 												borderColor: 'white',

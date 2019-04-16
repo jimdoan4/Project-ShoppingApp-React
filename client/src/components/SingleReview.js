@@ -107,10 +107,10 @@ class SingleReview extends Component {
                     </form>
                     : <div>
                         <div className="text-center">
-                            <button onClick = {this.toggleEditForm} style= {{ marginRight: '50px', marginTop: '20px'}}>Edit Review</button>
-                            <button style= {{ marginTop: '20px'}}onClick = {this.deleteReview}>Delete Review</button>
+                            <button onClick = {this.toggleEditForm} style= {{ marginRight: '50px', marginTop: '20px', width: '12rem', marginBottom: '30px', backgroundColor: 'white', borderColor: 'white', color: 'black',
+                            borderColor: 'black'}}>Edit Review</button>
+                            <button style= {{ marginTop: '20px', width: '12rem', marginBottom: '30px', backgroundColor: 'white', borderColor: 'white',color: 'black', borderColor: 'black'}} onClick = {this.deleteReview}>Delete Review</button>
                         </div>
-                       
                      </div>
                 }
                 <div className="text-center" style= {{ marginTop: '20px'}}>
