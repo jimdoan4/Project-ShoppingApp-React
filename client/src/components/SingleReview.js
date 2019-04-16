@@ -79,7 +79,8 @@ class SingleReview extends Component {
                         <div className="col">
                             <div className="col s12 m6 text-center">
                                 <label style= {{ marginRight: '30px', marginTop: '30px'}}htmlFor="title">Title</label>
-                                <input style= {{height: '65px', width: '320px'}}
+                                <input style= {{height: '50px', width: '320px'}}
+                                    className= 'text-center'
                                     id="title"
                                     type="text"
                                     name="title"
@@ -90,7 +91,8 @@ class SingleReview extends Component {
                             <div className="col s12 m6 text-center">
                                 <label style= {{ marginRight: '30px', marginTop: '40px'}}htmlFor="description">Description</label>
                                 <input
-                                style= {{height: '65px', width: '320px'}}
+                                style= {{height: '50px', width: '320px', marginRight: '53px'}}
+                                    className= 'text-center'
                                     id="description"
                                     type="text"
                                     name="description"
@@ -99,18 +101,19 @@ class SingleReview extends Component {
                                 />
                             </div> 
                         </div>
-                    
+                    <div className= 'text-center' style= {{ marginTop: '20px'}}>
                         <button className= 'text-center'>Submit</button>
+                        </div>
                     </form>
                     : <div>
                         <div className="text-center">
-                            <button onClick = {this.toggleEditForm}>Edit Review</button>
-                            <button onClick = {this.deleteReview}>Delete Review</button>
+                            <button onClick = {this.toggleEditForm} style= {{ marginRight: '50px', marginTop: '20px'}}>Edit Review</button>
+                            <button style= {{ marginTop: '20px'}}onClick = {this.deleteReview}>Delete Review</button>
                         </div>
                        
                      </div>
                 }
-                <div className="text-center">
+                <div className="text-center" style= {{ marginTop: '20px'}}>
                 <Link className="text-center" to = {`/apparels/${this.state.apparelId}/`}>Back To Apparels</Link>
                 </div>
             </div>
