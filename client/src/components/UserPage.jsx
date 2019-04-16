@@ -10,7 +10,7 @@ class UserPage extends Component {
 	render() {
 		return (
 			<div className="row">
-				<div className="col s12 m4 l3">
+				<div className="col s12 m4 l3" style= {{ marginTop: '50px'}}>
 					<SingleUser userId={this.state.userId} />
 				</div>
 			</div>

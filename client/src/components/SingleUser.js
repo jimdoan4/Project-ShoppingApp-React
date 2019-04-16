@@ -80,7 +80,7 @@ class SingleUser extends Component {
 						</div>
 
 						<div style={{ textAlign: 'center' }}>
-							<label htmlFor="password" className="container">
+							<label style= {{ marginTop: '10px'}}htmlFor="password" className="container">
 								Password
 							</label>
 							<input
@@ -92,18 +92,19 @@ class SingleUser extends Component {
 								value={this.state.currentUser.password}
 							/>
 						</div>
-						<button>Update</button>
+						<div style= {{ marginTop: '20px'}} className= 'text-center'>
+						<button className= 'text-center'>Update</button>
+						</div>
 					</form>
 				) : (
 					<div>
-						<div>{/* <Pharmacy userId={this.state.userId} /> */}</div>
 					</div>
 				)}
-				<div className="row">
-					<button className="container" onClick={this.toggleEditForm}>
+				<div className="col">
+					<button style= {{ marginTop: '20px'}} className="col text-center" onClick={this.toggleEditForm}>
 						Edit
 					</button>
-					<button onClick={this.deleteUser} className="container">
+					<button style= {{ marginTop: '30px'}} onClick={this.deleteUser} className=" col text-center">
 						Delete
 					</button>
 				</div>
