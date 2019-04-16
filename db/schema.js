@@ -1,42 +1,33 @@
-const mongoose = require('./connections.js');
+const mongoose = require('../db/connection.js');
 const Schema = mongoose.Schema;
 
 const ReviewSchema = new Schema({
-	title: {
-		type: String,
-		default: 'New Title'
-	},
-	description: {
-		type: String,
-		default: 'New Description'
-	}
+	title: String,
+	description: String
 });
 
+// const CartSchema = new Schema({
+// 	cartItem: Number
+// })
+
 const ApparelSchema = new Schema({
-	name: {
-		type: String,
-		default: 'New Name'
-	},
-	size: {
-		type: String,
-		default: 'New Size'
-	},
-	image: {
-		type: String,
-		default: 'New Image'
-	},
-	price: {
-		type: Number,
-		default: 0
-	},
-	description: {
-		type: String,
-		default: 'New Description'
-	},
-	reviews: [ ReviewSchema ]
+	name: String,
+	size: String,
+	image: String,
+	price: Number,
+	description: String,
+	reviews: [ ReviewSchema ],
+	// carts: [ CartSchema ],
+});
+
+const UserSchema = new Schema({
+	userName: String,
+	password: String
 });
 
 module.exports = {
+	ApparelSchema: ApparelSchema,
 	ReviewSchema: ReviewSchema,
-	ApparelSchema: ApparelSchema
+	// CartSchema: CartSchema,
+	UserSchema: UserSchema
 };

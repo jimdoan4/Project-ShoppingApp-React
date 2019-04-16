@@ -1,13 +1,15 @@
+// mongoose.connect(process.env.MONGODB_URI);
 require('dotenv').config();
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI);
 
-const Review = require('../models/Review');
-const Apparel = require('../models/Apparel');
+const User = require('../models/User.js');
+const Apparel = require('../models/Apparel.js');
+const Review = require('../models/Review.js');
+// const Cart = require('../models/Cart.js');
 
-const shirt = new Review({
-	title: 'This is the best shirt I ever bought!',
-	description: 'This shirt if worth the price'
+const like = new Review({
+	title: 'Great fabric!',
+	description: 'This shirt is worth the price'
 });
 
 const cityHoodie = new Apparel({
@@ -17,7 +19,8 @@ const cityHoodie = new Apparel({
 	description:
 		'Cozy meets technical in this breathable, sweat-wicking pullover hoodie that keeps your muscles warm before and after training.',
 	image: 'https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 
 const ventShirt = new Apparel({
@@ -27,7 +30,8 @@ const ventShirt = new Apparel({
 	price: 68.0,
 	description:
 		'Seamless construction, anti-stink technology, and strategic venting make this shirt training-session ready.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 
 const basicShirt = new Apparel({
@@ -36,7 +40,8 @@ const basicShirt = new Apparel({
 	image: 'https://images.lululemon.com/is/image/lululemon/LM3BP6S_031384_1?$image_carousel-lg_2x$',
 	price: 68.0,
 	description: 'We built this soft, lightweight crew for ultimate everyday comfort.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 
 const ventShirtPolo = new Apparel({
@@ -46,7 +51,8 @@ const ventShirtPolo = new Apparel({
 	price: 68.0,
 	description:
 		'Go ahead and get sweaty in this anti-stink polo with strategic venting, four-way stretch fabric, and seamless construction.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 const ventShirt2 = new Apparel({
 	name: 'Metal Vent Tech Polo 2',
@@ -55,7 +61,8 @@ const ventShirt2 = new Apparel({
 	price: 49.0,
 	description:
 		'Seamless construction, anti-stink technology, and strategic venting make this a polo you will not be afraid to sweat in.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 const sweatPullOver = new Apparel({
 	name: 'City Sweat Pullover Hoodie',
@@ -64,7 +71,8 @@ const sweatPullOver = new Apparel({
 	price: 118.0,
 	description:
 		'Everyone needs a good hoodie. A loose fit and soft, breathable fabric makes this one just that much better.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 const zipHoodie = new Apparel({
 	name: 'City Sweat Zip Hoodie',
@@ -73,7 +81,8 @@ const zipHoodie = new Apparel({
 	price: 128.0,
 	description:
 		'Everyone needs a good hoodie. A loose fit and soft, breathable fabric makes this one just that much better.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 const ventTechShirt = new Apparel({
 	name: 'Metal Vent Tech Short Sleeve V',
@@ -82,7 +91,8 @@ const ventTechShirt = new Apparel({
 	price: 68.0,
 	description:
 		'Seamless construction, anti-stink technology, and strategic venting make this shirt training-session ready.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 const sleevelessShirt = new Apparel({
 	name: 'Drysense Mesh Sleeveless',
@@ -91,7 +101,8 @@ const sleevelessShirt = new Apparel({
 	price: 58.0,
 	description:
 		'Break your sweat record in this anti-stink sleeveless tee. It is made from a Mesh fabric that we developed to feel good against your skin—even when you are sweaty.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 const surgeTank = new Apparel({
 	name: 'Metal Vent Tech Surge Tank',
@@ -100,7 +111,8 @@ const surgeTank = new Apparel({
 	price: 39.0,
 	description:
 		'Stay cool when you are heating it up in this breatheable, seamless, and lightweight tank.Integrated open- hole Mesh fabric allows for maxium airflow so you can push yourself to the max.Plus, anti - stink technology means you can go from running your favourite routes to enjoying a much - deserved cold one at happy hour.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 const surgeShort = new Apparel({
 	name: 'Surge Short',
@@ -109,7 +121,8 @@ const surgeShort = new Apparel({
 	price: 48.0,
 	description:
 		'Stay cool when you are heating it up in this breatheable, seamless, and lightweight tank.Integrated open- hole Mesh fabric allows for maxium airflow so you can push yourself to the max.Plus, anti - stink technology means you can go from running your favourite routes to enjoying a much - deserved cold one at happy hour.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 const noBoxer = new Apparel({
 	name: 'No Boxer',
@@ -118,9 +131,16 @@ const noBoxer = new Apparel({
 	price: 39.0,
 	description:
 		'Stay cool when you are heating it up in this breatheable, seamless, and lightweight tank.Integrated open- hole Mesh fabric allows for maxium airflow so you can push yourself to the max.Plus, anti - stink technology means you can go from running your favourite routes to enjoying a much - deserved cold one at happy hour.',
-	reviews: [ shirt ]
+	reviews: [ like ],
+	// carts: '',
 });
 
+const jim = new User({
+	userName: 'Jimdoan4',
+	password: 'password'
+});
+
+User.deleteMany({}).then(() => jim.save());
 Apparel.deleteMany({})
 	.then(() => cityHoodie.save())
 	.then(() => surgeTank.save())
@@ -136,3 +156,18 @@ Apparel.deleteMany({})
 	.then(() => ventShirt.save())
 	.then(() => console.log('Successful Save'))
 	.then(() => mongoose.connection.close());
+
+// apparels: [
+// 	cityHoodie,
+// 	ventShirt,
+// 	basicShirt,
+// 	ventShirtPolo,
+// 	ventShirt2,
+// 	sweatPullOver,
+// 	zipHoodie,
+// 	ventTechShirt,
+// 	sleevelessShirt,
+// 	surgeTank,
+// 	surgeShort,
+// 	noBoxer
+// ]

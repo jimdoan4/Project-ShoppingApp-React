@@ -6,13 +6,17 @@ const routes = require('./routes/index')
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(`${__dirname}/client/build`));
+// app.use(express.static(`${__dirname}/client/build`));
+app.use(express.static(__dirname + '/client/build'))
 
-app.use('/api/apparels', routes);
-app.get('/', (req, res) => {
-	res.sendFile(`${__dirname}/client/build/index.html`);
-});
+app.use('/api/', routes);
 
+// app.get('/*', (req, res) => {
+// 	res.sendFile(`${__dirname}/client/build/index.html`);
+// });
+app.get('/*', (req,res) => {
+    res.sendFile(__dirname + '/client/build/index.html')
+})
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {

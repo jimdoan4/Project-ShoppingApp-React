@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
@@ -9,14 +9,15 @@ import { CardGroup } from 'react-bootstrap';
 class MenClothes extends Component {
 	state = {
 		apparels: [],
-		apparel: {
+		newApparel: {
 			name: '',
 			size: '',
 			image: '',
 			price: '',
-			description: ''
+			description: '',
+			review: []
 		},
-		displayApparelForm: false
+		redirectToSignUp: false
 	};
 
 	componentDidMount = () => {
@@ -24,37 +25,37 @@ class MenClothes extends Component {
 	};
 
 	getAllApparels = () => {
-		axios.get('/api/apparels').then((res) => {
+		axios.get(`/api/apparels`).then((res) => {
 			this.setState({ apparels: res.data });
 		});
 	};
 
-	createApparel = (e) => {
-		e.preventDefault();
-		axios
-			.post('/api/apparels', {
-				name: this.state.newApparel.name,
-				size: this.state.newApparel.size,
-				image: this.state.newApparel.image,
-				description: this.state.newApparel.description,
-				price: this.state.newApparel.price
-			})
-			.then((res) => {
-				const apparelsList = [ ...this.state.apparels ];
-				apparelsList.unshift(res.data);
-				this.setState({
-					newApparel: {
-						name: '',
-						size: '',
-						image: '',
-						price: '',
-						description: ''
-					},
-					displayApparelForm: false,
-					apparels: apparelsList
-				});
-			});
-	};
+	// createApparel = (e) => {
+	// 	e.preventDefault();
+	// 	axios
+	// 		.post(`/api/apparels`, {
+	// 			name: this.state.newApparel.name,
+	// 			size: this.state.newApparel.size,
+	// 			image: this.state.newApparel.image,
+	// 			description: this.state.newApparel.description,
+	// 			price: this.state.newApparel.price
+	// 		})
+	// 		.then((res) => {
+	// 			const apparelsList = [ ...this.state.apparels ];
+	// 			apparelsList.unshift(res.data);
+	// 			this.setState({
+	// 				newApparel: {
+	// 					name: '',
+	// 					size: '',
+	// 					image: '',
+	// 					price: '',
+	// 					description: ''
+	// 				},
+	// 				displayApparelForm: false,
+	// 				apparels: apparelsList
+	// 			});
+	// 		});
+	// };
 
 	handleChange = (e) => {
 		const newApparel = { ...this.state.apparel };
@@ -66,10 +67,8 @@ class MenClothes extends Component {
 		return (
 			<div>
 				<Jumbotron fluid className="man" style={{ height: '26rem' }}>
-					<Container className= 'homefont' style={{ marginTop: '210px' }}>
-						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: 'white' }}>
-							Let it Breathe
-						</h1>
+					<Container className="homefont" style={{ marginTop: '210px' }}>
+						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: 'white' }}>Let it Breathe</h1>
 					</Container>
 				</Jumbotron>
 				<div className="row">
@@ -93,7 +92,7 @@ class MenClothes extends Component {
 											marginRight: '30px'
 										}}
 									>
-										<Link to={`/${apparel._id}`}>
+										<Link to={`/apparels/${apparel._id}`} key={apparel._id}>
 											<Card.Img variant="top" src={apparel.image} />
 										</Link>
 										<Card.Body>
