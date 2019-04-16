@@ -72,13 +72,13 @@ class SingleReview extends Component {
         }
         return (
             <div>
-                <h3 className="text-center">{this.state.review.title}</h3>
+                <h3 style= {{ marginTop: '30px' }}className="text-center">{this.state.review.title}</h3>
                 {
                     this.state.displayEditForm
                     ? <form onSubmit = {this.updateReview} className="col s12">
-                        <div className="row">
-                            <div className="col s12 m6">
-                                <label htmlFor="title">Title</label>
+                        <div className="col">
+                            <div className="col s12 m6 text-center">
+                                <label style= {{ marginRight: '30px', marginTop: '30px'}}htmlFor="title">Title</label>
                                 <input style= {{height: '65px', width: '320px'}}
                                     id="title"
                                     type="text"
@@ -87,8 +87,8 @@ class SingleReview extends Component {
                                     value={this.state.review.title}
                                 />
                             </div>  
-                            <div className="col s12 m6">
-                                <label htmlFor="description">Description</label>
+                            <div className="col s12 m6 text-center">
+                                <label style= {{ marginRight: '30px', marginTop: '40px'}}htmlFor="description">Description</label>
                                 <input
                                 style= {{height: '65px', width: '320px'}}
                                     id="description"
@@ -100,7 +100,7 @@ class SingleReview extends Component {
                             </div> 
                         </div>
                     
-                        <button>Submit</button>
+                        <button className= 'text-center'>Submit</button>
                     </form>
                     : <div>
                         <div className="text-center">
