@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-class SingleUser extends Component {
+export default class SingleUser extends Component {
 	state = {
 		userId: this.props.userId,
 		currentUser: {
@@ -80,7 +80,7 @@ class SingleUser extends Component {
 						</div>
 
 						<div style={{ textAlign: 'center' }}>
-							<label style= {{ marginTop: '10px'}}htmlFor="password" className="container">
+							<label style={{ marginTop: '10px' }} htmlFor="password" className="container">
 								Password
 							</label>
 							<input
@@ -91,19 +91,18 @@ class SingleUser extends Component {
 								value={this.state.currentUser.password}
 							/>
 						</div>
-						<div style= {{ marginTop: '20px'}} className= 'text-center'>
-						<button className= 'text-center'>Update</button>
+						<div style={{ marginTop: '20px' }} className="text-center">
+							<button className="text-center">Update</button>
 						</div>
 					</form>
 				) : (
-					<div>
-					</div>
+					<div />
 				)}
 				<div className="col">
-					<button style= {{ marginTop: '20px'}} className="col text-center" onClick={this.toggleEditForm}>
+					<button style={{ marginTop: '20px' }} className="col text-center" onClick={this.toggleEditForm}>
 						Edit
 					</button>
-					<button style= {{ marginTop: '30px'}} onClick={this.deleteUser} className=" col text-center">
+					<button style={{ marginTop: '30px' }} onClick={this.deleteUser} className=" col text-center">
 						Delete
 					</button>
 				</div>
@@ -112,4 +111,4 @@ class SingleUser extends Component {
 	}
 }
 
-export default SingleUser;
+

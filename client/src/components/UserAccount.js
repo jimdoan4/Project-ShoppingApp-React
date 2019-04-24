@@ -6,7 +6,7 @@ import { Card } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 
-class UserAccount extends Component {
+export default class UserAccount extends Component {
 	state = {
 		users: [],
 		newUser: {
@@ -22,14 +22,14 @@ class UserAccount extends Component {
 	};
 
 	getAllUsers = () => {
-		axios.get('/api/users').then((res) => {
+		axios.get('/api/users/').then((res) => {
 			this.setState({ users: res.data });
 		});
 	};
 
 	createUser = (e) => {
 		axios
-			.post('/api/users', {
+			.post('/api/users/', {
 				password: this.state.newUser.password,
 				userName: this.state.newUser.userName,
 				apparels: []
@@ -133,7 +133,5 @@ class UserAccount extends Component {
 	}
 }
 
-{
-}
 
-export default UserAccount;
+

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SingleUser from './SingleUser';
 
 
-class UserPage extends Component {
+export default class UserPage extends Component {
 	state = {
 		userId: this.props.match.params.userId
 	};
@@ -18,4 +18,4 @@ class UserPage extends Component {
 	}
 }
 
-export default UserPage;
+

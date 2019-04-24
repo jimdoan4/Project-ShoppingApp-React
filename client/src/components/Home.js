@@ -13,7 +13,7 @@ export default class Home extends Component {
 				<Jumbotron fluid className="home" style={{ height: '26rem' }}>
 					<Container className="homefont">
 						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: '#6a7587' }}>EQUIS</h1>
-						<p style={{ fontSize: '20px', color: '#495260' }}>Your MIND, BODY and SOUL</p>
+						<p style={{ fontSize: '20px', color: '#495260' }}>Fitness Wear that hone Your MIND, BODY and SOUL</p>
 					</Container>
 				</Jumbotron>
 				<div style={{ marginLeft: '30px', marginRight: '30px', marginBottom: '30px', height: '20rem' }}>
@@ -45,8 +45,7 @@ export default class Home extends Component {
 								color: '#495260'
 							}}
 						>
-							EQUIS, the haven to your fitness guides. Browse through and find the best tips to your
-							healthy LIFESTYLE.
+							EQUIS, the haven to your fitness clothing guides. Browse through our apparel and find the best fitwear for your daily Lifestyle.
 						</h5>
 					</Container>
 					<div>
@@ -56,7 +55,7 @@ export default class Home extends Component {
 									className="fonts"
 									style={{ fontWeight: 'bold', color: 'white', marginTop: '170px' }}
 								>
-									EQUIS GYM
+									Women Fitness Wear
 								</h1>
 							</Container>
 						</Jumbotron>
@@ -128,7 +127,7 @@ export default class Home extends Component {
 								color: '#495260'
 							}}
 						>
-							Check out our FORUM
+							Check out our Accessories
 						</h1>
 					</Container>
 
@@ -136,7 +135,7 @@ export default class Home extends Component {
 						<Jumbotron fluid className="homee" style={{ width: 'max', height: '26rem' }}>
 							<Container>
 								<h1 className="fonts" style={{ fontWeight: 'bold', color: 'white', marginTop: '70px' }}>
-									Accessories
+									Fitness Accessories
 								</h1>
 							</Container>
 						</Jumbotron>

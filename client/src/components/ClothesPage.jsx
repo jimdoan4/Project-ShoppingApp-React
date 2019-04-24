@@ -1,28 +1,35 @@
-
-
 import React, { Component } from 'react';
 import SingleApparel from './SingleApparel';
 import ReviewPage from './ReviewPage';
+import { Container } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 
-class ClothesPage extends Component {
+export default class ClothesPage extends Component {
 	state = {
-        apparelId: this.props.match.params.apparelId
-       
+		apparelId: this.props.match.params.apparelId
 	};
 
 	render() {
 		return (
-			<div className="row">
-				<div className="col s12 m4 l3">
-					<SingleApparel apparelId={this.state.apparelId} />
-				</div>
- 
- 				<div className="container col">
- 					<ReviewPage apparelId={this.state.apparelId} />
-				</div>
+			<div>
+			<Jumbotron fluid className="cart" style={{ height: '26rem' }} />
+			<Container className= 'text-center'>
+			
+				<Row>
+			
+					<Col><SingleApparel apparelId={this.state.apparelId} /></Col>
+				</Row>
+				<Row>
+
+	
+					<Col><ReviewPage apparelId={this.state.apparelId} /></Col>
+					</Row>
+			</Container>
 			</div>
 		);
 	}
 }
 
-export default ClothesPage;
+

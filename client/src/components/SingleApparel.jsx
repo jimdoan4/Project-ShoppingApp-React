@@ -7,7 +7,7 @@ import { Card } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
-class SingleApparel extends Component {
+export default class SingleApparel extends Component {
 	state = {
 		apparelId: this.props.apparelId,
 		apparels: [],
@@ -20,7 +20,7 @@ class SingleApparel extends Component {
 			description: '',
 			reviews: {}
 		},
-		redirectToUser: false,
+		redirectToApparel: false,
 		displayEditForm: false
 	};
 
@@ -46,40 +46,6 @@ class SingleApparel extends Component {
 		this.setState({ apparel: updatedApparel });
 	};
 
-	createApparel = (e) => {
-		e.preventDefault();
-		axios
-			.post(`/api/apparels`, {
-				image: this.state.apparel.image,
-				name: this.state.apparel.name,
-				description: this.state.apparel.description,
-				size: this.state.apparel.size,
-				price: this.state.apparel.price,
-				reviews: {}
-			})
-			.then((res) => {
-				const apparelsList = [ ...this.state.apparel ];
-				apparelsList.unshift(res.data);
-				this.setState({
-					newApparel: {
-						name: '',
-						size: '',
-						image: '',
-						price: '',
-						description: '',
-						reviews: {}
-					},
-					displayApparelForm: false,
-					apparels: apparelsList
-				});
-			});
-	};
-
-	handleChange = (e) => {
-		const newApparel = { ...this.state.apparel };
-		newApparel[e.target.name] = e.target.value;
-		this.setState({ currentApparel: newApparel });
-	};
 
 	updateApparel = (e) => {
 		e.preventDefault();
@@ -100,19 +66,17 @@ class SingleApparel extends Component {
 
 	deleteApparel = () => {
 		axios.delete(`/api/apparels/${this.state.apparelId}`).then((res) => {
-			this.setState({ redirectToUser: true });
+			this.setState({ redirectToApparel: true });
 		});
 	};
 
 	render() {
-		if (this.state.redirectToUser) {
-			return <Redirect to={`/apparels/${this.state.apparelId}/`} />;
+		if (this.state.redirectToApparel) {
+			return <Redirect to={`/apparels/`} />;
 		}
 		return (
 			<div>
-				<Jumbotron fluid className="cart" style={{ height: '26rem' }} />
 
-				<form onSubmit={this.createApparel}>
 					<div style={{ marginTop: '100px', marginBottom: '100px' }}>
 						<Card className="container" style={{ width: '43rem', marginBottom: '40px' }}>
 							<Card>
@@ -139,24 +103,123 @@ class SingleApparel extends Component {
 									</Container>
 								</Form.Group>
 								<Container style={{ textAlign: 'center', marginBottom: '30px', marginTop: '8px' }}>
-									<Button style={{ backgroundColor: 'white', borderColor: 'black' }}>
-										<Link
-											to={{
-												pathname: `/cart/${this.state.apparelId}`,
-												state: { apparelId: true }
-											}}
-										>
-											Add to Cart
-										</Link>
-									</Button>
-								</Container>
+								<button
+								className= ''
+									onClick={this.toggleEditForm}
+									style={{
+										backgroundColor: 'white',
+										borderColor: 'black',
+										color: 'black',
+										marginRight: '10px'
+									}}
+								>
+									Edit Apparel
+								</button>
+
+								<button
+								className= ''
+									style={{ backgroundColor: 'white', borderColor: 'black', color: 'black' }}
+									onClick={this.deleteApparel}
+								>
+									Delete Apparel
+								</button>
+							</Container>
+							
 							</Card>
 						</Card>
 					</div>
-				</form>
+				{this.state.displayEditForm ? (
+					<form style={{ marginTop: '30px', marginRight: '' }} onSubmit={this.updateApparel} className="col text-center">
+						<div className="col text-center">
+							<div className="col s12 m6 text-center">
+								<label style={{ marginRight: '0px', marginTop: '30px' }} htmlFor="name">
+									Apparel Name{' '}
+								</label>
+								<p></p>
+								<input
+									style={{ height: '50px', width: '320px' }}
+									className="text-center"
+									id="name"
+									type="text"
+									name="name"
+									onChange={this.handleChange}
+									value={this.state.apparel.name}
+								/>
+							</div>
+							<div className="col s12 m6 text-center">
+								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="size">
+									Size{' '}
+								</label>
+								<input
+									style={{ height: '54px', width: '390px', marginRight: '53px' }}
+									className="text-center"
+									id="size"
+									type="text"
+									name="size"
+									onChange={this.handleChange}
+									value={this.state.apparel.size}
+								/>
+							</div>
+							<div className="col s12 m6 text-center">
+								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="image">
+									Image{' '}
+								</label>
+								<input
+									style={{ height: '54px', width: '390px', marginRight: '53px' }}
+									className="text-center"
+									id="image"
+									type="text"
+									name="image"
+									onChange={this.handleChange}
+									value={this.state.apparel.image}
+								/>
+							</div>
+							<div className="col s12 m6 text-center">
+								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="price">
+									Price
+								</label>
+								<input
+									style={{ height: '54px', width: '390px', marginRight: '53px' }}
+									className="text-center"
+									id="price"
+									type="number"
+									name="price"
+									onChange={this.handleChange}
+									value={this.state.apparel.price}
+								/>
+							</div>
+							<div className="col s12 m6 text-center">
+								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="description">
+									Description{' '}
+								</label>
+								<input
+									style={{ height: '54px', width: '390px', marginRight: '53px' }}
+									className="text-center"
+									id="description"
+									type="text"
+									name="description"
+									onChange={this.handleChange}
+									value={this.state.apparel.description}
+								/>
+							</div>
+						
+						</div>
+						<div className="text-center" style={{ marginTop: '20px' }}>
+							<button
+								style={{
+									backgroundColor: 'white',
+									borderColor: 'black',
+									color: 'black'
+								}}
+								className="text-center rockstar"
+							>
+								Submit
+							</button>
+						</div>
+					</form>
+				) : null}
 			</div>
 		);
 	}
 }
 
-export default SingleApparel;

@@ -1,4 +1,3 @@
-// mongoose.connect(process.env.MONGODB_URI);
 require('dotenv').config();
 const mongoose = require('mongoose');
 
@@ -141,7 +140,9 @@ const jim = new User({
 	password: 'password'
 });
 
-User.deleteMany({}).then(() => jim.save());
+User.deleteMany({})
+	.then(() => jim.save());
+
 Apparel.deleteMany({})
 	.then(() => cityHoodie.save())
 	.then(() => surgeTank.save())

@@ -8,8 +8,9 @@ import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
-class ReviewPage extends Component {
+export default class ReviewPage extends Component {
 	state = {
 		apparelId: this.props.apparelId,
 		reviews: [],
@@ -19,11 +20,12 @@ class ReviewPage extends Component {
 			description: ''
 		},
 		redirectToUser: false,
-		displayEditForm: false
+		displayEditForm: false,
+		displayReviewForm: false
 	};
 
 	getAllReviews = () => {
-		axios.get(`/api/apparels/${this.state.apparelId}/reviews`).then((res) => {
+		axios.get(`/api/apparels/${this.state.apparelId}/reviews/`).then((res) => {
 			console.log(res.data);
 			this.setState({ reviews: res.data });
 		});
@@ -39,6 +41,12 @@ class ReviewPage extends Component {
 		});
 	};
 
+	toggleReviewForm = () => {
+		this.setState((state, props) => {
+			return { displayReviewForm: !state.displayReviewForm };
+		});
+	};
+
 	handleChange = (e) => {
 		const changeNewReview = { ...this.state.newReview };
 		changeNewReview[e.target.name] = e.target.value;
@@ -48,7 +56,7 @@ class ReviewPage extends Component {
 	createReview = (e) => {
 		e.preventDefault();
 		axios
-			.post(`/api/apparels/${this.state.apparelId}/reviews`, {
+			.post(`/api/apparels/${this.state.apparelId}/reviews/`, {
 				screenName: this.state.newReview.screenName,
 				title: this.state.newReview.title,
 				description: this.state.newReview.description
@@ -59,10 +67,10 @@ class ReviewPage extends Component {
 				this.setState({
 					newReview: {
 						screenName: '',
-						name: '',
-						size: ''
+						title: '',
+						description: ''
 					},
-					displayReviewForm: false,
+					displayEditForm: false,
 					reviews: reviewsList
 				});
 			});
@@ -79,124 +87,191 @@ class ReviewPage extends Component {
 		e.preventDefault();
 		axios
 			.put(`/api/apparels/${this.state.apparelId}`, {
+				screenName: this.state.newReview.screenName,
 				title: this.state.newReview.title,
 				description: this.state.newReview.description
 			})
 			.then((res) => {
-				this.setState({ apparel: res.data, displayEditForm: false });
+				this.setState({ apparel: res.data, displayReviewForm: false });
 			});
 		this.getAllReviews();
 	};
 
+	deleteReview = (e, review) => {
+		e.preventDefault();
+		axios.delete(`/api/apparels/${this.state.apparelId}/reviews/${review._id}`).then((res) => {
+			this.getAllReviews();
+		});
+	};
+
 	render() {
+		if (this.state.redirectToUser) {
+			return <Redirect to={`/apparels/`} />
+		}
 		return (
-			<div>
-				{this.state.reviews.map((review) => {
-					return (
-						<div key={review._id}>
-							<Card
-								className="container"
-								style={{ width: '80rem', marginTop: '0px', marginBottom: '50px' }}
-							>
-								<Card.Body className="container">
-									<Card.Title className="container">
-										<Link
-											to={`/apparels/${this.state.apparelId}/reviews/${review._id}`}
-											key={review._id}
-										>
-											<p style={{ fontSize: '20px', color: 'black' }} className="text-center">
-												{review.screenName}
-											</p>
-											<p style={{ fontSize: '20px', color: 'black' }} className="text-center">
-												{review.title}
-											</p>
-
-											<p style={{ fontSize: '20px', color: 'black' }} className="text-center">
-												{review.description}
-											</p>
-										</Link>
-									</Card.Title>
-								</Card.Body>
-								</Card>
-							
-								<div>
-								<Form onSubmit={this.createReview}>
-									<Form.Row>
-										<Form.Group as={Col} controlId="formGridEmail" className= 'text-center'>
-											<Form.Label htmlFor="title">Title</Form.Label>
-											<Form.Control
-												className= 'container'
-												type="text"
-												name="title"
-												onChange={this.handleChange}
-												value={this.state.newReview.title}
-												placeholder="Enter Title"
-											/>
-										</Form.Group>
-									</Form.Row>
-									<Form.Row>
-										<Form.Group as={Col} controlId="formGridEmail" className= 'text-center'>
-											<Form.Label  htmlFor="description">Description</Form.Label>
-											<Form.Control
-												className= 'container'
-												type="text"
-												name="description"
-												onChange={this.handleChange}
-												value={this.state.newReview.description}
-												placeholder="Enter Description"
-											/>
-										</Form.Group>
-									</Form.Row>
-
-									<div className="row">
-										<Button
-											className="container"
-											type="submit"
+			<div className="text-center" style={{ position: 'block' }}>
+				<h3 style= {{marginTop: '30px'}}>Write A Review About This Apparel Item</h3>
+				<button
+					style={{
+						marginTop: '14px',
+						backgroundColor: 'white',
+						borderColor: 'black',
+						color: 'black'
+					}}
+					onClick={this.toggleEditForm}
+				>
+					Check to see All of the Reviews About this Item
+				</button>
+				<div className="">
+					{this.state.reviews.map((review) => {
+						return (
+							<div>
+								{this.state.displayEditForm ? (
+								
+										<Card
+											className="text-center"
 											style={{
-												marginTop: '20px',
-												width: '12rem',
-												backgroundColor: 'white',
-												borderColor: 'white',
-												color: 'black',
-												borderColor: 'black'
+												backgroundColor: 'grey',
+												color: 'white',
+												paddingLeft: '14px',
+												paddingRight: '14px',
+												paddingTop: '14px',
+												paddingBottom: '14px',
+												marginTop: '20px'
 											}}
 										>
-											Review this item
-										</Button>
-									</div>
-									<div className="text-center">
-										<Link
-											className="text-center"
-											to={`/apparels/${this.state.apparelId}/reviews/${review._id}`}
-										>
-											<Button
+										<div style= {{color: 'white'}}>
+											<p style= {{color: 'white'}}>Screen Name: {review.screenName}</p>
+											<p style= {{color: 'white'}}>Title: {review.title}</p>
+											<p style= {{color: 'white'}}>Description: {review.description}</p>
+											</div>
+										
+
+											<Container
+												style={{ textAlign: 'center' }}
 												className="text-center"
+											>
+											<Row>
+												<Col> 
+												<Link
+													to={`/apparels/${this.state.apparelId}/reviews/${review._id}`}
+													key={review._id}
+												> 
+													<button
+														style={{
+															backgroundColor: 'white',
+															borderColor: 'black',
+															color: 'black',
+															marginRight: '10px'
+														}}
+													>
+														Edit Review
+													</button>
+												 </Link> 
+												</Col>
+												<Col>
+												<button
+													style={{
+														backgroundColor: 'white',
+														borderColor: 'black',
+														color: 'black'
+													}}
+													key={review._id}
+													onClick={(e) => this.deleteReview(e, review)}
+												>
+													Delete Review
+												</button>
+												</Col>
+												</Row>
+											</Container>
+										</Card>
+								
+								) : null}
+							</div>
+						);
+					})}
+
+					<div className="text-center col" style={{ marginTop: '30px' }}>
+						
+							<div className="container text-center">
+							
+									<Form
+										className="text-center"
+										style={{
+											display: 'inline-block',
+											backgroundColor: 'grey',
+											color: 'white',
+											marginBottom: '30px'
+											
+										}}
+										onSubmit={this.createReview}
+									>
+										<Form.Row>
+											<Form.Group as={Col} controlId="formGridPassword">
+												<Form.Label htmlFor="screenName">Screen Name </Form.Label>
+												<Form.Control
+													className="text-center"
+													type="text"
+													name="screenName"
+													onChange={this.handleChange}
+													value={this.state.newReview.screenName}
+													placeholder="Enter Your Screen Name"
+												/>
+											</Form.Group>
+										</Form.Row>
+										<Form.Row>
+											<Form.Group as={Col} controlId="formGridEmail">
+												<Form.Label htmlFor="title">Title </Form.Label>
+												<Form.Control
+													className="text-center"
+													type="text"
+													name="title"
+													onChange={this.handleChange}
+													value={this.state.newReview.title}
+													placeholder="Enter A Brief Title of Your Review"
+												/>
+											</Form.Group>
+										</Form.Row>
+										<Form.Row>
+											<Form.Group as={Col} controlId="formGridEmail">
+												<Form.Label htmlFor="description">Description </Form.Label>
+												<Form.Control
+													className="text-center"
+													type="text"
+													name="description"
+													onChange={this.handleChange}
+													value={this.state.newReview.description}
+													placeholder="Enter A Description Of Your Review About this Item"
+												/>
+											</Form.Group>
+										</Form.Row>
+										<div style={{ marginLeft: '140px' }} className="text-center">
+											<button
+												className="text-center"
+												variant="primary"
 												type="submit"
 												style={{
-													width: '12rem',
-													marginBottom: '30px',
+													marginRight: '140px',
+													paddingLeft: '60px',
+													paddingRight: '60px',
+													marginTop: '1px',
+													marginBottom: '15px',
 													backgroundColor: 'white',
-													borderColor: 'white',
-													color: 'black',
 													borderColor: 'black',
-													marginTop: '13px'
+													color: 'black'
 												}}
 											>
-												Edit Review
-											</Button>
-										</Link>
-									</div>
-								</Form>
-								</div>
-						</div>
-							
-					);
-				})}
-			
+												Add a Review
+											</button>
+										</div>
+									</Form>
+						
+							</div>
+						
+					</div>
+				</div>
 			</div>
-			
 		);
 	}
 }
 
-export default ReviewPage;

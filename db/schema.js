@@ -7,7 +7,6 @@ const ReviewSchema = new Schema({
 	description: String
 });
 
-
 const ApparelSchema = new Schema({
 	name: String,
 	size: String,

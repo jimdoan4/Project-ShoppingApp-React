@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
 
-class MenClothes extends Component {
+export default class MenClothes extends Component {
 	state = {
 		apparels: [],
 		newApparel: {
@@ -25,7 +25,7 @@ class MenClothes extends Component {
 	};
 
 	getAllApparels = () => {
-		axios.get(`/api/apparels`).then((res) => {
+		axios.get(`/api/apparels/`).then((res) => {
 			this.setState({ apparels: res.data });
 		});
 	};
@@ -110,4 +110,4 @@ class MenClothes extends Component {
 	}
 }
 
-export default MenClothes;
+

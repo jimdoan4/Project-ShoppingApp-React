@@ -23,7 +23,7 @@ class App extends Component {
 							<Nav className="mr-auto">
 								<NavDropdown title="Shop" id="collasible-nav-dropdown">
 									<NavDropdown.Item>
-										<Link to="/apparels" style={{ color: 'black ' }}>
+										<Link to="/apparels/" style={{ color: 'black ' }}>
 											Men Apparel
 										</Link>
 									</NavDropdown.Item>
@@ -31,7 +31,7 @@ class App extends Component {
 								</NavDropdown>
 							</Nav>
 							<Nav.Link>
-								<Link to="/users" style={{ color: 'white ' }}>
+								<Link to="/users/" style={{ color: 'white ' }}>
 									User Account
 								</Link>
 							</Nav.Link>
@@ -40,11 +40,11 @@ class App extends Component {
 
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route exact path="/apparels" component={MenClothes} />
-						<Route exact path="/users" component={UserAccount} />
-						<Route exact path="/users/:userId" component={UserPage} />
-						<Route exact path="/apparels/:apparelId" component={ClothesPage} />
-						<Route exact path="/apparels/:apparelId/reviews/:reviewId" component={SingleReview} />
+						<Route exact path="/apparels/" component={MenClothes} />
+						<Route exact path="/users/" component={UserAccount} />
+						<Route exact path="/users/:userId/" component={UserPage} />
+						<Route exact path="/apparels/:apparelId/" component={ClothesPage} />
+						<Route exact path="/apparels/:apparelId/reviews/:reviewId/" component={SingleReview} />
 					</Switch>
 				</div>
 			</Router>
