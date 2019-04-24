@@ -110,7 +110,7 @@ export default class ReviewPage extends Component {
 		}
 		return (
 			<div className="text-center" style={{ position: 'block' }}>
-				<h3 style= {{marginTop: '30px'}}>Write A Review About This Apparel Item</h3>
+				<h3>Write A Review About This Apparel Item</h3>
 				<button
 					style={{
 						marginTop: '14px',
@@ -133,17 +133,15 @@ export default class ReviewPage extends Component {
 											style={{
 												backgroundColor: 'grey',
 												color: 'white',
-												paddingLeft: '14px',
-												paddingRight: '14px',
 												paddingTop: '14px',
 												paddingBottom: '14px',
 												marginTop: '20px'
 											}}
 										>
 										<div style= {{color: 'white'}}>
-											<p style= {{color: 'white'}}>Screen Name: {review.screenName}</p>
-											<p style= {{color: 'white'}}>Title: {review.title}</p>
-											<p style= {{color: 'white'}}>Description: {review.description}</p>
+											<p style= {{color: 'white', fontSize: '20px'}}>Screen Name: {review.screenName}</p>
+											<p style= {{color: 'white', fontSize: '20px'}}>Title: {review.title}</p>
+											<p style= {{color: 'white', fontSize: '20px'}}>Description: {review.description}</p>
 											</div>
 										
 
@@ -159,9 +157,8 @@ export default class ReviewPage extends Component {
 												> 
 													<button
 														style={{
-															backgroundColor: 'white',
-															borderColor: 'black',
-															color: 'black',
+															backgroundColor: '#3a5d96', color: 'white',
+                            								borderColor: 'black',
 															marginRight: '10px'
 														}}
 													>
@@ -172,9 +169,8 @@ export default class ReviewPage extends Component {
 												<Col>
 												<button
 													style={{
-														backgroundColor: 'white',
-														borderColor: 'black',
-														color: 'black'
+														backgroundColor: '#3a5d96', color: 'white',
+                            							borderColor: 'black'
 													}}
 													key={review._id}
 													onClick={(e) => this.deleteReview(e, review)}
@@ -208,7 +204,7 @@ export default class ReviewPage extends Component {
 									>
 										<Form.Row>
 											<Form.Group as={Col} controlId="formGridPassword">
-												<Form.Label htmlFor="screenName">Screen Name </Form.Label>
+												<Form.Label style= {{marginTop: '14px'}}htmlFor="screenName">Screen Name </Form.Label>
 												<Form.Control
 													className="text-center"
 													type="text"
@@ -256,9 +252,9 @@ export default class ReviewPage extends Component {
 													paddingRight: '60px',
 													marginTop: '1px',
 													marginBottom: '15px',
-													backgroundColor: 'white',
-													borderColor: 'black',
-													color: 'black'
+													backgroundColor: '#3a5d96', 
+													color: 'white',
+                            						borderColor: 'black'
 												}}
 											>
 												Add a Review

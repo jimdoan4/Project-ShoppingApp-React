@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default class SingleUser extends Component {
@@ -92,19 +92,27 @@ export default class SingleUser extends Component {
 							/>
 						</div>
 						<div style={{ marginTop: '20px' }} className="text-center">
-							<button className="text-center">Update</button>
+							<button style ={{ backgroundColor: '#3a5d96', color: 'white',
+                            borderColor: 'black' }}className="text-center">Update</button>
 						</div>
 					</form>
 				) : (
 					<div />
 				)}
 				<div className="col">
-					<button style={{ marginTop: '20px' }} className="col text-center" onClick={this.toggleEditForm}>
+					<button style={{ marginTop: '20px', backgroundColor: '#3a5d96', color: 'white',
+                            borderColor: 'black' }} className="col text-center" onClick={this.toggleEditForm}>
 						Edit
 					</button>
-					<button style={{ marginTop: '30px' }} onClick={this.deleteUser} className=" col text-center">
+					<button style={{ marginTop: '30px', backgroundColor: '#3a5d96', color: 'white',
+                            borderColor: 'black' }} onClick={this.deleteUser} className=" col text-center">
 						Delete
 					</button>
+				</div>
+				<div className= 'col text-center'>
+				<Link to={'/users/'}>
+				<button style={{ marginTop: '20px', backgroundColor: '#3a5d96', color: 'white', borderColor: 'black', marginleft: '300px' }} className=" text-center">Back to Login</button>
+				</Link>
 				</div>
 			</div>
 		);

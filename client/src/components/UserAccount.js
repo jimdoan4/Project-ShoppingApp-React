@@ -67,21 +67,20 @@ export default class UserAccount extends Component {
 				{this.state.users.map((user) => {
 					return (
 						<div>
-							<Card>
-								<Card.Body className= 'text-center'>
-									<Link to={`/users/${user._id}`} key={user._id}>Welcome: {user.userName}
+							<Card style= {{marginRight: '511px', marginLeft: '511px', color: 'white'}}>
+								<Card.Body style= {{backgroundColor: 'grey', color: 'white'}} className= 'text-center'>
+									<Link style= {{backgroundColor: 'grey', color: 'white'}}to={`/users/${user._id}`} key={user._id}>Welcome: {user.userName}
 									</Link>
 								</Card.Body>
 							</Card>
 						</div>
 					);
 				})}
-				<br />
-				<br />
+			
 				<div className="container">
 					<Card
 						className="container"
-						style={{ width: '33rem', height: '18rem', paddingTop: '35px', marginTop: '100px' }}
+						style={{ width: '33rem', height: '18rem', paddingTop: '35px', marginTop: '230px' }}
 					>
 						<Form className="text-center" style={{ display: 'inline-block' }} onSubmit={this.handleSignUp}>
 							<Form.Row>
@@ -118,7 +117,10 @@ export default class UserAccount extends Component {
 									paddingLeft: '30px',
 									paddingRight: '30px',
 									marginTop: '15px',
-									marginBottom: '25px'
+									marginBottom: '25px',
+									backgroundColor: '#3a5d96', 
+									color: 'white',
+                            		borderColor: 'black'
 									
 								}}
 							>

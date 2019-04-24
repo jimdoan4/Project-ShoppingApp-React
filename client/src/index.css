@@ -94,15 +94,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* border-radius: 9rem; */
+
 }
 
-.forum {
-  background-image: url('https://s3.amazonaws.com/coursestorm/live/media/ebe36e99967f11e88ea30e92b056efc0');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .women {
   background-image: url('https://assets.parents.com/s3fs-public/styles/nfp_1080_portrait/public/fitbit_versa_lifestyle_female_outdoorrun.jpeg?k23jgEJVtM2wz0w2KeK8hcjAN3qiSshA');
@@ -131,6 +125,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .fonts {
   font-family: 'Fira Sans', sans-serif;
 }

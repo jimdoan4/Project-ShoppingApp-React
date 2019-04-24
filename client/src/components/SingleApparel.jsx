@@ -77,7 +77,7 @@ export default class SingleApparel extends Component {
 		return (
 			<div>
 
-					<div style={{ marginTop: '100px', marginBottom: '100px' }}>
+					<div style={{ marginTop: '10px', marginBottom: '40px' }}>
 						<Card className="container" style={{ width: '43rem', marginBottom: '40px' }}>
 							<Card>
 								<Card.Img variant="top" src={this.state.apparel.image} alt="top" />
@@ -107,9 +107,9 @@ export default class SingleApparel extends Component {
 								className= ''
 									onClick={this.toggleEditForm}
 									style={{
-										backgroundColor: 'white',
+										backgroundColor: '#3a5d96',
 										borderColor: 'black',
-										color: 'black',
+										color: 'white',
 										marginRight: '10px'
 									}}
 								>
@@ -118,7 +118,7 @@ export default class SingleApparel extends Component {
 
 								<button
 								className= ''
-									style={{ backgroundColor: 'white', borderColor: 'black', color: 'black' }}
+									style={{ backgroundColor: '#3a5d96', borderColor: 'black', color: 'white' }}
 									onClick={this.deleteApparel}
 								>
 									Delete Apparel
@@ -129,15 +129,15 @@ export default class SingleApparel extends Component {
 						</Card>
 					</div>
 				{this.state.displayEditForm ? (
-					<form style={{ marginTop: '30px', marginRight: '' }} onSubmit={this.updateApparel} className="col text-center">
+					<form style={{ marginTop: '10px', marginBottom: '60px' }} onSubmit={this.updateApparel} className="col text-center">
 						<div className="col text-center">
 							<div className="col s12 m6 text-center">
-								<label style={{ marginRight: '0px', marginTop: '30px' }} htmlFor="name">
+								<label style={{ marginRight: '30px', marginTop: '10px' }} htmlFor="name">
 									Apparel Name{' '}
 								</label>
-								<p></p>
+								
 								<input
-									style={{ height: '50px', width: '320px' }}
+									style={{ height: '50px', width: '320px', marginRight: '99px'  }}
 									className="text-center"
 									id="name"
 									type="text"
@@ -147,7 +147,7 @@ export default class SingleApparel extends Component {
 								/>
 							</div>
 							<div className="col s12 m6 text-center">
-								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="size">
+								<label style={{ marginRight: '30px', marginTop: '20px' }} htmlFor="size">
 									Size{' '}
 								</label>
 								<input
@@ -161,7 +161,7 @@ export default class SingleApparel extends Component {
 								/>
 							</div>
 							<div className="col s12 m6 text-center">
-								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="image">
+								<label style={{ marginRight: '30px', marginTop: '20px' }} htmlFor="image">
 									Image{' '}
 								</label>
 								<input
@@ -175,7 +175,7 @@ export default class SingleApparel extends Component {
 								/>
 							</div>
 							<div className="col s12 m6 text-center">
-								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="price">
+								<label style={{ marginRight: '30px', marginTop: '20px' }} htmlFor="price">
 									Price
 								</label>
 								<input
@@ -188,12 +188,12 @@ export default class SingleApparel extends Component {
 									value={this.state.apparel.price}
 								/>
 							</div>
-							<div className="col s12 m6 text-center">
+							<div style= {{ marginTop: '6px' }}className="col s12 m6 text-center">
 								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="description">
 									Description{' '}
 								</label>
 								<input
-									style={{ height: '54px', width: '390px', marginRight: '53px' }}
+									style={{ height: '54px', width: '390px', marginRight: '90px', paddingTop: '100px', paddingBottom: '100px', paddingLeft: '100px', paddingRight: '100px' }}
 									className="text-center"
 									id="description"
 									type="text"
@@ -207,9 +207,9 @@ export default class SingleApparel extends Component {
 						<div className="text-center" style={{ marginTop: '20px' }}>
 							<button
 								style={{
-									backgroundColor: 'white',
+									backgroundColor: '#3a5d96',
 									borderColor: 'black',
-									color: 'black'
+									color: 'white'
 								}}
 								className="text-center rockstar"
 							>

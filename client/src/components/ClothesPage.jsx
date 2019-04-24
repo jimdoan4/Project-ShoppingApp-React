@@ -16,14 +16,10 @@ export default class ClothesPage extends Component {
 			<div>
 			<Jumbotron fluid className="cart" style={{ height: '26rem' }} />
 			<Container className= 'text-center'>
-			
-				<Row>
-			
+				<Row>			
 					<Col><SingleApparel apparelId={this.state.apparelId} /></Col>
 				</Row>
-				<Row>
-
-	
+				<Row>	
 					<Col><ReviewPage apparelId={this.state.apparelId} /></Col>
 					</Row>
 			</Container>

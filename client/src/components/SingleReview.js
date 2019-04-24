@@ -113,16 +113,17 @@ export default class SingleReview extends Component {
                             </div> 
                         </div>
                     <div className= 'text-center' style= {{ marginTop: '20px'}}>
-                        <button className= 'text-center'>Submit</button>
+                        <button style= {{ backgroundColor: '#3a5d96', color: 'white',
+                            borderColor: 'black'}} className= 'text-center'>Submit</button>
                         </div>
                         </div>
                     </form>
                    
                     : <div>
                         <div className="text-center">
-                            <button onClick = {this.toggleEditForm} style= {{ marginRight: '50px', marginTop: '20px', width: '12rem', marginBottom: '30px', backgroundColor: 'white', borderColor: 'white', color: 'black',
+                            <button onClick = {this.toggleEditForm} style= {{ marginRight: '50px', marginTop: '20px', width: '12rem', marginBottom: '30px', backgroundColor: '#3a5d96', borderColor: 'white', color: 'white',
                             borderColor: 'black'}}>Edit Review</button>
-                            <button style= {{ marginTop: '20px', width: '12rem', marginBottom: '30px', backgroundColor: 'white', borderColor: 'white',color: 'black', borderColor: 'black'}} onClick = {this.deleteReview}>Delete Review</button>
+                            <button style= {{ marginTop: '20px', width: '12rem', marginBottom: '30px', backgroundColor: '#3a5d96', borderColor: 'white',color: 'black', borderColor: 'white'}} onClick = {this.deleteReview}>Delete Review</button>
                         </div>
                      </div>
                 }
