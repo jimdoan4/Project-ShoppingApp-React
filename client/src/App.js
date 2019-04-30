@@ -11,6 +11,7 @@ import UserPage from './components/UserPage';
 import ClothesPage from './components/ClothesPage';
 import SingleReview from './components/SingleReview';
 
+
 class App extends Component {
 	render() {
 		return (
@@ -27,7 +28,7 @@ class App extends Component {
 											Men Apparel
 										</Link>
 									</NavDropdown.Item>
-									<NavDropdown.Divider />
+									
 								</NavDropdown>
 							</Nav>
 							<Nav.Link>
@@ -35,6 +36,7 @@ class App extends Component {
 									User Account
 								</Link>
 							</Nav.Link>
+							
 						</Navbar.Collapse>
 					</Navbar>
 

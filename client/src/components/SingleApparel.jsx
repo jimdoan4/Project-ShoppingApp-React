@@ -7,7 +7,8 @@ import { Card } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
-export default class SingleApparel extends Component {
+
+class SingleApparel extends Component {
 	state = {
 		apparelId: this.props.apparelId,
 		apparels: [],
@@ -46,7 +47,6 @@ export default class SingleApparel extends Component {
 		this.setState({ apparel: updatedApparel });
 	};
 
-
 	updateApparel = (e) => {
 		e.preventDefault();
 		axios
@@ -76,35 +76,32 @@ export default class SingleApparel extends Component {
 		}
 		return (
 			<div>
+				<div style={{ marginTop: '10px', marginBottom: '40px' }}>
+					<Card className="container" style={{ width: '43rem', marginBottom: '40px' }}>
+						<Card>
+							<Card.Img variant="top" src={this.state.apparel.image} alt="top" />
+							<Card.Body>
+								<Card.Title>{this.state.apparel.name}</Card.Title>
+								<Card.Title>{this.state.apparel.description}</Card.Title>
+								<Card.Title>${this.state.apparel.price}.00</Card.Title>
+							</Card.Body>
 
-					<div style={{ marginTop: '10px', marginBottom: '40px' }}>
-						<Card className="container" style={{ width: '43rem', marginBottom: '40px' }}>
-							<Card>
-								<Card.Img variant="top" src={this.state.apparel.image} alt="top" />
-								<Card.Body>
-									<Card.Title>{this.state.apparel.name}</Card.Title>
-									<Card.Title>{this.state.apparel.description}</Card.Title>
-									<Card.Title>${this.state.apparel.price}.00</Card.Title>
-								</Card.Body>
-
-								<Form.Group
-									controlId="exampleForm.ControlSelect1"
-									className="container"
-									style={{ width: '34rem' }}
-								>
-									<Container style={{ textAlign: 'center' }}>
-										<Form.Label>Size</Form.Label>
-										<Form.Control as="select" className="container" style={{ width: '12rem' }}>
-											<option>S</option>
-											<option>M</option>
-											<option>L</option>
-											<option>XL</option>
-										</Form.Control>
-									</Container>
-								</Form.Group>
-								<Container style={{ textAlign: 'center', marginBottom: '30px', marginTop: '8px' }}>
+							<Form.Group
+								controlId="exampleForm.ControlSelect1"
+								className="container"
+								style={{ width: '34rem' }}
+							>
+								<Container style={{ textAlign: 'center' }}>
+									<Form.Label>Size</Form.Label>
+									<Form.Control as="select" className="container" style={{ width: '12rem' }}>
+										<option>{this.state.apparel.size}</option>
+									</Form.Control>
+								</Container>
+							</Form.Group>
+						
+							<Container style={{ textAlign: 'center', marginBottom: '30px', marginTop: '8px' }}>
 								<button
-								className= ''
+									className=""
 									onClick={this.toggleEditForm}
 									style={{
 										backgroundColor: '#3a5d96',
@@ -117,27 +114,30 @@ export default class SingleApparel extends Component {
 								</button>
 
 								<button
-								className= ''
+									className=""
 									style={{ backgroundColor: '#3a5d96', borderColor: 'black', color: 'white' }}
 									onClick={this.deleteApparel}
 								>
 									Delete Apparel
 								</button>
 							</Container>
-							
-							</Card>
 						</Card>
-					</div>
+					</Card>
+				</div>
 				{this.state.displayEditForm ? (
-					<form style={{ marginTop: '10px', marginBottom: '60px' }} onSubmit={this.updateApparel} className="col text-center">
+					<form
+						style={{ marginTop: '10px', marginBottom: '60px' }}
+						onSubmit={this.updateApparel}
+						className="col text-center"
+					>
 						<div className="col text-center">
 							<div className="col s12 m6 text-center">
 								<label style={{ marginRight: '30px', marginTop: '10px' }} htmlFor="name">
 									Apparel Name{' '}
 								</label>
-								
+
 								<input
-									style={{ height: '50px', width: '320px', marginRight: '99px'  }}
+									style={{ height: '50px', width: '320px', marginRight: '99px' }}
 									className="text-center"
 									id="name"
 									type="text"
@@ -188,12 +188,20 @@ export default class SingleApparel extends Component {
 									value={this.state.apparel.price}
 								/>
 							</div>
-							<div style= {{ marginTop: '6px' }}className="col s12 m6 text-center">
+							<div style={{ marginTop: '6px' }} className="col s12 m6 text-center">
 								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="description">
 									Description{' '}
 								</label>
 								<input
-									style={{ height: '54px', width: '390px', marginRight: '90px', paddingTop: '100px', paddingBottom: '100px', paddingLeft: '100px', paddingRight: '100px' }}
+									style={{
+										height: '54px',
+										width: '390px',
+										marginRight: '90px',
+										paddingTop: '100px',
+										paddingBottom: '100px',
+										paddingLeft: '100px',
+										paddingRight: '100px'
+									}}
 									className="text-center"
 									id="description"
 									type="text"
@@ -202,7 +210,6 @@ export default class SingleApparel extends Component {
 									value={this.state.apparel.description}
 								/>
 							</div>
-						
 						</div>
 						<div className="text-center" style={{ marginTop: '20px' }}>
 							<button
@@ -223,3 +230,4 @@ export default class SingleApparel extends Component {
 	}
 }
 
+export default SingleApparel;

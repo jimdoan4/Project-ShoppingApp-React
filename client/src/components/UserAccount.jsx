@@ -5,6 +5,8 @@ import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 export default class UserAccount extends Component {
 	state = {
@@ -66,17 +68,31 @@ export default class UserAccount extends Component {
 			<div>
 				{this.state.users.map((user) => {
 					return (
-						<div>
-							<Card style= {{marginRight: '511px', marginLeft: '511px', color: 'white'}}>
-								<Card.Body style= {{backgroundColor: 'grey', color: 'white'}} className= 'text-center'>
-									<Link style= {{backgroundColor: 'grey', color: 'white'}}to={`/users/${user._id}`} key={user._id}>Welcome: {user.userName}
+						<div style= {{marginLeft: '403px', marginRight: '403px', borderColor: 'white'}} className=" card">
+							
+								<Row>
+							<div className="col" style={{  color: 'white', borderColor: 'white' }}>
+								<Card.Body
+									
+									style={{ backgroundColor: '#3a5d96', color: 'white', borderColor: 'white' }}
+									className="text-center"
+								>
+									<Link
+										
+										style={{ backgroundColor: '#3a5d96', color: 'white' }}
+										to={`/users/${user._id}`}
+										key={user._id}
+									>
+										Welcome: {user.userName}
 									</Link>
 								</Card.Body>
-							</Card>
+							</div>
+							</Row>
+							
 						</div>
 					);
 				})}
-			
+
 				<div className="container">
 					<Card
 						className="container"
@@ -107,25 +123,24 @@ export default class UserAccount extends Component {
 									/>
 								</Form.Group>
 							</Form.Row>
-							<div style= {{ marginLeft: '140px'}}className='text-center'>
-							<Button
-								className='text-center'
-								variant="primary"
-								type="submit"
-								style={{
-									marginRight: '140px',
-									paddingLeft: '30px',
-									paddingRight: '30px',
-									marginTop: '15px',
-									marginBottom: '25px',
-									backgroundColor: '#3a5d96', 
-									color: 'white',
-                            		borderColor: 'black'
-									
-								}}
-							>
-								Register
-							</Button>
+							<div style={{ marginLeft: '140px' }} className="text-center">
+								<Button
+									className="text-center"
+									variant="primary"
+									type="submit"
+									style={{
+										marginRight: '140px',
+										paddingLeft: '30px',
+										paddingRight: '30px',
+										marginTop: '15px',
+										marginBottom: '25px',
+										backgroundColor: '#3a5d96',
+										color: 'white',
+										borderColor: 'white'
+									}}
+								>
+									Register
+								</Button>
 							</div>
 						</Form>
 					</Card>
@@ -134,6 +149,3 @@ export default class UserAccount extends Component {
 		);
 	}
 }
-
-
-

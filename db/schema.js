@@ -24,5 +24,6 @@ const UserSchema = new Schema({
 module.exports = {
 	ApparelSchema: ApparelSchema,
 	ReviewSchema: ReviewSchema,
-	UserSchema: UserSchema
+	UserSchema: UserSchema,
+
 };

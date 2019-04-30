@@ -12,7 +12,7 @@ export default class Home extends Component {
 			<div>
 				<Jumbotron fluid className="home" style={{ height: '26rem' }}>
 					<Container className="homefont">
-						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: '#6a7587' }}>EQUIS</h1>
+						<h1 style={{ fontSize: '42px', fontWeight: 'bold', color: '#6a7587' }}>EQUIS Men Apparel</h1>
 						<p style={{ fontSize: '20px', color: '#495260' }}>Fitness Wear that hone Your MIND, BODY and SOUL</p>
 					</Container>
 				</Jumbotron>
@@ -21,7 +21,7 @@ export default class Home extends Component {
 						<Card style={{ width: '18rem', marginLeft: '30px', marginTop: '14px', marginRight: '30px' }}>
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LM3ASJS_032489_2?$product_tile-md_2x$"
+								src="https://images.lululemon.com/is/image/lululemon/LM3BF7S_038068_1?$image_carousel-lg$"
 								alt="top"
 							/>
 						</Card>
@@ -29,7 +29,7 @@ export default class Home extends Component {
 						<Card style={{ width: '18rem', marginTop: '14px', marginLeft: '30px', marginRight: '30px' }}>
 							<Card.Img
 								variant="top"
-								src="https://images.lululemon.com/is/image/lululemon/LW1BV0S_037681_2?$product_tile-md_2x$"
+								src="https://images.lululemon.com/is/image/lululemon/LM3AUTS_037049_1?$image_carousel-lg$"
 								alt="top"
 							/>
 						</Card>
@@ -55,7 +55,7 @@ export default class Home extends Component {
 									className="fonts"
 									style={{ fontWeight: 'bold', color: 'white', marginTop: '170px' }}
 								>
-									Women Fitness Wear
+									Women Fitness Wear - Coming Soon!
 								</h1>
 							</Container>
 						</Jumbotron>
@@ -127,7 +127,7 @@ export default class Home extends Component {
 								color: '#495260'
 							}}
 						>
-							Check out our Accessories
+							Check out our Accessories - Coming Soon!
 						</h1>
 					</Container>
 
@@ -135,7 +135,7 @@ export default class Home extends Component {
 						<Jumbotron fluid className="homee" style={{ width: 'max', height: '26rem' }}>
 							<Container>
 								<h1 className="fonts" style={{ fontWeight: 'bold', color: 'white', marginTop: '70px' }}>
-									Fitness Accessories
+									Fitness Accessories - Coming Soon!
 								</h1>
 							</Container>
 						</Jumbotron>
