@@ -122,7 +122,7 @@ export default class ReviewPage extends Component {
 				>
 					Check to see All of the Reviews About this Item
 				</button>
-				<div className="">
+				<div>
 					{this.state.reviews.map((review) => {
 						return (
 							<div>

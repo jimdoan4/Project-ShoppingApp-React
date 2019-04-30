@@ -18,8 +18,8 @@ export default class MenClothes extends Component {
 			description: '',
 			review: []
 		},
-		redirectToSignUp: false,
-		displayEditForm: false
+		redirectToApparel: false,
+		displayApparelForm: false,
 	};
 
 	componentDidMount = () => {
@@ -53,25 +53,26 @@ export default class MenClothes extends Component {
 						price: '',
 						description: ''
 					},
-					displayEditForm: false,
+					displayApparelForm: false,
 					apparels: apparelsList
 				});
 			});
 	};
 
-	toggleEditForm = () => {
+	toggleApparelForm = () => {
 		this.setState((state, props) => {
-			return { displayEditForm: !state.displayEditForm };
+			return { displayApparelForm: !state.displayApparelForm };
 		});
 	};
 
 	handleChange = (e) => {
-		const newApparel = { ...this.state.newApparel };
-		newApparel[e.target.name] = e.target.value;
-		this.setState({ newApparel: newApparel });
+		const changeNewApparel = { ...this.state.newApparel };
+		changeNewApparel[e.target.name] = e.target.value;
+		this.setState({ newApparel: changeNewApparel });
 	};
 
 	render() {
+	
 		return (
 			<div>
 				<Jumbotron fluid className="man" style={{ height: '26rem' }}>
@@ -79,24 +80,26 @@ export default class MenClothes extends Component {
 						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: 'white' }}>Let it Breathe</h1>
 					</Container>
 				</Jumbotron>
-				<div style= {{float: 'right'}}>
+				<div style= {{marginBottom: '20px'}}>
 				
 				<button
-					onClick={this.toggleEditForm}
+					onClick={this.toggleApparelForm}
 					style={{
 						backgroundColor: '#3a5d96',
 						borderColor: 'black',
 						color: 'white', 
 						marginRight: '14px',
 						borderColor: 'white'
+					
 
 					}}
-				><img style ={{ height: '30px', width: '30px', marginRight: '7px', color: 'white'}} src= 'https://image.flaticon.com/icons/svg/863/863684.svg'/>
+				>
+				<img style ={{ height: '30px', width: '30px', marginRight: '7px', color: 'white'}} src= 'https://image.flaticon.com/icons/svg/863/863684.svg'/>
 					Add Apparel
 				</button>
 				</div>
-
-				{this.state.displayEditForm ? (
+					<div>
+				{this.state.displayApparelForm ? (
 					<form
 						style={{ marginTop: '10px', marginBottom: '60px' }}
 						onSubmit={this.createApparel}
@@ -109,7 +112,7 @@ export default class MenClothes extends Component {
 								</label>
 
 								<input
-									style={{ height: '50px', width: '320px', marginRight: '10px', paddingRight: '200px' }}
+									style={{ height: '50px', width: '320px', marginRight: '112px', paddingRight: '200px' }}
 									className="text-center"
 									id="name"
 									type="text"
@@ -197,6 +200,9 @@ export default class MenClothes extends Component {
 						</div>
 					</form>
 				) : null}
+				</div>
+			
+				
 				<div className="row">
 					{this.state.apparels.map((apparel) => {
 						return (
