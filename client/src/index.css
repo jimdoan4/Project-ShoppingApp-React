@@ -1,11 +1,70 @@
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "muse-300", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 0.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+sup {
+  font-size: xx-small;
+  vertical-align: super;
+}
+
+p a,
+h5 a {
+  font-weight: bold;
+  transition: all 0.2s ease-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-size: 28px;
+  font-family: "muse-300", Georgia, serif;
+}
+
+h2 {
+  font-size: 26px;
+  font-family: "muse-300", Georgia, serif;
+}
+
+h3 {
+  font-size: 21px;
+  font-family: "muse-300", Georgia, serif;
+}
+
+h4 {
+  font-size: 18px;
+  font-family: "muse-300", Georgia, serif;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 code {
@@ -24,19 +83,83 @@ body {
   background-color: #F3F6F8;
 }
 
+.btn-custom {
+  color: black;
+  background-color:white;
+  font-size: 18px;
+  font-family: "muse-500", Arial, sans-serif;
+  transition: 0.3s all ease-out;
+  margin-bottom: 50px;
+  padding: 18px;
+  border: .5px solid black;
+}
+
+.btn-custom:hover {
+  box-shadow: 1px 3px 12px 0px #b3b3b3;
+  color: white;
+  background: black;
+}
+
+
+/*************************** NAVBAR **********************/
+.navbar {
+  height: 70px;
+}
+
+.iconic i{
+  font-size: 29px;
+  color: white;
+  margin: 8px;
+}
+
+/*************************** FRONT PAGE INTRO **********************/
+.intro-header h1{
+  font-size: 43px; 
+  font-weight: bold; 
+  color: white; 
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+  margin-top: 100px;
+}
+
 .home {
-  background-image: url('https://images.ctfassets.net/ew96z4wsnz93/3lVFApyuM8YCOuyAWEgSWQ/d86b94d30106a8c7a48d50f4d56ac0c9/20170630_FB-Metadata_1200x630_Homepage.jpg');
+  background-image: url('https://images.lululemon.com/is/image/lululemon/na_aug19_wk3_m_flannel_1_1_md_Masonry_D_womens?$masonry_grid_one-whole_medium-md$');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.homes {
-  background-image: url('https://cdn1.medicalnewstoday.com/content/images/articles/320/320590/woman-looking-at-phone-in-gym.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.main-img-intro img{
+  width: 29rem;
+   height: 469px;
 }
+
+.secondary-img-intro img{
+  width: 20rem; 
+  height: 460px;
+}
+/********************************* EVENT ***********************************/
+#event {
+  padding: 50px 0;
+  font-family: "muse-500", Arial, sans-serif;
+}
+
+#event .container .row .col-md-4 .card a img {
+  opacity: 0.7;
+  height: 200px;
+}
+
+#event .container .row .col-md-4 .card a img:hover {
+  opacity: 1;
+  transition: all 0.7s ease-out;
+}
+
+#event .container .row .col-md-4 .card .card-text {
+  line-height: 1.3;
+}
+
+/*************************** NAVBAR **********************/
+
 
 .homee {
   background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-length-of-woman-lifting-weight-in-gym-royalty-free-image-1058449732-1547849286.jpg');
@@ -59,59 +182,9 @@ body {
   font-size: 33px;
 }
 
-.gyms {
-  background-image: url('http://www.montana.edu/getfit/_ldp/.private_ldp/a4199/production/master/1b826c54-1730-4d06-b34e-58ca1344874b.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.pic {
-  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-length-of-woman-lifting-weight-in-gym-royalty-free-image-1058449732-1547849286.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.about {
-  background-image: url('https://media2.s-nbcnews.com/j/newscms/2017_36/2144546/170905-working-out-group-ac-512p_2b5db137b66bedb7f1d96c24b8ca1b8a.fit-760w.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.nutrition {
-  background-image: url('https://cdn.pixabay.com/photo/2017/08/07/14/02/people-2604149_960_720.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.gym {
-  background-image: url('https://medfit.org/wp-content/uploads/2016/10/175558978.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-
-
-.women {
-  background-image: url('https://assets.parents.com/s3fs-public/styles/nfp_1080_portrait/public/fitbit_versa_lifestyle_female_outdoorrun.jpeg?k23jgEJVtM2wz0w2KeK8hcjAN3qiSshA');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .man {
   background-image: url('https://www.mensjournal.com/wp-content/uploads/mf/_crop_mf0217_ot_fitness_01_1.jpg?w=1200&h=630&crop=1');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.accessories {
-  background-image: url('https://www.modells.com/on/demandware.static/-/Sites-Modells-Library/default/dwea3f1e8c/CategoryLanding/Fitness-and-Activities/Accessories/cat-landing-fitness-accessories-hero-012318.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -127,47 +200,10 @@ body {
 .fonts {
   font-family: 'Fira Sans', sans-serif;
 }
-.intro {
-  height: 90vh;
-}
+
 
 .content {
   display: table-cell;
   vertical-align: middle;
 }
 
-h1 {
-  font-size: 3em;
-  display: block;
-  color: white;
-  font-weight: 300;
-}
-
-p {
-  font-size: 1.5em;
-  font-weight: 500;
-  color: #C3CAD9;
-}
-
-a {
-  font-weight: 700;
-  color: #373B44;
-  position: relative;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    top: 1px;
-  }
-}
-
-.mainfont {
-  font-family: 'Lato',
-    sans-serif;
-  font-family: 'Noto Sans KR',
-    sans-serif;
-  font-family: 'Merriweather',
-    serif;
-}
