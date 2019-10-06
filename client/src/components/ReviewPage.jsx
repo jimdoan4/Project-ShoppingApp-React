@@ -109,7 +109,7 @@ export default class ReviewPage extends Component {
 			return <Redirect to={`/apparels/`} />
 		}
 		return (
-			<div className="text-center" style={{ position: 'block' }}>
+			<div className="text-center jumbotron" style={{ position: 'block' }}>
 				<h3>Write A Review About This Apparel Item</h3>
 				<button
 					style={{
@@ -122,7 +122,7 @@ export default class ReviewPage extends Component {
 				>
 					Check to see All of the Reviews About this Item
 				</button>
-				<div>
+				<div className="jumbotron">
 					{this.state.reviews.map((review) => {
 						return (
 							<div>

@@ -77,7 +77,7 @@ class SingleApparel extends Component {
 		return (
 			<div>
 				<div style={{ marginTop: '10px', marginBottom: '40px' }}>
-					<Card className="container" style={{ width: '43rem', marginBottom: '40px' }}>
+					<Card className="container" style={{ width: '31rem', marginBottom: '40px' }}>
 						<Card>
 							<Card.Img variant="top" src={this.state.apparel.image} alt="top" />
 							<Card.Body>
@@ -89,11 +89,10 @@ class SingleApparel extends Component {
 							<Form.Group
 								controlId="exampleForm.ControlSelect1"
 								className="container"
-								style={{ width: '34rem' }}
 							>
-								<Container style={{ textAlign: 'center' }}>
+								<Container className="text-center">
 									<Form.Label>Size</Form.Label>
-									<Form.Control as="select" className="container" style={{ width: '12rem' }}>
+									<Form.Control as="select" className="container" style={{ width: '12rem', contentAlign: 'center' }}>
 										<option>{this.state.apparel.size}</option>
 									</Form.Control>
 								</Container>
@@ -101,7 +100,6 @@ class SingleApparel extends Component {
 						
 							<Container style={{ textAlign: 'center', marginBottom: '30px', marginTop: '8px' }}>
 								<button
-									className=""
 									onClick={this.toggleEditForm}
 									style={{
 										backgroundColor: '#3a5d96',

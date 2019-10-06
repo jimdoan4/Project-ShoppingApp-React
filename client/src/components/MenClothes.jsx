@@ -5,6 +5,7 @@ import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
+import { ApparelListContainer } from './styled-components/ApparelListStyles'
 
 
 export default class MenClothes extends Component {
@@ -203,25 +204,25 @@ export default class MenClothes extends Component {
 				</div>
 			
 				
-				<div className="row">
+				<div className="row text-center">
 					{this.state.apparels.map((apparel) => {
 						return (
 							<div
 								className="col"
 								style={{
-									marginLeft: '30px',
-									marginRight: '30px',
-									marginBottom: '30px'
+									marginBottom: '20px',
+									justifyContent: 'center'
 								}}
 							>
-								<CardGroup className="row">
+								<CardGroup className="jumbotron" style={{
+									justifyContent: 'center'
+								}}>
 									<Card
 										key={apparel._id}
-										className="row"
+										className="text-center"
 										style={{
 											width: '18rem',
-											marginLeft: '30px',
-											marginRight: '30px'
+											margin: '20px'
 										}}
 									>
 										<Link to={`/apparels/${apparel._id}`} key={apparel._id}>
@@ -236,7 +237,7 @@ export default class MenClothes extends Component {
 							</div>
 						);
 					})}
-				</div>
+					</div>
 			</div>
 		);
 	}
