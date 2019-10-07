@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
+import { Form } from 'react-bootstrap';
+import { SingleReviewContainer } from './styled-components/SingleReviewStyles'
 
 export default class SingleReview extends Component {
     state = {
@@ -69,68 +71,54 @@ export default class SingleReview extends Component {
             return (<Redirect to={`/apparels/${this.state.apparelId}`}/>)
         }
         return (
-            <div className= 'text-center'>
-                <h3 style= {{ marginTop: '30px' }} className="text-center">{this.state.review.title}</h3>
-                {
-                    this.state.displayEditForm
-                    ? <form style= {{margin: 'auto'}} onSubmit = {this.updateReview} className="row text-center">
-                     <div className="col">
-                            <div className="col text-center">
-                                <label style= {{ marginRight: '30px', marginTop: '30px'}}htmlFor="screenName">Screen Name</label>
-                                <input style= {{height: '50px', width: '320px'}}
-                                    className= 'text-center'
+            <SingleReviewContainer>
+            
+            
+                    <Form className="jumbotron text-center" onSubmit={this.updateApparel}>
+
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Username</Form.Label>
+    <Form.Control type="text" className= 'text-center'
                                     id="screenName"
                                     type="text"
                                     name="screenName"
                                     onChange={this.handleChange}
-                                    value={this.state.review.screenName}
-                                />
-                            </div>  
-                       
-                        <div className="col">
-                            <div className="col text-center">
-                                <label style= {{ marginRight: '30px', marginTop: '30px'}}htmlFor="title">Title</label>
-                                <input style= {{height: '50px', width: '320px'}}
-                                    className= 'text-center'
+                                    value={this.state.review.screenName} />
+  </Form.Group>
+
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Title</Form.Label>
+    <Form.Control type="text" className= 'text-center'
                                     id="title"
                                     type="text"
                                     name="title"
                                     onChange={this.handleChange}
-                                    value={this.state.review.title}
-                                />
-                            </div>  
-                            <div className="col text-center">
-                                <label style= {{ marginRight: '30px', marginTop: '40px'}}htmlFor="description">Description</label>
-                                <input
-                                style= {{height: '54px', width: '390px', marginRight: '53px', paddingTop: '130px', paddingBottom: '130px', marginTop: '20px'}}
-                                    className= 'text-center'
+                                    value={this.state.review.title} />
+  </Form.Group>
+
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Description</Form.Label>
+    <Form.Control as="textarea" type="text" className= 'text-center'
                                     id="description"
                                     type="text"
                                     name="description"
                                     onChange={this.handleChange}
-                                    value={this.state.review.description}
-                                />
-                            </div> 
-                        </div>
-                    <div className= 'text-center' style= {{ marginTop: '20px'}}>
-                        <button style= {{ backgroundColor: '#3a5d96', color: 'white',
-                            borderColor: 'black'}} className= 'text-center'>Submit</button>
-                        </div>
-                        </div>
-                    </form>
-                   
-                    : <div>
-                        <div className="text-center">
-                            <button onClick = {this.toggleEditForm} style= {{ marginRight: '50px', marginTop: '20px', width: '12rem', marginBottom: '30px', backgroundColor: '#3a5d96', borderColor: 'white', color: 'white',
-                            borderColor: 'black'}}>Edit Review</button>
-                            <button style= {{ marginTop: '20px', width: '12rem', marginBottom: '30px', backgroundColor: '#3a5d96', borderColor: 'white',color: 'black', borderColor: 'white'}} onClick = {this.deleteReview}>Delete Review</button>
-                        </div>
-                     </div>
-                }
+                                    value={this.state.review.description} />
+  </Form.Group>
+  <div className="text-center" style={{ marginTop: '20px'}}>
+							<button
+								className="text-center edit-button"
+							>
+								Submit
+							</button>
+                            <button className="delete-button" onClick = {this.deleteReview}>Delete</button>
+						</div>
+  </Form>
+ 
                 <div className="text-center" style= {{ marginTop: '18px'}}>
-                <Link className="text-center" to = {`/apparels/${this.state.apparelId}/`}>Back To Apparels</Link>
+                <Link className="text-center back-button" to = {`/apparels/${this.state.apparelId}/`}>Back To Apparels</Link>
                 </div>
-            </div>
+            </SingleReviewContainer>
         );
     }
 }

@@ -3,7 +3,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "muse-300", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,51 +26,6 @@ sup {
   vertical-align: super;
 }
 
-p a,
-h5 a {
-  font-weight: bold;
-  transition: all 0.2s ease-out;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  line-height: 1.5;
-  margin-bottom: 1.5em;
-  font-family: "muse-300", Georgia, serif;
-}
-
-h1 {
-  font-size: 28px;
-  font-family: "muse-300", Georgia, serif;
-}
-
-h2 {
-  font-size: 26px;
-  font-family: "muse-300", Georgia, serif;
-}
-
-h3 {
-  font-size: 21px;
-  font-family: "muse-300", Georgia, serif;
-}
-
-h4 {
-  font-size: 18px;
-  font-family: "muse-300", Georgia, serif;
-}
-
-h5 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 
 * {
   box-sizing: border-box;
@@ -80,7 +34,7 @@ code {
 body {
   margin: 0;
   font-weight: 500;
-  font-family: 'HelveticaNeue';
+  font-family: 'Be Vietnam', sans-serif;
   background-color: #F3F6F8;
 }
 
@@ -101,6 +55,9 @@ body {
   background: black;
 }
 
+.card-img-top {
+  box-shadow: 1px 3px 12px 0px #b3b3b3;
+}
 
 /*************************** NAVBAR **********************/
 .navbar {
@@ -115,19 +72,19 @@ body {
 
 /*************************** FRONT PAGE INTRO **********************/
 .intro-header h1{
-  font-size: 43px; 
+  font-size: 59px; 
   font-weight: bold; 
   color: white; 
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Lexend Deca', sans-serif;
   margin-top: 100px;
+  text-align: center;
 }
 
-.home {
+.main-page-image {
   background-image: url('https://images.lululemon.com/is/image/lululemon/na_aug19_wk3_m_flannel_1_1_md_Masonry_D_womens?$masonry_grid_one-whole_medium-md$');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 1px 3px 12px 0px #b3b3b3;
 }
 
 .main-img-intro img{
@@ -139,10 +96,9 @@ body {
   width: 20rem; 
   height: 460px;
 }
-/********************************* EVENT ***********************************/
+
 #event {
   padding: 50px 0;
-  font-family: "muse-500", Arial, sans-serif;
 }
 
 #event .container .row .col-md-4 .card a img {
@@ -159,47 +115,38 @@ body {
   line-height: 1.3;
 }
 
-/*************************** NAVBAR **********************/
+/*************************** APPAREL PAGE **********************/
 
-
-.homee {
-  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/full-length-of-woman-lifting-weight-in-gym-royalty-free-image-1058449732-1547849286.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.homefont {
-  font-family: 'Lato',
-    sans-serif;
-  font-family: 'Noto Sans KR',
-    sans-serif;
-  font-family: 'Merriweather',
-    serif;
-  font-family: 'Francois One',
-    sans-serif;
+.apparel-page-header h1 {
   font-style: normal;
-  font-weight: 900;
-  font-size: 33px;
+  font-weight: bold;
+  font-size: 63px;
+  color: white;
 }
 
-
-.man {
+.apparel-page-image {
   background-image: url('https://www.mensjournal.com/wp-content/uploads/mf/_crop_mf0217_ot_fitness_01_1.jpg?w=1200&h=630&crop=1');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 1px 3px 12px 0px #b3b3b3;
 }
 
-.cart {
+.single-apparel-page {
   background-image: url('https://images.lululemon.com/is/image/lululemon/NA_Feb18_CollectionsUpdate_M_SpringJackets?$full_width_feature-lg_2x$');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 1px 3px 12px 0px #b3b3b3;
 }
 
-.fonts {
-  font-family: 'Fira Sans', sans-serif;
+
+.add-apparel-button {
+  background-color: white;
+  color: black;
+border: 1px solid black;
+padding: 14px;
+box-shadow: 1px 3px 12px 0px #b3b3b3;
 }
 
 

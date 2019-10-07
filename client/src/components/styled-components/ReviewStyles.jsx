@@ -1,16 +1,35 @@
 import styled, { keyframes, css } from 'styled-components'
 
 
-export const ApparelContainer = styled.div`
+export const ReviewContainer = styled.div`
 font-family: 'Be Vietnam', sans-serif;
 }
 
-.product-title {
-    font-size: 18px;
+.review-toggle {
+margin-top: 14px;
+background-color: white;
+border-color: black;
+color: black;		
 }
 
+.review-section {
+    color: black; 
+    font-size: 16px;
+}
 
-.edit-apparel-button {
+.review-header h3 {
+font-size: 24px;
+font-family: 'Be Vietnam', sans-serif;
+font-weight: bold;
+text-decoration: underline;
+}
+
+.review-header h5 {
+    font-size: 20px;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.edit-review-button {
     background-color: white;
     color: black;
  border: 1px solid black;
@@ -19,13 +38,19 @@ margin-top: 13px;
 margin-bottom: 13px;
 }
 
-.edit-apparel-button:hover {
+.edit-review-button:hover {
   box-shadow: 1px 3px 12px 0px #b3b3b3;
   color: white;
   background: black;
 }
 
-.delete-apparel-button {
+.delete-review-button:hover {
+  box-shadow: 1px 3px 12px 0px #b3b3b3;
+  color: white;
+  background: black;
+}
+
+.delete-review-button {
     background-color: white;
     color: black;
  border: 1px solid black;
@@ -33,13 +58,7 @@ margin-bottom: 13px;
 margin-bottom: 13px;
 }
 
-.delete-apparel-button:hover {
-  box-shadow: 1px 3px 12px 0px #b3b3b3;
-  color: white;
-  background: black;
-}
-
-.submit-button {
+.add-review-button {
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -51,7 +70,7 @@ margin-bottom: 13px;
     margin-bottom: 20px;
 }
 
-.submit-button:hover {
+.add-review-button:hover {
   box-shadow: 1px 3px 12px 0px #b3b3b3;
   color: white;
   background: black;

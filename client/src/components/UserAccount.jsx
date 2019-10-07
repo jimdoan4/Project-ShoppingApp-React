@@ -68,18 +68,16 @@ export default class UserAccount extends Component {
 			<div>
 				{this.state.users.map((user) => {
 					return (
-						<div style= {{marginLeft: '403px', marginRight: '403px', borderColor: 'white'}} className=" card">
-							
+						<div className="card">
 								<Row>
-							<div className="col" style={{  color: 'white', borderColor: 'white' }}>
+							<div className="col">
 								<Card.Body
-									
-									style={{ backgroundColor: '#3a5d96', color: 'white', borderColor: 'white' }}
-									className="text-center"
+							
+									className="text-center add-apparel-button"
 								>
 									<Link
 										
-										style={{ backgroundColor: '#3a5d96', color: 'white' }}
+										style={{ color: 'black' }}
 										to={`/users/${user._id}`}
 										key={user._id}
 									>
@@ -96,7 +94,7 @@ export default class UserAccount extends Component {
 				<div className="container">
 					<Card
 						className="container"
-						style={{ width: '33rem', height: '18rem', paddingTop: '35px', marginTop: '230px' }}
+						style={{ width: '33rem', height: '18rem', paddingTop: '35px', marginTop: '230px', border: '1px solid black' }}
 					>
 						<Form className="text-center" style={{ display: 'inline-block' }} onSubmit={this.handleSignUp}>
 							<Form.Row>
@@ -123,21 +121,11 @@ export default class UserAccount extends Component {
 									/>
 								</Form.Group>
 							</Form.Row>
-							<div style={{ marginLeft: '140px' }} className="text-center">
+							<div className="text-center">
 								<Button
-									className="text-center"
+									className="text-center add-apparel-button"
 									variant="primary"
 									type="submit"
-									style={{
-										marginRight: '140px',
-										paddingLeft: '30px',
-										paddingRight: '30px',
-										marginTop: '15px',
-										marginBottom: '25px',
-										backgroundColor: '#3a5d96',
-										color: 'white',
-										borderColor: 'white'
-									}}
 								>
 									Register
 								</Button>

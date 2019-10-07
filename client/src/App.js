@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Nav } from "react-bootstrap";
-import { Navbar } from "react-bootstrap";
-import { NavDropdown } from "react-bootstrap";
+import Navigation from "./components/Navigation";
 import MenClothes from "./components/MenClothes";
 import Home from "./components/Home";
 import UserAccount from "./components/UserAccount";
@@ -16,37 +14,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar className="navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand href="/">EQUIS</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="mr-auto">
-                <NavDropdown title="Shop" id="collasible-nav-dropdown">
-                  <NavDropdown.Item>
-                    <Link to="/apparels/" style={{ color: "black " }}>
-                      Men Apparel
-                    </Link>
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-              <div class="iconic">
-                <i
-                  class="fa fa-search"
-                ></i>
-                <i
-                  class="fa fa-shopping-cart"
-                ></i>
-                <i
-                  class="fa fa-heart-o"
-                ></i>
-                <Link to="/users/" style={{ color: "white " }}>
-                  <i
-                    class="fa fa-male"
-                  ></i>
-                </Link>
-              </div>
-            </Navbar.Collapse>
-          </Navbar>
+          <Navigation/>
 
           <Switch>
             <Route exact path="/" component={Home} />

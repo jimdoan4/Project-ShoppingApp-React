@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
+import { Form } from 'react-bootstrap';
+import { SingleReviewContainer } from './styled-components/SingleReviewStyles'
 
 export default class SingleUser extends Component {
 	state = {
@@ -61,60 +63,44 @@ export default class SingleUser extends Component {
 		}
 
 		return (
-			<div className="container">
-				<h3 className="text-center">{this.state.currentUser.userName}</h3>
-				{this.state.displayEditForm ? (
-					<form onSubmit={this.updateUser} className="container">
-						<div className="container" style={{ textAlign: 'center' }}>
-							<label htmlFor="userName" style={{ textAlign: 'center' }}>
-								Username
-							</label>
-							<input
-								className="container"
-								id="userName"
-								type="text"
-								name="userName"
-								onChange={this.handleChange}
-								value={this.state.currentUser.userName}
-							/>
-						</div>
+			<SingleReviewContainer>
+                    <Form className="jumbotron text-center" onSubmit={this.updateUser}>
 
-						<div style={{ textAlign: 'center' }}>
-							<label style={{ marginTop: '10px' }} htmlFor="password" className="container">
-								Password
-							</label>
-							<input
-								id="password"
-								type="password"
-								name="password"
-								onChange={this.handleChange}
-								value={this.state.currentUser.password}
-							/>
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Username</Form.Label>
+    <Form.Control type="text" className= 'text-center'
+                                    id="userName"
+                                    type="text"
+                                    name="userName"
+                                    onChange={this.handleChange}
+                                    value={this.state.currentUser.userName} />
+  </Form.Group>
+
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Password</Form.Label>
+    <Form.Control type="text" className= 'text-center'
+                                    id="password"
+                                    type="text"
+                                    name="password"
+                                    onChange={this.handleChange}
+                                    value={this.state.currentUser.password} />
+  </Form.Group>
+
+  <div className="text-center" style={{ marginTop: '20px'}}>
+							<button
+								className="text-center edit-button"
+							>
+								Submit
+							</button>
+                            <button className="delete-button" onClick = {this.deleteUser}>Delete</button>
 						</div>
-						<div style={{ marginTop: '20px' }} className="text-center">
-							<button style ={{ backgroundColor: '#3a5d96', color: 'white',
-                            borderColor: 'black' }}className="text-center">Update</button>
-						</div>
-					</form>
-				) : (
-					<div />
-				)}
-				<div className="col">
-					<button style={{ marginTop: '20px', backgroundColor: '#3a5d96', color: 'white',
-                            borderColor: 'black' }} className="col text-center" onClick={this.toggleEditForm}>
-						Edit
-					</button>
-					<button style={{ marginTop: '30px', backgroundColor: '#3a5d96', color: 'white',
-                            borderColor: 'black' }} onClick={this.deleteUser} className=" col text-center">
-						Delete
-					</button>
-				</div>
-				<div className= 'col text-center'>
-				<Link to={'/users/'}>
-				<button style={{ marginTop: '20px', backgroundColor: '#3a5d96', color: 'white', borderColor: 'black', marginleft: '300px' }} className=" text-center">Back to Login</button>
-				</Link>
-				</div>
-			</div>
+  </Form>
+ 
+                <div className="text-center" style= {{ marginTop: '18px'}}>
+                <Link className="text-center back-button" to = {'/users/'}>Back To User Account</Link>
+                </div>
+            </SingleReviewContainer>
+			
 		);
 	}
 }

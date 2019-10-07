@@ -5,7 +5,8 @@ import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Jumbotron } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
-import { ApparelListContainer } from './styled-components/ApparelListStyles'
+import { Form } from 'react-bootstrap';
+import { ApparelContainer } from './styled-components/ApparelListStyles'
 
 
 export default class MenClothes extends Component {
@@ -76,132 +77,84 @@ export default class MenClothes extends Component {
 	
 		return (
 			<div>
-				<Jumbotron fluid className="man" style={{ height: '26rem' }}>
-					<Container className="homefont" style={{ marginTop: '210px' }}>
-						<h1 style={{ fontSize: '50px', fontWeight: 'bold', color: 'white' }}>Let it Breathe</h1>
+				<Jumbotron fluid className="apparel-page-image" style={{ height: '26rem' }}>
+					<Container className="apparel-page-header" style={{ marginTop: '210px' }}>
+						<h1>Let it Breathe</h1>
 					</Container>
 				</Jumbotron>
-				<div style= {{marginBottom: '20px'}}>
+		
+				<div className="text-center" style= {{marginBottom: '20px'}}>
 				
-				<button
+				<button className="add-apparel-button"
 					onClick={this.toggleApparelForm}
-					style={{
-						backgroundColor: '#3a5d96',
-						borderColor: 'black',
-						color: 'white', 
-						marginRight: '14px',
-						borderColor: 'white'
-					
-
-					}}
 				>
 				<img style ={{ height: '30px', width: '30px', marginRight: '7px', color: 'white'}} src= 'https://image.flaticon.com/icons/svg/863/863684.svg'/>
 					Add Apparel
 				</button>
 				</div>
-					<div>
+					<ApparelContainer>
 				{this.state.displayApparelForm ? (
-					<form
-						style={{ marginTop: '10px', marginBottom: '60px' }}
-						onSubmit={this.createApparel}
-						className="col text-center"
-					>
-						<div className="col text-center">
-							<div className="col s12 m6 text-center">
-								<label htmlFor="name" style={{ marginRight: '30px', marginTop: '10px' }}>
-									Apparel Name{' '}
-								</label>
-
-								<input
-									style={{ height: '50px', width: '320px', marginRight: '112px', paddingRight: '200px' }}
-									className="text-center"
+					<Form className="jumbotron" onSubmit={this.createApparel}>
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Product Name</Form.Label>
+    <Form.Control type="text" className="text-center"
 									id="name"
 									type="text"
 									name="name"
 									onChange={this.handleChange}
-									value={this.state.newApparel.name}
-								/>
-							</div>
-							<div className="col s12 m6 text-center">
-								<label style={{ marginRight: '30px', marginTop: '20px' }} htmlFor="size">
-									Size{' '}
-								</label>
-								<input
-									style={{ height: '54px', width: '390px', marginRight: '53px' }}
-									className="text-center"
+									value={this.state.newApparel.name} />
+  </Form.Group>
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Size</Form.Label>
+    <Form.Control type="text"	
+	className="text-center"
 									id="size"
 									type="text"
 									name="size"
 									onChange={this.handleChange}
-									value={this.state.newApparel.size}
-								/>
-							</div>
-							<div className="col s12 m6 text-center">
-								<label style={{ marginRight: '30px', marginTop: '20px' }} htmlFor="image">
-									Image{' '}
-								</label>
-								<input
-									style={{ height: '54px', width: '390px', marginRight: '65px' }}
-									className="text-center"
+									value={this.state.newApparel.size} />
+  </Form.Group>
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Image</Form.Label>
+    <Form.Control type="text" className="text-center"
 									id="image"
 									type="text"
 									name="image"
 									onChange={this.handleChange}
-									value={this.state.newApparel.image}
-								/>
-							</div>
-							<div className="col s12 m6 text-center">
-								<label style={{ marginRight: '30px', marginTop: '20px' }} htmlFor="price">
-									Price
-								</label>
-								<input
-									style={{ height: '54px', width: '390px', marginRight: '57px' }}
-									className="text-center"
+									value={this.state.newApparel.image} />
+  </Form.Group>
+
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Price</Form.Label>
+    <Form.Control type="text"className="text-center"
 									id="price"
 									type="number"
 									name="price"
 									onChange={this.handleChange}
-									value={this.state.newApparel.price}
-								/>
-							</div>
-							<div style={{ marginTop: '6px' }} className="col s12 m6 text-center">
-								<label style={{ marginRight: '30px', marginTop: '40px' }} htmlFor="description">
-									Description{' '}
-								</label>
-								<input
-									style={{
-										height: '54px',
-										width: '390px',
-										marginRight: '100px',
-										paddingTop: '100px',
-										paddingBottom: '100px',
-										paddingLeft: '100px',
-										paddingRight: '100px'
-									}}
-									className="text-center"
+									value={this.state.newApparel.price} />
+  </Form.Group>
+
+  <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Product Description</Form.Label>
+    <Form.Control as="textarea" type="text" className="text-center"
 									id="description"
 									type="text"
 									name="description"
 									onChange={this.handleChange}
-									value={this.state.newApparel.description}
-								/>
-							</div>
-						</div>
-						<div className="text-center" style={{ marginTop: '20px' }}>
+									value={this.state.newApparel.description} />
+  </Form.Group>
+  <div className="text-center" style={{ marginTop: '20px', marginLeft: '140px'}}>
 							<button
-								style={{
-									backgroundColor: '#3a5d96',
-									borderColor: 'black',
-									color: 'white'
-								}}
-								className="text-center rockstar"
+								className="text-center submit-button"
 							>
 								Submit
 							</button>
 						</div>
-					</form>
+  </Form>
+					
+			
 				) : null}
-				</div>
+				</ApparelContainer>
 			
 				
 				<div className="row text-center">
@@ -229,8 +182,8 @@ export default class MenClothes extends Component {
 											<Card.Img variant="top" src={apparel.image} />
 										</Link>
 										<Card.Body>
-											<Card.Title style={{ color: 'black' }}>{apparel.name}</Card.Title>
-											<Card.Text style={{ color: 'black' }}>${apparel.price}.00</Card.Text>
+											<Card.Title>{apparel.name}</Card.Title>
+											<Card.Text>${apparel.price}.00</Card.Text>
 										</Card.Body>
 									</Card>
 								</CardGroup>

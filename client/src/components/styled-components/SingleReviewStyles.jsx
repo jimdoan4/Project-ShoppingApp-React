@@ -1,16 +1,12 @@
 import styled, { keyframes, css } from 'styled-components'
 
 
-export const ApparelContainer = styled.div`
+export const SingleReviewContainer = styled.div`
 font-family: 'Be Vietnam', sans-serif;
 }
 
-.product-title {
-    font-size: 18px;
-}
 
-
-.edit-apparel-button {
+.edit-button {
     background-color: white;
     color: black;
  border: 1px solid black;
@@ -19,13 +15,13 @@ margin-top: 13px;
 margin-bottom: 13px;
 }
 
-.edit-apparel-button:hover {
+.edit-button:hover {
   box-shadow: 1px 3px 12px 0px #b3b3b3;
   color: white;
   background: black;
 }
 
-.delete-apparel-button {
+.delete-button {
     background-color: white;
     color: black;
  border: 1px solid black;
@@ -33,7 +29,7 @@ margin-bottom: 13px;
 margin-bottom: 13px;
 }
 
-.delete-apparel-button:hover {
+.delete-button:hover {
   box-shadow: 1px 3px 12px 0px #b3b3b3;
   color: white;
   background: black;
@@ -57,9 +53,20 @@ margin-bottom: 13px;
   background: black;
 }
 
-.form-label {
-    text-align: left;
-    font-size: 15px;
+.back-button {
+    background-color: white;
+    color: black;
+    padding: 13px;
+ border: 1px solid black;
+margin-right: 10px;
+margin-top: 13px;
+margin-bottom: 13px;
+}
+
+.back-button:hover {
+  box-shadow: 1px 3px 12px 0px #b3b3b3;
+  color: white;
+  background: black;
 }
 
 .add-form {

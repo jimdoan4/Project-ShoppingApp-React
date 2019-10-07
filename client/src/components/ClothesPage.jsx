@@ -14,7 +14,7 @@ export default class ClothesPage extends Component {
 	render() {
 		return (
 			<div>
-			<Jumbotron fluid className="cart" style={{ height: '26rem' }} />
+			<Jumbotron fluid className="single-apparel-page" style={{ height: '26rem' }} />
 			<Container className= 'text-center'>
 				<Row>			
 					<Col><SingleApparel apparelId={this.state.apparelId} /></Col>

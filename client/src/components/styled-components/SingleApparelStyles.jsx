@@ -1,7 +1,7 @@
 import styled, { keyframes, css } from 'styled-components'
 
 
-export const ApparelContainer = styled.div`
+export const SingleApparelContainer = styled.div`
 font-family: 'Be Vietnam', sans-serif;
 }
 

@@ -9,6 +9,7 @@ import { Button } from 'react-bootstrap';
 import { CardGroup } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
+import { ReviewContainer } from './styled-components/ReviewStyles'
 
 export default class ReviewPage extends Component {
 	state = {
@@ -109,15 +110,11 @@ export default class ReviewPage extends Component {
 			return <Redirect to={`/apparels/`} />
 		}
 		return (
-			<div className="text-center jumbotron" style={{ position: 'block' }}>
-				<h3>Write A Review About This Apparel Item</h3>
-				<button
-					style={{
-						marginTop: '14px',
-						backgroundColor: 'white',
-						borderColor: 'black',
-						color: 'black'
-					}}
+			<ReviewContainer>
+			<div className="text-center jumbotron review-header">
+				<h3>REVIEWS</h3>
+				<h5>How's this gear working for you</h5>
+				<button className="review-toggle"
 					onClick={this.toggleEditForm}
 				>
 					Check to see All of the Reviews About this Item
@@ -130,18 +127,11 @@ export default class ReviewPage extends Component {
 								
 										<Card
 											className="text-center"
-											style={{
-												backgroundColor: 'grey',
-												color: 'white',
-												paddingTop: '14px',
-												paddingBottom: '14px',
-												marginTop: '20px'
-											}}
 										>
-										<div style= {{color: 'white'}}>
-											<p style= {{color: 'white', fontSize: '20px'}}>Screen Name: {review.screenName}</p>
-											<p style= {{color: 'white', fontSize: '20px'}}>Title: {review.title}</p>
-											<p style= {{color: 'white', fontSize: '20px'}}>Description: {review.description}</p>
+										<div clasName="review-section">
+											<p>{review.screenName}</p>
+											<p>{review.title}</p>
+											<p>{review.description}</p>
 											</div>
 										
 
@@ -155,23 +145,14 @@ export default class ReviewPage extends Component {
 													to={`/apparels/${this.state.apparelId}/reviews/${review._id}`}
 													key={review._id}
 												> 
-													<button
-														style={{
-															backgroundColor: '#3a5d96', color: 'white',
-                            								borderColor: 'black',
-															marginRight: '10px'
-														}}
+													<button className="edit-review-button"
 													>
 														Edit Review
 													</button>
 												 </Link> 
 												</Col>
 												<Col>
-												<button
-													style={{
-														backgroundColor: '#3a5d96', color: 'white',
-                            							borderColor: 'black'
-													}}
+												<button className="delete-review-button"
 													key={review._id}
 													onClick={(e) => this.deleteReview(e, review)}
 												>
@@ -187,75 +168,56 @@ export default class ReviewPage extends Component {
 						);
 					})}
 
-					<div className="text-center col" style={{ marginTop: '30px' }}>
-						
-							<div className="container text-center">
+					<div className="col" style={{ marginTop: '20px' }}>
+							<div className="container">
 							
-									<Form
-										className="text-center"
-										style={{
-											display: 'inline-block',
-											backgroundColor: 'grey',
-											color: 'white',
-											marginBottom: '30px'
-											
-										}}
+									<Form className="add-form"
 										onSubmit={this.createReview}
 									>
 										<Form.Row>
 											<Form.Group as={Col} controlId="formGridPassword">
-												<Form.Label style= {{marginTop: '14px'}}htmlFor="screenName">Screen Name </Form.Label>
+												<Form.Label className="form-label" style= {{marginTop: '14px'}}> </Form.Label>
 												<Form.Control
 													className="text-center"
 													type="text"
 													name="screenName"
 													onChange={this.handleChange}
 													value={this.state.newReview.screenName}
-													placeholder="Enter Your Screen Name"
+													placeholder="Enter your username"
 												/>
 											</Form.Group>
 										</Form.Row>
 										<Form.Row>
 											<Form.Group as={Col} controlId="formGridEmail">
-												<Form.Label htmlFor="title">Title </Form.Label>
+												<Form.Label className="form-label" htmlFor="title"></Form.Label>
 												<Form.Control
 													className="text-center"
 													type="text"
 													name="title"
 													onChange={this.handleChange}
 													value={this.state.newReview.title}
-													placeholder="Enter A Brief Title of Your Review"
+													placeholder="Enter a review"
 												/>
 											</Form.Group>
 										</Form.Row>
 										<Form.Row>
 											<Form.Group as={Col} controlId="formGridEmail">
-												<Form.Label htmlFor="description">Description </Form.Label>
+												<Form.Label className="form-label" htmlFor="description"></Form.Label>
 												<Form.Control
 													className="text-center"
 													type="text"
 													name="description"
 													onChange={this.handleChange}
 													value={this.state.newReview.description}
-													placeholder="Enter A Description Of Your Review About this Item"
+													placeholder="Enter a description about this item"
 												/>
 											</Form.Group>
 										</Form.Row>
 										<div style={{ marginLeft: '140px' }} className="text-center">
 											<button
-												className="text-center"
+												className="text-center add-review-button"
 												variant="primary"
 												type="submit"
-												style={{
-													marginRight: '140px',
-													paddingLeft: '60px',
-													paddingRight: '60px',
-													marginTop: '1px',
-													marginBottom: '15px',
-													backgroundColor: '#3a5d96', 
-													color: 'white',
-                            						borderColor: 'black'
-												}}
 											>
 												Add a Review
 											</button>
@@ -267,6 +229,7 @@ export default class ReviewPage extends Component {
 					</div>
 				</div>
 			</div>
+			</ReviewContainer>
 		);
 	}
 }

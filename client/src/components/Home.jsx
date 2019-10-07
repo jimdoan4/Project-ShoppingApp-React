@@ -9,7 +9,7 @@ export default class Home extends Component {
 	render() {
 		return (
 			<div>
-				<Jumbotron className="home" style={{ height: '26rem' }}>
+				<Jumbotron className="main-page-image" style={{ height: '26rem' }}>
 					<Container className="main-header-img intro-header">
 						<h1>EQUIS Men Apparel</h1>
 					</Container>
@@ -17,7 +17,7 @@ export default class Home extends Component {
 				<div id="event">
         <div class="container-fluid text-center">
 <div class="container-fluid">
-            <div class="os-animation" data-animation="fadeInUp">
+        
               <div class="row text-center"> 
                 <div class="col main-img-intro">
                       <img class="card-img-top" src="https://images.lululemon.com/is/image/lululemon/LM3BF7S_038068_1?$image_carousel-lg$"/>
@@ -26,14 +26,13 @@ export default class Home extends Component {
                 <div class="col main-img-intro">
                       <img class="card-img-top" src="https://images.lululemon.com/is/image/lululemon/LM3AUTS_037049_1?$image_carousel-lg$"/>
                 </div>
-            </div>
           </div> 
       </div>
 
 					<div id="event">
-					<div>
+					
                 <button class="btn btn-custom" type="submit" value="Send">SHOP WHAT'S NEW</button>
-              </div>
+             
 		<div class="container-fluid">
               <div class="row text-center">
                 <div class="col secondary-img-intro">
