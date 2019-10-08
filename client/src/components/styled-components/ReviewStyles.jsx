@@ -13,8 +13,8 @@ color: black;
 }
 
 .review-section {
-    color: black; 
-    font-size: 16px;
+color: black; 
+font-size: 16px;
 }
 
 .review-header h3 {
@@ -25,14 +25,14 @@ text-decoration: underline;
 }
 
 .review-header h5 {
-    font-size: 20px;
-    font-family: 'Be Vietnam', sans-serif;
+font-size: 20px;
+font-family: 'Be Vietnam', sans-serif;
 }
 
 .edit-review-button {
-    background-color: white;
-    color: black;
- border: 1px solid black;
+background-color: white;
+color: black;
+border: 1px solid black;
 margin-right: 10px;
 margin-top: 13px;
 margin-bottom: 13px;

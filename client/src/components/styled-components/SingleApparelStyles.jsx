@@ -1,5 +1,4 @@
-import styled, { keyframes, css } from 'styled-components'
-
+import styled, { keyframes, css } from "styled-components";
 
 export const SingleApparelContainer = styled.div`
 font-family: 'Be Vietnam', sans-serif;
@@ -67,4 +66,4 @@ margin-bottom: 13px;
     border: 1px solid black;
 }
 
-`
+`;
