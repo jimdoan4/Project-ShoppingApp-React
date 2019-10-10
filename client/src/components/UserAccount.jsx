@@ -8,6 +8,7 @@ import { Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 
 export default class UserAccount extends Component {
+      // We'll set up the  array as an empty array to begin with
   state = {
     users: [],
     newUser: {
@@ -23,20 +24,20 @@ export default class UserAccount extends Component {
   };
 
   getAllUsers = () => {
-    axios.get("/api/users/").then(res => {
+    axios.get("/api/users/").then(res => { // When the page loads, grab all users from the database
       this.setState({ users: res.data });
     });
   };
 
   createUser = e => {
     axios
-      .post("/api/users/", {
+      .post("/api/users/", {  // Ask the server to create a new user in the database
         password: this.state.newUser.password,
         userName: this.state.newUser.userName,
         apparels: []
       })
       .then(res => {
-        const usersList = [this.state.users];
+        const usersList = [this.state.users];  // Copy the old users list into a new one
         usersList.unshift(res.data);
         this.setState({
           newUser: {

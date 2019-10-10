@@ -9,6 +9,7 @@ import { Button } from "react-bootstrap";
 import { SingleApparelContainer } from "./styled-components/SingleApparelStyles";
 
 class SingleApparel extends Component {
+      // We'll set up the  array as an empty array to begin with
   state = {
     apparelId: this.props.apparelId,
     apparels: [],
@@ -26,7 +27,7 @@ class SingleApparel extends Component {
   };
 
   getApparelData = () => {
-    axios.get(`/api/apparels/${this.state.apparelId}`).then(res => {
+    axios.get(`/api/apparels/${this.state.apparelId}`).then(res => { // When the page loads, grab apparel id from the database
       this.setState({ apparel: res.data });
     });
   };
@@ -35,7 +36,7 @@ class SingleApparel extends Component {
     this.getApparelData();
   };
 
-  toggleEditForm = () => {
+  toggleEditForm = () => {  // This toggle the apparel button when clicked
     this.setState((state, props) => {
       return { displayEditForm: !state.displayEditForm };
     });
@@ -50,7 +51,7 @@ class SingleApparel extends Component {
   updateApparel = e => {
     e.preventDefault();
     axios
-      .put(`/api/apparels/${this.state.apparelId}`, {
+      .put(`/api/apparels/${this.state.apparelId}`, {   // ask the server to update the apparel in the database
         image: this.state.apparel.image,
         name: this.state.apparel.name,
         description: this.state.apparel.description,
@@ -65,7 +66,7 @@ class SingleApparel extends Component {
   };
 
   deleteApparel = () => {
-    axios.delete(`/api/apparels/${this.state.apparelId}`).then(res => {
+    axios.delete(`/api/apparels/${this.state.apparelId}`).then(res => { // Ask the server to delete this apparel
       this.setState({ redirectToApparel: true });
     });
   };

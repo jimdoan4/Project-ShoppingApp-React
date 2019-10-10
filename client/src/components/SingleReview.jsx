@@ -5,6 +5,7 @@ import { Form } from "react-bootstrap";
 import { SingleReviewContainer } from "./styled-components/SingleReviewStyles";
 
 export default class SingleReview extends Component {
+      // We'll set up the  array as an empty array to begin with
   state = {
     review: {
       screenName: "",
@@ -19,7 +20,7 @@ export default class SingleReview extends Component {
 
   getReviewData = () => {
     axios
-      .get(
+      .get( // When the page loads, grab review id from the database
         `/api/apparels/${this.state.apparelId}/reviews/${this.state.reviewId}`
       )
       .then(res => {
@@ -31,7 +32,7 @@ export default class SingleReview extends Component {
     this.getReviewData();
   };
 
-  toggleEditForm = () => {
+  toggleEditForm = () => {  // This toggle the review button when clicked
     this.setState((state, props) => {
       return { displayEditForm: !state.displayEditForm };
     });
@@ -47,7 +48,7 @@ export default class SingleReview extends Component {
     e.preventDefault();
     axios
       .put(
-        `/api/apparels/${this.state.apparelId}/reviews/${this.state.reviewId}`,
+        `/api/apparels/${this.state.apparelId}/reviews/${this.state.reviewId}`,  // ask the server to update the review in the database
         {
           screenName: this.state.review.screenName,
           title: this.state.review.title,
@@ -63,7 +64,7 @@ export default class SingleReview extends Component {
   deleteReview = () => {
     axios
       .delete(
-        `/api/apparels/${this.state.apparelId}/reviews/${this.state.reviewId}`
+        `/api/apparels/${this.state.apparelId}/reviews/${this.state.reviewId}` // Ask the server to delete this review
       )
       .then(res => {
         this.setState({ redirectToReview: true });

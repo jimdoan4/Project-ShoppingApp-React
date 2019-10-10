@@ -7,18 +7,21 @@ const reviewController = require('../controllers/reviewController');
 
 router.get('/', appController.index);
 
+// Review routes
 router.get('/apparels/:apparelId/reviews/', reviewController.index);
 router.post('/apparels/:apparelId/reviews/', reviewController.create);
 router.get('/apparels/:apparelId/reviews/:reviewId/', reviewController.show);
 router.put('/apparels/:apparelId/reviews/:reviewId/', reviewController.update);
 router.delete('/apparels/:apparelId/reviews/:reviewId/', reviewController.delete);
 
+// User routes
 router.get('/users/', userController.index);
 router.post('/users/', userController.create);
 router.get('/users/:userId/', userController.show);
 router.put('/users/:userId/', userController.update);
 router.delete('/users/:userId/', userController.delete);
 
+// Apparel routes
 router.get('/apparels/', apparelController.index);
 router.post('/apparels/', apparelController.create);
 router.get('/apparels/:apparelId/', apparelController.show);

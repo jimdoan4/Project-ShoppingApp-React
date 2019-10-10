@@ -5,6 +5,7 @@ import { Form } from "react-bootstrap";
 import { SingleReviewContainer } from "./styled-components/SingleReviewStyles";
 
 export default class SingleUser extends Component {
+      // We'll set up the  array as an empty array to begin with
   state = {
     userId: this.props.userId,
     currentUser: {
@@ -17,7 +18,7 @@ export default class SingleUser extends Component {
   };
 
   getUserData = () => {
-    axios.get(`/api/users/${this.state.userId}`).then(res => {
+    axios.get(`/api/users/${this.state.userId}`).then(res => { // When the page loads, grab user id from the database
       this.setState({ currentUser: res.data });
     });
   };
@@ -26,7 +27,7 @@ export default class SingleUser extends Component {
     this.getUserData();
   };
 
-  toggleEditForm = () => {
+  toggleEditForm = () => {  // This toggle the user button when clicked
     this.setState((state, props) => {
       return { displayEditForm: !state.displayEditForm };
     });
@@ -41,7 +42,7 @@ export default class SingleUser extends Component {
   updateUser = e => {
     e.preventDefault();
     axios
-      .put(`/api/users/${this.state.userId}`, {
+      .put(`/api/users/${this.state.userId}`, {  // ask the server to update the user in the database
         password: this.state.currentUser.password,
         userName: this.state.currentUser.userName
       })
@@ -52,7 +53,7 @@ export default class SingleUser extends Component {
   };
 
   deleteUser = () => {
-    axios.delete(`/api/users/${this.state.userId}`).then(res => {
+    axios.delete(`/api/users/${this.state.userId}`).then(res => {  // Ask the server to delete this user
       this.setState({ redirectToHome: true });
     });
   };

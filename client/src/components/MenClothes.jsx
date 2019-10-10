@@ -9,6 +9,7 @@ import { Form } from "react-bootstrap";
 import { ApparelContainer } from "./styled-components/ApparelListStyles";
 
 export default class MenClothes extends Component {
+      // We'll set up the  array as an empty array to begin with
   state = {
     apparels: [],
     newApparel: {
@@ -36,7 +37,7 @@ export default class MenClothes extends Component {
   createApparel = e => {
     e.preventDefault();
     axios
-      .post(`/api/apparels`, {
+      .post(`/api/apparels`, {   // Ask the server to create a new apparel in the database
         name: this.state.newApparel.name,
         size: this.state.newApparel.size,
         image: this.state.newApparel.image,
@@ -44,7 +45,7 @@ export default class MenClothes extends Component {
         price: this.state.newApparel.price
       })
       .then(res => {
-        const apparelsList = [...this.state.apparels];
+        const apparelsList = [...this.state.apparels];  // Copy the old apparels list into a new one
         apparelsList.unshift(res.data);
         this.setState({
           newApparel: {
@@ -60,12 +61,15 @@ export default class MenClothes extends Component {
       });
   };
 
-  toggleApparelForm = () => {
+  toggleApparelForm = () => {  // This toggle the apparel button when clicked
     this.setState((state, props) => {
       return { displayApparelForm: !state.displayApparelForm };
     });
   };
 
+
+     //We need to pass in multiple arguments here.  The first is the object of the specific idea that is being changed.
+  //And the event object is the special event listener object that has information about the value and name
   handleChange = e => {
     const changeNewApparel = { ...this.state.newApparel };
     changeNewApparel[e.target.name] = e.target.value;

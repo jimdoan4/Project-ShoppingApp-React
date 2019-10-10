@@ -9,6 +9,7 @@ import { Row } from "react-bootstrap";
 import { ReviewContainer } from "./styled-components/ReviewStyles";
 
 export default class ReviewPage extends Component {
+      // We'll set up the  array as an empty array to begin with
   state = {
     apparelId: this.props.apparelId,
     reviews: [],
@@ -39,7 +40,7 @@ export default class ReviewPage extends Component {
     });
   };
 
-  toggleReviewForm = () => {
+  toggleReviewForm = () => {  // This toggle the review button when clicked
     this.setState((state, props) => {
       return { displayReviewForm: !state.displayReviewForm };
     });
@@ -54,13 +55,13 @@ export default class ReviewPage extends Component {
   createReview = e => {
     e.preventDefault();
     axios
-      .post(`/api/apparels/${this.state.apparelId}/reviews/`, {
+      .post(`/api/apparels/${this.state.apparelId}/reviews/`, {   // Ask the server to create a new review in the database
         screenName: this.state.newReview.screenName,
         title: this.state.newReview.title,
         description: this.state.newReview.description
       })
       .then(res => {
-        const reviewsList = [...this.state.reviews];
+        const reviewsList = [...this.state.reviews];  // Copy the old reviews list into a new one
         reviewsList.unshift(res.data);
         this.setState({
           newReview: {
