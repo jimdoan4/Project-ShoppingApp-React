@@ -29,7 +29,7 @@ export default class MenClothes extends Component {
   };
 
   getAllApparels = () => {
-    axios.get(`/api/apparels/`).then(res => {
+    axios.get(`/api/apparels/`).then(res => {  // When the page loads, grab all apparels from the database
       this.setState({ apparels: res.data });
     });
   };

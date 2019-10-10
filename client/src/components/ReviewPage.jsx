@@ -24,7 +24,7 @@ export default class ReviewPage extends Component {
   };
 
   getAllReviews = () => {
-    axios.get(`/api/apparels/${this.state.apparelId}/reviews/`).then(res => {
+    axios.get(`/api/apparels/${this.state.apparelId}/reviews/`).then(res => { // When the page loads, grab all reviews from the database
       console.log(res.data);
       this.setState({ reviews: res.data });
     });
