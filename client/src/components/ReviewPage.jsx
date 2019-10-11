@@ -85,7 +85,7 @@ export default class ReviewPage extends Component {
   updateReview = e => {
     e.preventDefault();
     axios
-      .put(`/api/apparels/${this.state.apparelId}`, {
+      .put(`/api/apparels/${this.state.apparelId}`, {   // ask the server to update the review in the database
         screenName: this.state.newReview.screenName,
         title: this.state.newReview.title,
         description: this.state.newReview.description
@@ -99,7 +99,7 @@ export default class ReviewPage extends Component {
   deleteReview = (e, review) => {
     e.preventDefault();
     axios
-      .delete(`/api/apparels/${this.state.apparelId}/reviews/${review._id}`)
+      .delete(`/api/apparels/${this.state.apparelId}/reviews/${review._id}`) // Ask the server to delete this review
       .then(res => {
         this.getAllReviews();
       });
