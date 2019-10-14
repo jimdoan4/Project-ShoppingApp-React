@@ -9,6 +9,7 @@ const reviewController = {
 			})
 			.catch((err) => {
 				console.log(err);  // If there is any error, tell the client something went wrong on the server
+			});
 	},
 	create: (req, res) => {
 		Apparel.findById(req.params.apparelId) // create a new Review, let Mongoose give the default values

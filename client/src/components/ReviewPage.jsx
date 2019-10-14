@@ -7,7 +7,8 @@ import { Form } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { ReviewContainer } from "./styled-components/ReviewStyles";
-
+import { Button } from "react-bootstrap";
+import { Jumbotron } from "react-bootstrap";
 export default class ReviewPage extends Component {
       // We'll set up the  array as an empty array to begin with
   state = {
@@ -111,19 +112,19 @@ export default class ReviewPage extends Component {
     }
     return (
       <ReviewContainer>
-        <div className="text-center jumbotron review-header">
+        <Jumbotron className="text-center review-header">
           <h3>REVIEWS</h3>
           <h5>How's this gear working for you</h5>
-          <button className="review-toggle" onClick={this.toggleEditForm}>
+          <Button className="review-toggle" onClick={this.toggleEditForm}>
             Check to see All of the Reviews About this Item
-          </button>
-          <div className="jumbotron">
+          </Button>
+          <Jumbotron>
             {this.state.reviews.map(review => {
               return (
                 <div>
                   {this.state.displayEditForm ? (
                     <Card className="text-center">
-                      <div clasName="review-section">
+                      <div className="review-section">
                         <p>{review.screenName}</p>
                         <p>{review.title}</p>
                         <p>{review.description}</p>
@@ -139,19 +140,19 @@ export default class ReviewPage extends Component {
                               to={`/apparels/${this.state.apparelId}/reviews/${review._id}`}
                               key={review._id}
                             >
-                              <button className="edit-review-button">
+                              <Button className="edit-review-button">
                                 Edit Review
-                              </button>
+                              </Button>
                             </Link>
                           </Col>
                           <Col>
-                            <button
+                            <Button
                               className="delete-review-button"
                               key={review._id}
                               onClick={e => this.deleteReview(e, review)}
                             >
                               Delete Review
-                            </button>
+                            </Button>
                           </Col>
                         </Row>
                       </Container>
@@ -161,8 +162,8 @@ export default class ReviewPage extends Component {
               );
             })}
 
-            <div className="col" style={{ marginTop: "20px" }}>
-              <div className="container">
+            <Col style={{ marginTop: "20px" }}>
+              <Container>
                 <Form className="add-form" onSubmit={this.createReview}>
                   <Form.Row>
                     <Form.Group as={Col} controlId="formGridPassword">
@@ -215,19 +216,19 @@ export default class ReviewPage extends Component {
                     </Form.Group>
                   </Form.Row>
                   <div style={{ marginLeft: "140px" }} className="text-center">
-                    <button
+                    <Button
                       className="text-center add-review-button"
                       variant="primary"
                       type="submit"
                     >
                       Add a Review
-                    </button>
+                    </Button>
                   </div>
                 </Form>
-              </div>
-            </div>
-          </div>
-        </div>
+              </Container>
+            </Col>
+          </Jumbotron>
+        </Jumbotron>
       </ReviewContainer>
     );
   }

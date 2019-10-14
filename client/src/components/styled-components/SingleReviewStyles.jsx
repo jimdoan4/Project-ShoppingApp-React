@@ -1,10 +1,12 @@
-import styled, { keyframes, css } from 'styled-components'
+import styled, {
+  keyframes,
+  css
+} from 'styled-components'
 
 
-export const SingleReviewContainer = styled.div`
+export const SingleReviewContainer = styled.div `
 font-family: 'Be Vietnam', sans-serif;
 }
-
 
 .edit-button {
     background-color: white;

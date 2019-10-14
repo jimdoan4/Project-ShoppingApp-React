@@ -15,7 +15,6 @@ export default class ClothesPage extends Component {
     return (
       <div>
         <Jumbotron
-          fluid
           className="single-apparel-page"
           style={{ height: "26rem" }}
         />

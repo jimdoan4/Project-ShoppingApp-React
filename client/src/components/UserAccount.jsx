@@ -6,9 +6,10 @@ import { Card } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 export default class UserAccount extends Component {
-      // We'll set up the  array as an empty array to begin with
+  // We'll set up the  array as an empty array to begin with
   state = {
     users: [],
     newUser: {
@@ -24,20 +25,22 @@ export default class UserAccount extends Component {
   };
 
   getAllUsers = () => {
-    axios.get("/api/users/").then(res => { // When the page loads, grab all users from the database
+    axios.get("/api/users/").then(res => {
+      // When the page loads, grab all users from the database
       this.setState({ users: res.data });
     });
   };
 
   createUser = e => {
     axios
-      .post("/api/users/", {  // Ask the server to create a new user in the database
+      .post("/api/users/", {
+        // Ask the server to create a new user in the database
         password: this.state.newUser.password,
         userName: this.state.newUser.userName,
         apparels: []
       })
       .then(res => {
-        const usersList = [this.state.users];  // Copy the old users list into a new one
+        const usersList = [this.state.users]; // Copy the old users list into a new one
         usersList.unshift(res.data);
         this.setState({
           newUser: {
@@ -68,9 +71,9 @@ export default class UserAccount extends Component {
       <div>
         {this.state.users.map(user => {
           return (
-            <div className="card">
+            <Card>
               <Row>
-                <div className="col">
+                <Col>
                   <Card.Body className="text-center add-apparel-button">
                     <Link
                       style={{ color: "black" }}
@@ -80,13 +83,13 @@ export default class UserAccount extends Component {
                       Welcome: {user.userName}
                     </Link>
                   </Card.Body>
-                </div>
+                </Col>
               </Row>
-            </div>
+            </Card>
           );
         })}
 
-        <div className="container">
+        <Container>
           <Card
             className="container"
             style={{
@@ -137,7 +140,7 @@ export default class UserAccount extends Component {
               </div>
             </Form>
           </Card>
-        </div>
+        </Container>
       </div>
     );
   }

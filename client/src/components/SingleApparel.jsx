@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
 import axios from "axios";
 import { Container } from "react-bootstrap";
-import { Jumbotron } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
@@ -123,19 +122,19 @@ class SingleApparel extends Component {
                   marginTop: "8px"
                 }}
               >
-                <button
+                <Button
                   className="edit-apparel-button"
                   onClick={this.toggleEditForm}
                 >
                   Edit Apparel
-                </button>
+                </Button>
 
-                <button
+                <Button
                   className="delete-apparel-button"
                   onClick={this.deleteApparel}
                 >
                   Delete Apparel
-                </button>
+                </Button>
               </Container>
             </Card>
           </Card>
@@ -209,7 +208,7 @@ class SingleApparel extends Component {
               className="text-center"
               style={{ marginTop: "20px", marginLeft: "140px" }}
             >
-              <button className="text-center submit-button">Submit</button>
+              <Button className="text-center submit-button">Submit</Button>
             </div>
           </Form>
         ) : null}

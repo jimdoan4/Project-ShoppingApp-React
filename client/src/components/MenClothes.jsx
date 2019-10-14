@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap";
 import { Jumbotron } from "react-bootstrap";
 import { CardGroup } from "react-bootstrap";
 import { Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { ApparelContainer } from "./styled-components/ApparelListStyles";
 
 export default class MenClothes extends Component {
@@ -80,7 +81,6 @@ export default class MenClothes extends Component {
     return (
       <div>
         <Jumbotron
-          fluid
           className="apparel-page-image"
           style={{ height: "26rem" }}
         >
@@ -93,7 +93,7 @@ export default class MenClothes extends Component {
         </Jumbotron>
 
         <div className="text-center" style={{ marginBottom: "20px" }}>
-          <button
+          <Button
             className="add-apparel-button"
             onClick={this.toggleApparelForm}
           >
@@ -107,7 +107,7 @@ export default class MenClothes extends Component {
               src="https://image.flaticon.com/icons/svg/863/863684.svg"
             />
             Add Apparel
-          </button>
+          </Button>
         </div>
         <ApparelContainer>
           {this.state.displayApparelForm ? (

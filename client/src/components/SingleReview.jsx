@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
 import axios from "axios";
 import { Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { SingleReviewContainer } from "./styled-components/SingleReviewStyles";
 
 export default class SingleReview extends Component {
@@ -118,10 +119,10 @@ export default class SingleReview extends Component {
             />
           </Form.Group>
           <div className="text-center" style={{ marginTop: "20px" }}>
-            <button className="text-center edit-button">Submit</button>
-            <button className="delete-button" onClick={this.deleteReview}>
+            <Button className="text-center edit-button">Submit</Button>
+            <Button className="delete-button" onClick={this.deleteReview}>
               Delete
-            </button>
+            </Button>
           </div>
         </Form>
 
