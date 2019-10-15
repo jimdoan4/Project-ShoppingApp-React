@@ -206,7 +206,7 @@ class SingleApparel extends Component {
             </Form.Group>
             <div
               className="text-center"
-              style={{ marginTop: "20px", marginLeft: "140px" }}
+              style={{ marginTop: "20px" }}
             >
               <Button className="text-center submit-button">Submit</Button>
             </div>

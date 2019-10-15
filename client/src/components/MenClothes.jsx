@@ -210,7 +210,7 @@ export default class MenClothes extends Component {
                     }}
                   >
                     <Link to={`/apparels/${apparel._id}`} key={apparel._id}>
-                      <Card.Img variant="top" src={apparel.image} />
+                      <Card.Img variant="top" className="clothes-list" src={apparel.image} />
                     </Link>
                     <Card.Body>
                       <Card.Title>{apparel.name}</Card.Title>

@@ -46,7 +46,6 @@ margin-bottom: 13px;
     color: black;
     border: 1px solid black;
     justify-content: center;
-    margin-right: 140px;
     padding-left: 60px;
     padding-right: 60px;
     margin-top: 1px;

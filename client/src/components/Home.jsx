@@ -46,13 +46,11 @@ export default class Home extends Component {
                   </Col>
                   <Col className="secondary-img-intro">
                     <Card.Img variant="top"
-                      style={{ width: "20rem", height: "460px" }}
                       src="https://images.lululemon.com/is/image/lululemon/LM9767S_036763_2?$product_tile-lg_2x$"
                     />
                   </Col>
                   <Col className="secondary-img-intro">
                     <Card.Img variant="top"
-                      style={{ width: "20rem", height: "460px" }}
                       src="https://images.lululemon.com/is/image/lululemon/LM5609S_1971_1?$image_carousel-lg_2x$"
                     />
                   </Col>
