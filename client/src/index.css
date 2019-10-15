@@ -154,7 +154,7 @@ body {
 }
 
 
-/* iphone X */
+/* Iphone X */
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   .main-img-intro img {
     width: 17rem;
@@ -182,6 +182,20 @@ body {
     margin-bottom: 10px;
   }
 
+  .single-apparel-container img {
+    width: 21rem;
+    margin-bottom: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+  .review-card {
+    width: 1rem!important;
+    }
+  
   .card {
     width: 19.2rem!important;
   }

@@ -121,7 +121,7 @@ export default class ReviewPage extends Component {
           <Jumbotron>
             {this.state.reviews.map(review => {
               return (
-                <div>
+                <div className="review-card">
                   {this.state.displayEditForm ? (
                     <Card className="text-center">
                       <div className="review-section">
@@ -131,8 +131,6 @@ export default class ReviewPage extends Component {
                       </div>
 
                       <Container
-                        style={{ textAlign: "center" }}
-                        className="text-center"
                       >
                         <Row>
                           <Col>
@@ -151,7 +149,7 @@ export default class ReviewPage extends Component {
                               key={review._id}
                               onClick={e => this.deleteReview(e, review)}
                             >
-                              Delete Review
+                              Delete
                             </Button>
                           </Col>
                         </Row>

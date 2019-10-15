@@ -76,12 +76,12 @@ class SingleApparel extends Component {
     }
     return (
       <SingleApparelContainer>
-        <div style={{ marginTop: "10px", marginBottom: "40px" }}>
-          <Card
-            className="container"
+        <div className="single-apparel-container jumbotron">
+          {/* <Card
+            className="container-fluid"
             style={{ width: "31rem", marginBottom: "40px" }}
-          >
-            <Card>
+          > */}
+            <Card className="">
               <Card.Img
                 variant="top"
                 src={this.state.apparel.image}
@@ -137,7 +137,7 @@ class SingleApparel extends Component {
                 </Button>
               </Container>
             </Card>
-          </Card>
+          {/* </Card> */}
         </div>
         {this.state.displayEditForm ? (
           <Form className="jumbotron" onSubmit={this.updateApparel}>

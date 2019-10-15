@@ -33,7 +33,7 @@ font-family: 'Be Vietnam', sans-serif;
 background-color: white;
 color: black;
 border: 1px solid black;
-margin-right: 10px;
+/* margin-right: 6px; */
 margin-top: 13px;
 margin-bottom: 13px;
 }
