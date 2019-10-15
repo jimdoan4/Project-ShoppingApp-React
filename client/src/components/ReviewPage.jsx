@@ -116,7 +116,7 @@ export default class ReviewPage extends Component {
           <h3>REVIEWS</h3>
           <h5>How's this gear working for you</h5>
           <Button className="review-toggle" onClick={this.toggleEditForm}>
-            Check to see All of the Reviews About this Item
+            All Reviews about this Item
           </Button>
           <Jumbotron>
             {this.state.reviews.map(review => {
