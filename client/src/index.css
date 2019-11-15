@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Anton|Gugi|Lato|Roboto|Sofia&display=swap");
+
+:root {
+  --light-gray: #2b3032a1;
+  --primary-color: black;
+  --border: #2b303218;
+  --roboto: "Roboto", sans-serif;
+  --gugi: "Gugi", cursive;
+  --sofia: "Sofia", cursive;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.bg-primary-color {
+  background-color: var(--primary-color) !important;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -77,14 +97,6 @@ body {
   text-align: center;
 }
 
-.main-page-image {
-  background-image: url('https://images.lululemon.com/is/image/lululemon/na_aug19_wk3_m_flannel_1_1_md_Masonry_D_womens?$masonry_grid_one-whole_medium-md$');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 1px 3px 12px 0px #b3b3b3;
-}
-
 .main-img-intro img {
   width: 29rem;
   height: 469px;
@@ -119,14 +131,15 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 63px;
-  color: white;
+  color: black;
 }
 
 .apparel-page-image {
-  background-image: url('https://www.mensjournal.com/wp-content/uploads/mf/_crop_mf0217_ot_fitness_01_1.jpg?w=1200&h=630&crop=1');
+  background-image: url('https://assets2.mr-mag.com/wp-content/uploads/2017/04/Spring17CatalogImages-02-1024x774.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 90vh;
   box-shadow: 1px 3px 12px 0px #b3b3b3;
 }
 
@@ -208,7 +221,7 @@ body {
   }
 }
 
-  /* Ipad Pro*/
+  /* IPAD PRO*/
   @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     .secondary-img-intro {
       height: 480px;

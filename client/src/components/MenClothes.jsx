@@ -82,14 +82,8 @@ export default class MenClothes extends Component {
       <div>
         <Jumbotron
           className="apparel-page-image"
-          style={{ height: "26rem" }}
+          style={{ height: "54vh" }}
         >
-          <Container
-            className="apparel-page-header"
-            style={{ marginTop: "210px" }}
-          >
-            <h1>Let it Breathe</h1>
-          </Container>
         </Jumbotron>
 
         <div className="text-center" style={{ marginBottom: "20px" }}>
