@@ -62,7 +62,7 @@ body {
   font-size: 18px;
   font-family: "muse-500", Arial, sans-serif;
   transition: 0.3s all ease-out;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   padding: 18px;
   border: .5px solid black;
 }

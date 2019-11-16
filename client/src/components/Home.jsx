@@ -74,7 +74,7 @@ export default class Home extends Component {
                   alt="Product 4"
                 />
                 <span className="border site-btn btn-span">
-                  LONG SLEEVE SHIRTS
+                  LONG SLEEVE 
                 </span>
               </div>
               <div className="col-md-2 product pt-md-5 pt-4">
@@ -103,9 +103,7 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <hr className="hr" />
-
-        <div className="container text-center">
+        <div className="container return-section text-center">
           <div className="features">
             <button className="btn btn-custom" type="submit" value="Send">
               SHOP WHAT'S NEW
@@ -121,7 +119,7 @@ export default class Home extends Component {
                   <div className="text-center">
                     <img
                       src="https://i.kinja-img.com/gawker-media/image/upload/s--RrDvM4Te--/c_scale,f_auto,fl_progressive,q_80,w_800/bovcbm5qopcsyntcum04.jpg"
-                      className="img-fluid"
+                      className="img-fluid middle-img"
                     />
                   </div>
                 </div>
@@ -143,10 +141,10 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-
+        <hr className="hr" />
         <div className="container-fluid">
           <div className="site-slider-four px-md-4">
-            <div className="slider-four row text-center">
+            <div className="slider-four row ml-5 text-center">
               <div className="col-md-2 product pt-md-5">
                 <img
                   src="https://images.lululemon.com/is/image/lululemon/LU9A73S_037040_1?$image_carousel-lg_2x$"
@@ -199,7 +197,7 @@ export default class Home extends Component {
               </span>
             </div>
           </div>
-        </div>
+        </div> 
 
         <hr className="hr" />
 
@@ -211,15 +209,15 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <div className="container mid-section bg-light">
+        <div className="container bottom-section bg-light">
           <div className="row justify-content-center">
             <div className="col-md-5 col-12 mr-4">
-              <div className="row box">
+              <div className="row box mb-4">
                 <div className="col-md-12 p-0 bg-white">
-                  <div className="text-left">
+                  <div className="text-center">
                     <img
                       src="https://bloximages.chicago2.vip.townnews.com/madison.com/content/tncms/assets/v3/editorial/4/2c/42c55441-d347-5ccf-9fb4-dcb5897289bf/59721b025eb8c.image.jpg"
-                      className="img-fluid"
+                      className="img-fluid collection-img"
                       width="100%"
                     />
                   </div>
@@ -233,7 +231,7 @@ export default class Home extends Component {
                   <div className="text-left">
                     <img
                       src="https://cms.qz.com/wp-content/uploads/2019/01/lululemon-OTC2.jpg?quality=75&strip=all&w=450&h=571&crop=1"
-                      className="img-fluid"
+                      className="img-fluid collection-img"
                       width="100%"
                     />
                   </div>
