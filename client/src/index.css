@@ -56,6 +56,10 @@ body {
   background-color: #F3F6F8;
 }
 
+.fixed {
+  z-index: 1;
+}
+
 .btn-custom {
   color: black;
   background-color: white;
@@ -148,7 +152,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 1px 3px 12px 0px #b3b3b3;
+
 }
 
 

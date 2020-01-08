@@ -15,8 +15,8 @@ export default class Navigation extends Component {
         variant="dark"
       >
         <Navbar.Brand href="/">EQUIS Apparel</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className="text-light"/>
+        <Navbar.Collapse id="responsive-navbar-nav" className="bg-dark fixed">
           <Nav className="mr-auto">
             <NavDropdown title="SHOP" id="collasible-nav-dropdown">
               <NavDropdown.Item>
