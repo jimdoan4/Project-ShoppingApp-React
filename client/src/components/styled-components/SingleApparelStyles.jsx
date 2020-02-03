@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components'
+import styled from 'styled-components'
 
 export const SingleApparelContainer=styled.div ` 
     font-family: 'Be Vietnam', sans-serif;

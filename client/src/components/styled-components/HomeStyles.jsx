@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const HomeContainer = styled.div`
 
 .main-front-img {
-    max-height: 600px;
+    max-height: 570px;
+    min-height: 380px;
     box-shadow: 1px 3px 12px 0px #b3b3b3;
 }
 
@@ -180,7 +181,8 @@ export const HomeContainer = styled.div`
 }
 
 .collection-img {
-    max-height: 320px;
+    max-height: 310px;
+    min-height: 270px;
 }
 .site-info {
   margin-top: 0rem;
@@ -204,9 +206,6 @@ export const HomeContainer = styled.div`
   overflow: hidden;
 }
 
-.collection-img {
-    margin-right: -30px;
-}
 
 }
 

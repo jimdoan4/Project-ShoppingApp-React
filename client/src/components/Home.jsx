@@ -10,7 +10,7 @@ export default class Home extends Component {
             <div className="slider-one">
               <div>
                 <img
-                  src="https://www.sportsbusinessdaily.com/-/media/Images/SBJ-Photos/2016/04/18/pg-8-Company-Watch-Main-Rhone-Spring2016-Camo-28.ashx?la=en&hash=AAA79F14A8B7A306A6A10474AC6E2B56181E84E6"
+                  src="https://coolmaterial.com/wp-content/uploads/2017/06/rhone-esp-activeware-2.jpg"
                   className="img-fluid main-front-img"
                   width="100%"
                   alt="Banner 1"
@@ -18,7 +18,7 @@ export default class Home extends Component {
               </div>
               <div>
                 <img
-                  src="https://cmzone-vzbqbxhynotw9ion96xv.netdna-ssl.com/wp-content/uploads/2017/06/rhone-esp-Sequoia_Air_CM.jpg"
+                  src="https://serendipitysocial.com/wp-content/uploads/2017/09/Rhone-Activewear.png"
                   className="img-fluid main-front-img"
                   width="100%"
                   alt="Banner 2"
@@ -26,7 +26,7 @@ export default class Home extends Component {
               </div>
               <div>
                 <img
-                  src="https://www.mensjournal.com/wp-content/uploads/m0916_nb_lululemon_a-e9c62f24-1958-4162-927d-79c71fceb8c5.jpg?crop=0px%2C847px%2C2183px%2C1226px&resize=1200%2C675"
+                  src="https://bfs2018.com/wp-content/uploads/2018/03/TJP04084-1024x683.jpg"
                   className="img-fluid main-front-img"
                   width="100%"
                   alt="Banner 3"
@@ -113,7 +113,7 @@ export default class Home extends Component {
 
         <div className="container mid-section bg-light">
           <div className="row">
-            <div className="col-md-6 col-12">
+            <div className="col-md-6 col-12 animated slideInRight">
               <div className="row box">
                 <div className="col-md-12 p-0 bg-white">
                   <div className="text-center">
@@ -125,7 +125,7 @@ export default class Home extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-12 pt-5 text-center text-black">
+            <div className="col-md-6 col-12 pt-5 text-center text-black animated slideInDown">
               <h4 className="text-center">Free Shipping. Free Returns.</h4>
               <p className="text-center pt-3">
                 <medium>Less stress, more sweat.</medium>
@@ -210,9 +210,9 @@ export default class Home extends Component {
         </div>
 
         <div className="container bottom-section bg-light">
-          <div className="row justify-content-center">
-            <div className="col-md-5 col-12 mr-4">
-              <div className="row box mb-4">
+          <div className="row justify-content-center mb-4">
+            <div className="col-md-5 col-12 m-3 animated slideInLeft">
+              <div className="row box">
                 <div className="col-md-12 p-0 bg-white">
                   <div className="text-center">
                     <img
@@ -225,9 +225,9 @@ export default class Home extends Component {
               </div>
             </div>
 
-            <div className="col-md-5 col-12">
+            <div className="col-md-5 col-12 m-3">
               <div className="row box">
-                <div className="col-md-12 p-0 bg-white">
+                <div className="col-md-12 p-0 bg-white animated slideInRight">
                   <div className="text-left">
                     <img
                       src="https://cms.qz.com/wp-content/uploads/2019/01/lululemon-OTC2.jpg?quality=75&strip=all&w=450&h=571&crop=1"
