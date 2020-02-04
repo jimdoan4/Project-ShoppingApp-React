@@ -15,12 +15,12 @@ export default class Navigation extends Component {
         variant="dark"
       >
         <Navbar.Brand href="/">EQUIS Apparel</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" className="text-light"/>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className="text-dark"/>
         <Navbar.Collapse id="responsive-navbar-nav" className="bg-dark fixed">
           <Nav className="mr-auto">
-            <NavDropdown title="SHOP" id="collasible-nav-dropdown">
-              <NavDropdown.Item>
-                <Link to="/apparels/" style={{ color: "black " }}>
+            <NavDropdown title="SHOP" className="text-light nav-dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item className="nav-dropdown-item text-center">
+                <Link to="/apparels/" className="text-dark">
                   Men Apparel
                 </Link>
               </NavDropdown.Item>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HomeContainer = styled.div`
 
 .main-front-img {
-    max-height: 570px;
+    max-height: 560px;
     min-height: 380px;
     box-shadow: 1px 3px 12px 0px #b3b3b3;
 }

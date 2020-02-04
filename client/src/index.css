@@ -92,6 +92,23 @@ body {
   margin: 8px;
 }
 
+@media (max-width: 987px) {
+  .nav-dropdown {
+    text-align: center;
+    color: black!important;
+   }
+   .nav-dropdown-item {
+    text-align: center;
+   }
+  .iconic {
+   text-align: center;
+   background-color: white;
+  }
+  .fa {
+    color: black!important;
+  }
+}
+
 /*************************** FRONT PAGE INTRO **********************/
 .intro-header h1 {
   font-size: 59px;
