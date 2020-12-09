@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jimdoan4/shopping-app.git"
+    "url": "git+https://github.com/jimdoan4/Project-ShoppingApp-React.git"
   },
   "engines": {
     "node": "10.15.0"
@@ -20,9 +20,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jimdoan4/shopping-app/issues"
+    "url": "https://github.com/jimdoan4/Project-ShoppingApp-React/issues"
   },
-  "homepage": "https://github.com/jimdoan4/shopping-app#readme",
+  "homepage": "https://github.com/jimdoan4/Project-ShoppingApp-React#readme",
   "dependencies": {
     "concurrently": "^4.1.2",
     "dotenv": "^7.0.0",
