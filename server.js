@@ -15,7 +15,7 @@ app.use('/api/', routes);
 app.get('/*', (req,res) => {
     res.sendFile(__dirname + '/client/build/index.html')
 })
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
 	console.log('App is up and running on port ' + PORT);
