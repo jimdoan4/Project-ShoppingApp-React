@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-// const User = require('../models/User.js');
+const User = require('../models/User.js');
 const Apparel = require('../models/Apparel.js');
 const Review = require('../models/Review.js');
 
@@ -135,13 +135,14 @@ const noBoxer = new Apparel({
 	
 });
 
-// const jim = new User({
-// 	userName: 'Jimdoan4',
-// 	password: 'password'
-// });
+const jim = new User({
+	userName: 'Jimdoan4',
+	password: 'password'
+});
 
-// User.deleteMany({})
-// 	.then(() => jim.save());
+User.deleteMany({})
+	.then(() => jim.save())
+	.then(() => console.log('Successful Save'));
 
 Apparel.deleteMany({})
 	.then(() => cityHoodie.save())
