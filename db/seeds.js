@@ -140,24 +140,20 @@ const jim = new User({
 	password: 'password'
 });
 
-User.deleteMany({})
-	.then(() => jim.save())
-	.then(() => console.log('Successful Save'));
+User.remove({})
+	.then(() => User.create([jim]))
+	.then(() => {
+	 console.log('Successful Save');
+	 mongoose.connection.close();
+	})
+	.catch(err => console.log(err, "error!"));
 
-Apparel.deleteMany({})
-	.then(() => cityHoodie.save())
-	.then(() => surgeTank.save())
-	.then(() => sleevelessShirt.save())
-	.then(() => ventTechShirt.save())
-	.then(() => zipHoodie.save())
-	.then(() => sweatPullOver.save())
-	.then(() => ventShirt2.save())
-	.then(() => ventShirtPolo.save())
-	.then(() => basicShirt.save())
-	.then(() => surgeShort.save())
-	.then(() => noBoxer.save())
-	.then(() => ventShirt.save())
-	.then(() => console.log('Successful Save'))
-	.then(() => mongoose.connection.close());
+Apparel.remove({})
+.then(() => Apparel.create([cityHoodie, surgeTank, sleevelessShirt, ventTechShirt, zipHoodie, sweatPullOver, ventShirt2, ventShirtPolo, basicShirt, surgeShort, noBoxer, ventShirt]))
+.then(() => {
+	console.log('Successful Save');
+	mongoose.connection.close();
+   })
+   .catch(err => console.log(err, "error!"));
 
 
