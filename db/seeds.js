@@ -160,7 +160,7 @@ const jim = new User({
 User.deleteMany({})
 	.then(() => jim.save())
 	.then(() => console.log('Successful Save'))
-	.catch(err => console.log(err, "error!"));
+	.then(() => mongoose.connection.close())
 
 Apparel.deleteMany({})
 	.then(() => cityHoodie.save())
