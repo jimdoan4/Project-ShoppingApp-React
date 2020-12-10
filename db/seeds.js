@@ -159,8 +159,9 @@ const jim = new User({
 
 User.deleteMany({})
 	.then(() => jim.save())
-	.then(() => console.log('Successful Save'));
-	
+	.then(() => console.log('Successful Save'))
+	.catch(err => console.log(err, "error!"));
+
 Apparel.deleteMany({})
 	.then(() => cityHoodie.save())
 	.then(() => surgeTank.save())
@@ -175,4 +176,5 @@ Apparel.deleteMany({})
 	.then(() => noBoxer.save())
 	.then(() => ventShirt.save())
 	.then(() => console.log('Successful Save'))
-	.then(() => mongoose.connection.close());
+	.then(() => mongoose.connection.close())
+	.catch(err => console.log(err, "error!"));

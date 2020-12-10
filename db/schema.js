@@ -25,5 +25,4 @@ module.exports = {
 	ApparelSchema: ApparelSchema,
 	ReviewSchema: ReviewSchema,
 	UserSchema: UserSchema,
-
 };
